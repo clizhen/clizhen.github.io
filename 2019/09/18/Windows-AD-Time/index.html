@@ -5,15 +5,22 @@
   
 
   
-  <title>Category: computer | li</title>
+  <title>Windows AD Time | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="li">
-<meta property="og:url" content="http://blog.lizhen.pro/categories/computer/index.html">
+  <meta name="description" content="Windows AD域(单域)内的时间同步只需掌握以下几点:* 域内工作站/服务器与登陆时的联络的DC同步时间，此DC与Root PDC角色的DC同步时间。* 有效的时间服务器可查询 http://www.pool.ntp.org/  域控(Root PDC角色)上需要与外部时间源同步,命令如下:W32tm /config /manualpeerlist:time.nrc.ca /syncfro">
+<meta name="keywords" content="system">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows AD Time">
+<meta property="og:url" content="http://blog.lizhen.pro/2019/09/18/Windows-AD-Time/index.html">
 <meta property="og:site_name" content="li">
+<meta property="og:description" content="Windows AD域(单域)内的时间同步只需掌握以下几点:* 域内工作站/服务器与登陆时的联络的DC同步时间，此DC与Root PDC角色的DC同步时间。* 有效的时间服务器可查询 http://www.pool.ntp.org/  域控(Root PDC角色)上需要与外部时间源同步,命令如下:W32tm /config /manualpeerlist:time.nrc.ca /syncfro">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://blog.lizhen.pro/images/ad_time.gif">
+<meta property="og:updated_time" content="2019-09-19T12:04:26.739Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="li">
+<meta name="twitter:title" content="Windows AD Time">
+<meta name="twitter:description" content="Windows AD域(单域)内的时间同步只需掌握以下几点:* 域内工作站/服务器与登陆时的联络的DC同步时间，此DC与Root PDC角色的DC同步时间。* 有效的时间服务器可查询 http://www.pool.ntp.org/  域控(Root PDC角色)上需要与外部时间源同步,命令如下:W32tm /config /manualpeerlist:time.nrc.ca /syncfro">
+<meta name="twitter:image" content="http://blog.lizhen.pro/images/ad_time.gif">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -60,211 +67,73 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/18/Windows-AD-Time/" class="archive-article-date">
-  <time datetime="2019-09-18T13:16:54.000Z" itemprop="datePublished">Sep 18</time>
+        <section id="main"><article id="post-Windows-AD-Time" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/18/Windows-AD-Time/" class="article-date">
+  <time datetime="2019-09-18T13:16:54.000Z" itemprop="datePublished">2019-09-18</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/18/Windows-AD-Time/">Windows AD Time</a>
+    <h1 class="article-title" itemprop="name">
+      Windows AD Time
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/18/KMS/" class="archive-article-date">
-  <time datetime="2019-09-18T12:10:13.000Z" itemprop="datePublished">Sep 18</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/18/KMS/">KMS</a>
-    </h1>
-  
+        <p><img src="/images/ad_time.gif" alt></p>
+<h3 id="Windows-AD域-单域-内的时间同步只需掌握以下几点"><a href="#Windows-AD域-单域-内的时间同步只需掌握以下几点" class="headerlink" title="Windows AD域(单域)内的时间同步只需掌握以下几点:"></a>Windows AD域(单域)内的时间同步只需掌握以下几点:</h3><p><strong>* 域内工作站/服务器与登陆时的联络的DC同步时间，此DC与Root PDC角色的DC同步时间。*</strong></p>
+<p><em>有效的时间服务器可查询 <a href="http://www.pool.ntp.org/" target="_blank" rel="noopener">http://www.pool.ntp.org/</a></em></p>
+<ol>
+<li><p>域控(Root PDC角色)上需要与外部时间源同步,命令如下:<br>W32tm /config /manualpeerlist:time.nrc.ca /syncfromflags:manual /reliable:yes /update<br>W32tm /resync /rediscover<br>net stop w32time &amp;&amp; net start w32time  </p>
+</li>
+<li><p>域控(非PDC角色),运行以下命令:<br>w32tm /config /syncfromflags:domhier /update<br>w32tm /resync /rediscover<br>net stop w32time &amp;&amp; net start w32time  </p>
+</li>
+<li><p>遇到问题，重建时间配置：<br>net stop w32time<br>w32tm /unregister<br>w32tm /register<br>net start w32time</p>
+</li>
+</ol>
+<ul>
+<li>域内机器同步: net time \DC Name或ip /set /y</li>
+<li>查看时间源: w32tm /monitor</li>
+<li>查看登录服务器: echo %logonserver%</li>
+</ul>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/16/shell-Example/" class="archive-article-date">
-  <time datetime="2019-09-16T12:55:44.000Z" itemprop="datePublished">Sep 16</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/shell-Example/">Linux Shell Example</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/16/vim-plugin/" class="archive-article-date">
-  <time datetime="2019-09-16T12:25:36.000Z" itemprop="datePublished">Sep 16</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pro/2019/09/18/Windows-AD-Time/" data-id="ck0qnfquy000jx8pwjk3rrrmv" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/vim-plugin/">vim plugin</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" class="archive-article-date">
-  <time datetime="2019-09-16T11:57:48.000Z" itemprop="datePublished">Sep 16</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/">Set TimeZone &amp; NTP In Ubuntu</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/SQL-XACT-ABORT/" class="archive-article-date">
-  <time datetime="2019-09-15T04:48:34.000Z" itemprop="datePublished">Sep 15</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/SQL-XACT-ABORT/">SQL XACT_ABORT</a>
-    </h1>
   
+    <a href="/2019/09/18/KMS/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">KMS</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/收集的网站地址/" class="archive-article-date">
-  <time datetime="2019-09-15T04:16:56.000Z" itemprop="datePublished">Sep 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/收集的网站地址/">收集的网站地址</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/node-安装和升级/" class="archive-article-date">
-  <time datetime="2019-09-14T23:10:05.000Z" itemprop="datePublished">Sep 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/node-安装和升级/">node 安装和升级</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/Ubuntu-语言设置/" class="archive-article-date">
-  <time datetime="2019-09-14T22:47:18.000Z" itemprop="datePublished">Sep 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/Ubuntu-语言设置/">Ubuntu 语言设置</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/13/begin/" class="archive-article-date">
-  <time datetime="2019-09-13T01:25:15.000Z" itemprop="datePublished">Sep 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/13/begin/">Linux终端 拷贝 粘贴</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         
