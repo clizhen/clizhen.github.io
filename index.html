@@ -62,6 +62,158 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-this" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/21/js-this/" class="article-date">
+  <time datetime="2019-09-21T11:46:11.000Z" itemprop="datePublished">2019-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/21/js-this/">JS THIS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Javascript 的this绑定使用时容易混淆，是语言的一个设计失误。而Js的闭包是这门语言的精髓。其实this是由函数的调用方式决定的，this代表函数执行时的上下文，而函数的调用有五种</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ex1</span>(<span class="params">name</span>) </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Obj</span>(<span class="params">name</span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  ex1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ex1(<span class="string">'li'</span>); <span class="comment">//直接调用</span></span><br><span class="line">obj.ex1(<span class="string">'li'</span>); <span class="comment">//方法调用</span></span><br><span class="line">objnew = <span class="keyword">new</span> Obj(<span class="string">'li'</span>); <span class="comment">//构造器</span></span><br><span class="line">ex1.call(objnew ,<span class="string">'li'</span>); <span class="comment">//call方法</span></span><br><span class="line">ex1.apply(objnew ,[<span class="string">'li'</span>]);&amp;nbsp; <span class="comment">// apply 方法</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>函数直接执行: 严格模式下是undefine,非严格模式是global context.(浏览器中是Window对象).</li>
+<li>函数做为对象的方法被调用: this绑定到对象.</li>
+<li>函数做为构造器被调用(new): this绑定到创建的对象</li>
+<li>call / apply 调用时可指定this对象.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pro/2019/09/21/js-this/" data-id="ck0ti23yb000pqqpwtd4k43sm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-sed" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/21/sed/" class="article-date">
+  <time datetime="2019-09-21T11:33:04.000Z" itemprop="datePublished">2019-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/21/sed/">SED</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>两种执行方式</strong><br>-n 禁止默认输出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed [-n] [-e] <span class="string">'command'</span> file(s)</span><br><span class="line">sed [-n] -f scriptfile file(s)</span><br></pre></td></tr></table></figure>
+
+<p>command结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- [addr [,addr]] [!] action [arguments]</span><br><span class="line">- [/pattern/[,/pattern/]] &#123;</span><br><span class="line">  cmd</span><br><span class="line">  cmd</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>action</p>
+<ul>
+<li>a\ 拼接</li>
+<li>c\ 替换</li>
+<li>i\ 插入</li>
+<li>d 删除</li>
+<li>s 替换</li>
+<li>y 翻译</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pro/2019/09/21/sed/" data-id="ck0ti23yc000rqqpwxc9jkobv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-SQL2000-孤立用户修复" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/21/SQL2000-孤立用户修复/" class="article-date">
+  <time datetime="2019-09-21T11:23:55.000Z" itemprop="datePublished">2019-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/21/SQL2000-孤立用户修复/">SQL2000 孤立用户修复</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="孤立用户的产生"><a href="#孤立用户的产生" class="headerlink" title="孤立用户的产生"></a>孤立用户的产生</h3><p><em>当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。</em></p>
+<p>解决方法之一：使登录用户和数据库的孤立用户对应起来<br><strong>存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)</strong><br>– 列出孤立用户<br>  sp_change_users_login ‘report’<br>– 连接孤立用户(登录名已建)<br>  sp_change_users_login ‘update_one’,’用户名’,’登录名’<br>– 自动连接孤立用户<br>  sp_change_users_login ‘Auto_Fix’,’用户名’,NULL,’登录密码’</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pro/2019/09/21/SQL2000-孤立用户修复/" data-id="ck0ti23y8000lqqpwdlbtq0h7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Windows-AD-Time" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/18/Windows-AD-Time/" class="article-date">
@@ -108,7 +260,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/18/Windows-AD-Time/" data-id="ck0qnfquy000jx8pwjk3rrrmv" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/18/Windows-AD-Time/" data-id="ck0ti23y1000jqqpwm59hud28" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -170,7 +322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/18/KMS/" data-id="ck0qnfqup000gx8pw7ix720jp" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/18/KMS/" data-id="ck0ti23xu000gqqpwh4ng2k2j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -219,7 +371,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/16/shell-Example/" data-id="ck0qnfquh000bx8pwf5mith7g" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/16/shell-Example/" data-id="ck0ti23xq000bqqpwt96sjksj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -275,7 +427,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/16/vim-plugin/" data-id="ck0qnfquk000ex8pwp6n02o0l" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/16/vim-plugin/" data-id="ck0ti23xs000eqqpwoiv3q2en" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -329,7 +481,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck0qnfqug000ax8pwbot8tmgn" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck0ti23xk000aqqpwwe4tjqy0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -372,7 +524,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/15/SQL-XACT-ABORT/" data-id="ck0qnfqu30001x8pwr87smurt" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/15/SQL-XACT-ABORT/" data-id="ck0ti23x40001qqpw08uyvznj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -426,148 +578,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/15/收集的网站地址/" data-id="ck0qnfquc0006x8pw4a7zm0n3" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/15/收集的网站地址/" data-id="ck0ti23xg0006qqpwsya7038w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url/">url</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-node-安装和升级" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/15/node-安装和升级/" class="article-date">
-  <time datetime="2019-09-14T23:10:05.000Z" itemprop="datePublished">2019-09-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/node-安装和升级/">node 安装和升级</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>推荐使用nvm来管理node,<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">GitHub</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/15/node-安装和升级/" data-id="ck0qnfqua0005x8pw9cbee53z" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/">software</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Ubuntu-语言设置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/15/Ubuntu-语言设置/" class="article-date">
-  <time datetime="2019-09-14T22:47:18.000Z" itemprop="datePublished">2019-09-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/Ubuntu-语言设置/">Ubuntu 语言设置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>查看当前系统语言环境: locale / locale -a</li>
-<li>编辑配置文件 sudo vim /etc/default/locale (中文:zh_CN.UTF-8 ,英文:en_US:UTF-8).</li>
-<li>安装编码: sudo locale-gen zh_CN.UTF-8.</li>
-<li>重启.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/15/Ubuntu-语言设置/" data-id="ck0qnfqu80004x8pw9hdrav57" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-begin" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/13/begin/" class="article-date">
-  <time datetime="2019-09-13T01:25:15.000Z" itemprop="datePublished">2019-09-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/13/begin/">Linux终端 拷贝 粘贴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>不比Windows差哦</em></p>
-<ol>
-<li>在Linux中，使用光标选择要复制的文本，它会自动将文本复制到剪贴板。</li>
-<li>右键点击鼠标，完成粘贴.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/13/begin/" data-id="ck0qnfqtu0000x8pw2p7ahmnm" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -601,7 +615,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
     </div>
   </div>
 
@@ -611,7 +625,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/shell/" style="font-size: 15px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 10px;">sql</a> <a href="/tags/system/" style="font-size: 20px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
+      <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/program/" style="font-size: 10px;">program</a> <a href="/tags/shell/" style="font-size: 16.67px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 20px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 10px;">vim</a>
     </div>
   </div>
 
@@ -633,23 +647,23 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       <ul>
         
           <li>
+            <a href="/2019/09/21/js-this/">JS THIS</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/21/sed/">SED</a>
+          </li>
+        
+          <li>
+            <a href="/2019/09/21/SQL2000-孤立用户修复/">SQL2000 孤立用户修复</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/18/Windows-AD-Time/">Windows AD Time</a>
           </li>
         
           <li>
             <a href="/2019/09/18/KMS/">KMS</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/16/shell-Example/">Linux Shell Example</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/16/vim-plugin/">vim plugin</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/">Set TimeZone &amp; NTP In Ubuntu</a>
           </li>
         
       </ul>

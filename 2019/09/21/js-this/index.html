@@ -5,20 +5,20 @@
   
 
   
-  <title>vim plugin | li</title>
+  <title>JS THIS | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="插件管理使用pathogen插件列表:  ack.vim camelcasemotion nerdcommenter tabular undotree vim-airline vim-bufonly vim-easymotion vim-fugitve vim-markdown vim-surround">
-<meta name="keywords" content="vim">
+  <meta name="description" content="Javascript 的this绑定使用时容易混淆，是语言的一个设计失误。而Js的闭包是这门语言的精髓。其实this是由函数的调用方式决定的，this代表函数执行时的上下文，而函数的调用有五种 1234567891011function ex1(name) &amp;#123;&amp;#125;function Obj(name) &amp;#123;&amp;#125;var obj = &amp;#123;  ex1: funct">
+<meta name="keywords" content="program">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim plugin">
-<meta property="og:url" content="http://blog.lizhen.pro/2019/09/16/vim-plugin/index.html">
+<meta property="og:title" content="JS THIS">
+<meta property="og:url" content="http://blog.lizhen.pro/2019/09/21/js-this/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="插件管理使用pathogen插件列表:  ack.vim camelcasemotion nerdcommenter tabular undotree vim-airline vim-bufonly vim-easymotion vim-fugitve vim-markdown vim-surround">
+<meta property="og:description" content="Javascript 的this绑定使用时容易混淆，是语言的一个设计失误。而Js的闭包是这门语言的精髓。其实this是由函数的调用方式决定的，this代表函数执行时的上下文，而函数的调用有五种 1234567891011function ex1(name) &amp;#123;&amp;#125;function Obj(name) &amp;#123;&amp;#125;var obj = &amp;#123;  ex1: funct">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-16T12:32:58.576Z">
+<meta property="og:updated_time" content="2019-09-21T11:52:37.995Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vim plugin">
-<meta name="twitter:description" content="插件管理使用pathogen插件列表:  ack.vim camelcasemotion nerdcommenter tabular undotree vim-airline vim-bufonly vim-easymotion vim-fugitve vim-markdown vim-surround">
+<meta name="twitter:title" content="JS THIS">
+<meta name="twitter:description" content="Javascript 的this绑定使用时容易混淆，是语言的一个设计失误。而Js的闭包是这门语言的精髓。其实this是由函数的调用方式决定的，this代表函数执行时的上下文，而函数的调用有五种 1234567891011function ex1(name) &amp;#123;&amp;#125;function Obj(name) &amp;#123;&amp;#125;var obj = &amp;#123;  ex1: funct">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-vim-plugin" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-js-this" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/16/vim-plugin/" class="article-date">
-  <time datetime="2019-09-16T12:25:36.000Z" itemprop="datePublished">2019-09-16</time>
+    <a href="/2019/09/21/js-this/" class="article-date">
+  <time datetime="2019-09-21T11:46:11.000Z" itemprop="datePublished">2019-09-21</time>
 </a>
     
   <div class="article-category">
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vim plugin
+      JS THIS
     </h1>
   
 
@@ -91,28 +91,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>插件管理使用<a href="https://github.com/tpope/vim-pathogen" target="_blank" rel="noopener">pathogen</a><br>插件列表:</p>
+        <p>Javascript 的this绑定使用时容易混淆，是语言的一个设计失误。而Js的闭包是这门语言的精髓。其实this是由函数的调用方式决定的，this代表函数执行时的上下文，而函数的调用有五种</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ex1</span>(<span class="params">name</span>) </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Obj</span>(<span class="params">name</span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  ex1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ex1(<span class="string">'li'</span>); <span class="comment">//直接调用</span></span><br><span class="line">obj.ex1(<span class="string">'li'</span>); <span class="comment">//方法调用</span></span><br><span class="line">objnew = <span class="keyword">new</span> Obj(<span class="string">'li'</span>); <span class="comment">//构造器</span></span><br><span class="line">ex1.call(objnew ,<span class="string">'li'</span>); <span class="comment">//call方法</span></span><br><span class="line">ex1.apply(objnew ,[<span class="string">'li'</span>]);&amp;nbsp; <span class="comment">// apply 方法</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>ack.vim</li>
-<li>camelcasemotion</li>
-<li>nerdcommenter</li>
-<li>tabular</li>
-<li>undotree</li>
-<li>vim-airline</li>
-<li>vim-bufonly</li>
-<li>vim-easymotion</li>
-<li>vim-fugitve</li>
-<li>vim-markdown</li>
-<li>vim-surround</li>
+<li>函数直接执行: 严格模式下是undefine,非严格模式是global context.(浏览器中是Window对象).</li>
+<li>函数做为对象的方法被调用: this绑定到对象.</li>
+<li>函数做为构造器被调用(new): this绑定到创建的对象</li>
+<li>call / apply 调用时可指定this对象.</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/16/vim-plugin/" data-id="ck0ti23xs000eqqpwoiv3q2en" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/21/js-this/" data-id="ck0ti23yb000pqqpwtd4k43sm" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
 
     </footer>
   </div>
@@ -120,19 +115,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/16/shell-Example/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Linux Shell Example
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/09/21/sed/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Set TimeZone &amp; NTP In Ubuntu</div>
+      <div class="article-nav-title">SED</div>
     </a>
   
 </nav>
