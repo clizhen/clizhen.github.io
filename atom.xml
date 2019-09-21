@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>li</title>
+  <icon>http://blog.lizhen.pro/icon.png</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://blog.lizhen.pro/"/>
+  <updated>2019-09-21T11:52:37.995Z</updated>
+  <id>http://blog.lizhen.pro/</id>
+  
+  <author>
+    <name>li zhen</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS THIS</title>
+    <link href="http://blog.lizhen.pro/2019/09/21/js-this/"/>
+    <id>http://blog.lizhen.pro/2019/09/21/js-this/</id>
+    <published>2019-09-21T11:46:11.000Z</published>
+    <updated>2019-09-21T11:52:37.995Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Javascript 的this绑定使用时容易混淆，是语言的一个设计失误。而Js的闭包是这门语言的精髓。其实this是由函数的调用方式决定的，this代表函数执行时的上下文，而函数的调用有五种&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="program" scheme="http://blog.lizhen.pro/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SED</title>
+    <link href="http://blog.lizhen.pro/2019/09/21/sed/"/>
+    <id>http://blog.lizhen.pro/2019/09/21/sed/</id>
+    <published>2019-09-21T11:33:04.000Z</published>
+    <updated>2019-09-21T11:43:52.515Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;两种执行方式&lt;/strong&gt;&lt;br&gt;-n 禁止默认输出&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL2000 孤立用户修复</title>
+    <link href="http://blog.lizhen.pro/2019/09/21/SQL2000-%E5%AD%A4%E7%AB%8B%E7%94%A8%E6%88%B7%E4%BF%AE%E5%A4%8D/"/>
+    <id>http://blog.lizhen.pro/2019/09/21/SQL2000-孤立用户修复/</id>
+    <published>2019-09-21T11:23:55.000Z</published>
+    <updated>2019-09-21T11:30:33.600Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;孤立用户的产生&quot;&gt;&lt;a href=&quot;#孤立用户的产生&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pro/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows AD Time</title>
+    <link href="http://blog.lizhen.pro/2019/09/18/Windows-AD-Time/"/>
+    <id>http://blog.lizhen.pro/2019/09/18/Windows-AD-Time/</id>
+    <published>2019-09-18T13:16:54.000Z</published>
+    <updated>2019-09-19T12:04:26.739Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;/images/ad_time.gif&quot; alt&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Windows-AD域-单域-内的时间同步只需掌握以下几点&quot;&gt;&lt;a href=&quot;#Windows-AD域-单域-内的时间同步只需掌握以下几点&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+    
+    
+      <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KMS</title>
+    <link href="http://blog.lizhen.pro/2019/09/18/KMS/"/>
+    <id>http://blog.lizhen.pro/2019/09/18/KMS/</id>
+    <published>2019-09-18T12:10:13.000Z</published>
+    <updated>2019-09-20T12:25:46.414Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;命令行激活,请使用管理员权限&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;激活WINDOWS&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;slmgr /skms X.X.X.X. 设置kms服务器&lt;/li&gt;
+&lt;li&gt;slmgr /ipk xxxx-xxxx-xxxx-xxxx
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+    
+    
+      <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Shell Example</title>
+    <link href="http://blog.lizhen.pro/2019/09/16/shell-Example/"/>
+    <id>http://blog.lizhen.pro/2019/09/16/shell-Example/</id>
+    <published>2019-09-16T12:55:44.000Z</published>
+    <updated>2019-09-16T13:27:56.120Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;grep&quot;&gt;&lt;a href=&quot;#grep&quot; class=&quot;headerlink&quot; title=&quot;grep&quot;&gt;&lt;/a&gt;grep&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#-r
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+    
+      <category term="grep" scheme="http://blog.lizhen.pro/tags/grep/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vim plugin</title>
+    <link href="http://blog.lizhen.pro/2019/09/16/vim-plugin/"/>
+    <id>http://blog.lizhen.pro/2019/09/16/vim-plugin/</id>
+    <published>2019-09-16T12:25:36.000Z</published>
+    <updated>2019-09-16T12:32:58.576Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;插件管理使用&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="vim" scheme="http://blog.lizhen.pro/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Set TimeZone &amp; NTP In Ubuntu</title>
+    <link href="http://blog.lizhen.pro/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/"/>
+    <id>http://blog.lizhen.pro/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/</id>
+    <published>2019-09-16T11:57:48.000Z</published>
+    <updated>2019-09-16T12:10:53.667Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;TimeZone&quot;&gt;&lt;a href=&quot;#TimeZone&quot; class=&quot;headerlink&quot; title=&quot;TimeZone&quot;&gt;&lt;/a&gt;TimeZone&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;timedatectl
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL XACT_ABORT</title>
+    <link href="http://blog.lizhen.pro/2019/09/15/SQL-XACT-ABORT/"/>
+    <id>http://blog.lizhen.pro/2019/09/15/SQL-XACT-ABORT/</id>
+    <published>2019-09-15T04:48:34.000Z</published>
+    <updated>2019-09-15T12:51:35.380Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;When SET XACT_ABORT is ON, if a Transact-SQL statement raises a run-time error, the entire transaction is terminated and rolled back.
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pro/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>收集的网站地址</title>
+    <link href="http://blog.lizhen.pro/2019/09/15/%E6%94%B6%E9%9B%86%E7%9A%84%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9D%80/"/>
+    <id>http://blog.lizhen.pro/2019/09/15/收集的网站地址/</id>
+    <published>2019-09-15T04:16:56.000Z</published>
+    <updated>2019-09-15T12:24:38.552Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;th&gt;备注&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://favicon.io/favicon-generator/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="other" scheme="http://blog.lizhen.pro/categories/computer/other/"/>
+    
+    
+      <category term="url" scheme="http://blog.lizhen.pro/tags/url/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>node 安装和升级</title>
+    <link href="http://blog.lizhen.pro/2019/09/15/node-%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%87%E7%BA%A7/"/>
+    <id>http://blog.lizhen.pro/2019/09/15/node-安装和升级/</id>
+    <published>2019-09-14T23:10:05.000Z</published>
+    <updated>2019-09-15T07:13:22.074Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;推荐使用nvm来管理node,&lt;a href=&quot;https://github.com/creationix/nvm&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="software" scheme="http://blog.lizhen.pro/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 语言设置</title>
+    <link href="http://blog.lizhen.pro/2019/09/15/Ubuntu-%E8%AF%AD%E8%A8%80%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://blog.lizhen.pro/2019/09/15/Ubuntu-语言设置/</id>
+    <published>2019-09-14T22:47:18.000Z</published>
+    <updated>2019-09-15T06:50:23.185Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;查看当前系统语言环境: locale / locale -a&lt;/li&gt;
+&lt;li&gt;编辑配置文件 sudo vim /etc/default/locale (中文:zh_CN.UTF-8 ,英文:en_US:UTF-8).&lt;/li&gt;
+&lt;li&gt;安装编码: sudo
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux终端 拷贝 粘贴</title>
+    <link href="http://blog.lizhen.pro/2019/09/13/begin/"/>
+    <id>http://blog.lizhen.pro/2019/09/13/begin/</id>
+    <published>2019-09-13T01:25:15.000Z</published>
+    <updated>2019-09-13T07:30:15.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;em&gt;不比Windows差哦&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在Linux中，使用光标选择要复制的文本，它会自动将文本复制到剪贴板。&lt;/li&gt;
+&lt;li&gt;右键点击鼠标，完成粘贴.&lt;/li&gt;
+&lt;/ol&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://blog.lizhen.pro/2019/09/12/hello-world/"/>
+    <id>http://blog.lizhen.pro/2019/09/12/hello-world/</id>
+    <published>2019-09-12T13:00:50.919Z</published>
+    <updated>2019-09-12T13:00:50.919Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
