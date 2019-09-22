@@ -5,15 +5,20 @@
   
 
   
-  <title>Archives: 2019 | li</title>
+  <title>Bash中的环境变量拼接 | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="li">
-<meta property="og:url" content="http://blog.lizhen.pro/archives/2019/page/2/index.html">
+  <meta name="description" content="我们知道在Linux中取出变量使用$符号，当我第一次看到表达式PATH=$PATH:/usr/game时，我不能理解Shell是如何将字符串连接起来的,按照使用其他语言的经验，没有字符串连接运算符啊，后来偶然查到资料，前述表达式实际上就是PATH=”$PATH:/usr/game”，省略害死人。">
+<meta name="keywords" content="shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bash中的环境变量拼接">
+<meta property="og:url" content="http://blog.lizhen.pro/2019/09/22/Bash中的环境变量拼接/index.html">
 <meta property="og:site_name" content="li">
+<meta property="og:description" content="我们知道在Linux中取出变量使用$符号，当我第一次看到表达式PATH=$PATH:/usr/game时，我不能理解Shell是如何将字符串连接起来的,按照使用其他语言的经验，没有字符串连接运算符啊，后来偶然查到资料，前述表达式实际上就是PATH=”$PATH:/usr/game”，省略害死人。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-22T10:45:32.149Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="li">
+<meta name="twitter:title" content="Bash中的环境变量拼接">
+<meta name="twitter:description" content="我们知道在Linux中取出变量使用$符号，当我第一次看到表达式PATH=$PATH:/usr/game时，我不能理解Shell是如何将字符串连接起来的,按照使用其他语言的经验，没有字符串连接运算符啊，后来偶然查到资料，前述表达式实际上就是PATH=”$PATH:/usr/game”，省略害死人。">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -60,216 +65,67 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/18/KMS/" class="archive-article-date">
-  <time datetime="2019-09-18T12:10:13.000Z" itemprop="datePublished">Sep 18</time>
+        <section id="main"><article id="post-Bash中的环境变量拼接" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/22/Bash中的环境变量拼接/" class="article-date">
+  <time datetime="2019-09-22T10:44:27.000Z" itemprop="datePublished">2019-09-22</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/18/KMS/">KMS</a>
+    <h1 class="article-title" itemprop="name">
+      Bash中的环境变量拼接
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/16/shell-Example/" class="archive-article-date">
-  <time datetime="2019-09-16T12:55:44.000Z" itemprop="datePublished">Sep 16</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/shell-Example/">Linux Shell Example</a>
-    </h1>
-  
+        <p>  我们知道在Linux中取出变量使用$符号，当我第一次看到表达式PATH=$PATH:/usr/game时，我不能理解Shell是如何将字符串连接起来的,按照使用其他语言的经验，没有字符串连接运算符啊，后来偶然查到资料，前述表达式实际上就是PATH=”$PATH:/usr/game”，省略害死人。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/16/vim-plugin/" class="archive-article-date">
-  <time datetime="2019-09-16T12:25:36.000Z" itemprop="datePublished">Sep 16</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/vim-plugin/">vim plugin</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" class="archive-article-date">
-  <time datetime="2019-09-16T11:57:48.000Z" itemprop="datePublished">Sep 16</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pro/2019/09/22/Bash中的环境变量拼接/" data-id="ck0uxbcwb000zl1pwnd6ixk0f" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/">Set TimeZone &amp; NTP In Ubuntu</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/SQL-XACT-ABORT/" class="archive-article-date">
-  <time datetime="2019-09-15T04:48:34.000Z" itemprop="datePublished">Sep 15</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/SQL-XACT-ABORT/">SQL XACT_ABORT</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/09/22/Linux-Find-Example/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Linux Find Example
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/22/JS-函数上下文-闭包/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JS 函数上下文 闭包</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/收集的网站地址/" class="archive-article-date">
-  <time datetime="2019-09-15T04:16:56.000Z" itemprop="datePublished">Sep 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/收集的网站地址/">收集的网站地址</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/node-安装和升级/" class="archive-article-date">
-  <time datetime="2019-09-14T23:10:05.000Z" itemprop="datePublished">Sep 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/node-安装和升级/">node 安装和升级</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/Ubuntu-语言设置/" class="archive-article-date">
-  <time datetime="2019-09-14T22:47:18.000Z" itemprop="datePublished">Sep 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/Ubuntu-语言设置/">Ubuntu 语言设置</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/13/begin/" class="archive-article-date">
-  <time datetime="2019-09-13T01:25:15.000Z" itemprop="datePublished">Sep 13</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/13/begin/">Linux终端 拷贝 粘贴</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/12/hello-world/" class="archive-article-date">
-  <time datetime="2019-09-12T13:00:50.919Z" itemprop="datePublished">Sep 12</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
-  </nav>
 
 </section>
         

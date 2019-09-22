@@ -5,20 +5,20 @@
   
 
   
-  <title>Ubuntu 语言设置 | li</title>
+  <title>Linux Find Example | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="查看当前系统语言环境: locale / locale -a 编辑配置文件 sudo vim /etc/default/locale (中文:zh_CN.UTF-8 ,英文:en_US:UTF-8). 安装编码: sudo locale-gen zh_CN.UTF-8. 重启.">
-<meta name="keywords" content="system">
+  <meta name="description" content="名字 12find . -name &quot;lizhen.c&quot;; find / -iname &quot;lizhen.c&quot;  目录深度 12find -maxdepth 2 -name passwd ; find / -mindepth 3 - maxdepth 5 -name passwd  反向 1find -not -iname &quot;lizhen.c&quot;  执行命令 1find -iname &quot;lizhen">
+<meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu 语言设置">
-<meta property="og:url" content="http://blog.lizhen.pro/2019/09/15/Ubuntu-语言设置/index.html">
+<meta property="og:title" content="Linux Find Example">
+<meta property="og:url" content="http://blog.lizhen.pro/2019/09/22/Linux-Find-Example/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="查看当前系统语言环境: locale / locale -a 编辑配置文件 sudo vim /etc/default/locale (中文:zh_CN.UTF-8 ,英文:en_US:UTF-8). 安装编码: sudo locale-gen zh_CN.UTF-8. 重启.">
+<meta property="og:description" content="名字 12find . -name &quot;lizhen.c&quot;; find / -iname &quot;lizhen.c&quot;  目录深度 12find -maxdepth 2 -name passwd ; find / -mindepth 3 - maxdepth 5 -name passwd  反向 1find -not -iname &quot;lizhen.c&quot;  执行命令 1find -iname &quot;lizhen">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-15T06:50:23.185Z">
+<meta property="og:updated_time" content="2019-09-22T11:27:15.533Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu 语言设置">
-<meta name="twitter:description" content="查看当前系统语言环境: locale / locale -a 编辑配置文件 sudo vim /etc/default/locale (中文:zh_CN.UTF-8 ,英文:en_US:UTF-8). 安装编码: sudo locale-gen zh_CN.UTF-8. 重启.">
+<meta name="twitter:title" content="Linux Find Example">
+<meta name="twitter:description" content="名字 12find . -name &quot;lizhen.c&quot;; find / -iname &quot;lizhen.c&quot;  目录深度 12find -maxdepth 2 -name passwd ; find / -mindepth 3 - maxdepth 5 -name passwd  反向 1find -not -iname &quot;lizhen.c&quot;  执行命令 1find -iname &quot;lizhen">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -65,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Ubuntu-语言设置" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Linux-Find-Example" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/15/Ubuntu-语言设置/" class="article-date">
-  <time datetime="2019-09-14T22:47:18.000Z" itemprop="datePublished">2019-09-15</time>
+    <a href="/2019/09/22/Linux-Find-Example/" class="article-date">
+  <time datetime="2019-09-22T10:55:20.000Z" itemprop="datePublished">2019-09-22</time>
 </a>
     
   <div class="article-category">
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Ubuntu 语言设置
+      Linux Find Example
     </h1>
   
 
@@ -92,19 +92,52 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>查看当前系统语言环境: locale / locale -a</li>
-<li>编辑配置文件 sudo vim /etc/default/locale (中文:zh_CN.UTF-8 ,英文:en_US:UTF-8).</li>
-<li>安装编码: sudo locale-gen zh_CN.UTF-8.</li>
-<li>重启.</li>
+<li><p>名字</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">"lizhen.c"</span>; </span><br><span class="line">find / -iname <span class="string">"lizhen.c"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>目录深度</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find -maxdepth 2 -name passwd ; </span><br><span class="line">find / -mindepth 3 - maxdepth 5 -name passwd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>反向</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -not -iname <span class="string">"lizhen.c"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -iname <span class="string">"lizhen.c"</span> -<span class="built_in">exec</span> md5sum &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文件权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find. -perm -g=r -<span class="built_in">type</span> f -<span class="built_in">exec</span> ls -l &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>空文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -empty</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -size +100M</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Top 5 Big files</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> ls -s &#123;&#125; \; | sort  -n -r | head -5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>find files by comaring with the modification time of other file</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -newer ordinary_file</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>最近几天没有修改的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -mtime +60</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>xargs </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -name <span class="string">'*.log'</span> -print0 | xargs -0 cat</span><br></pre></td></tr></table></figure>
+
+<p><em>备注: xargs 默认是以空白字符 (空格, TAB, 换行符) 来分割记录的,当这些不能分割时需设置为NULL分割.</em></p>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/15/Ubuntu-语言设置/" data-id="ck0uxbcv70004l1pw95hc4iaq" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/22/Linux-Find-Example/" data-id="ck0uxbcwf0017l1pwujfim5h1" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -112,19 +145,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/15/node-安装和升级/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/09/22/Bash-For-Loop-Examples-转载/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          node 安装和升级
+          Bash For Loop Examples(转载)
         
       </div>
     </a>
   
   
-    <a href="/2019/09/13/begin/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/09/22/Bash中的环境变量拼接/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Linux终端 拷贝 粘贴</div>
+      <div class="article-nav-title">Bash中的环境变量拼接</div>
     </a>
   
 </nav>

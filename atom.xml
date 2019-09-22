@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pro/"/>
-  <updated>2019-09-21T11:52:37.995Z</updated>
+  <updated>2019-09-22T11:50:50.419Z</updated>
   <id>http://blog.lizhen.pro/</id>
   
   <author>
@@ -15,6 +15,185 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bash For Loop Examples(转载)</title>
+    <link href="http://blog.lizhen.pro/2019/09/22/Bash-For-Loop-Examples-%E8%BD%AC%E8%BD%BD/"/>
+    <id>http://blog.lizhen.pro/2019/09/22/Bash-For-Loop-Examples-转载/</id>
+    <published>2019-09-22T11:25:08.000Z</published>
+    <updated>2019-09-22T11:50:50.419Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;http://www.cyberciti.biz/faq/bash-for-loop/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;转载&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux Find Example</title>
+    <link href="http://blog.lizhen.pro/2019/09/22/Linux-Find-Example/"/>
+    <id>http://blog.lizhen.pro/2019/09/22/Linux-Find-Example/</id>
+    <published>2019-09-22T10:55:20.000Z</published>
+    <updated>2019-09-22T11:27:15.533Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;名字&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bash中的环境变量拼接</title>
+    <link href="http://blog.lizhen.pro/2019/09/22/Bash%E4%B8%AD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%8B%BC%E6%8E%A5/"/>
+    <id>http://blog.lizhen.pro/2019/09/22/Bash中的环境变量拼接/</id>
+    <published>2019-09-22T10:44:27.000Z</published>
+    <updated>2019-09-22T10:45:32.149Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS 函数上下文 闭包</title>
+    <link href="http://blog.lizhen.pro/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/"/>
+    <id>http://blog.lizhen.pro/2019/09/22/JS-函数上下文-闭包/</id>
+    <published>2019-09-22T10:37:48.000Z</published>
+    <updated>2019-09-22T10:40:42.155Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;在传统的OO语言中，函数的上下文是由声明函数时确定的，例如静态函数通过类名调用，上下文是类。非静态函数通过类的实例调用，上下文是类的实例。而在javascript中函数首先是一个对象，&lt;strong&gt;它的上下文不能由声明时确定，而是由谁来调用来确定&lt;/stron
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="program" scheme="http://blog.lizhen.pro/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL Server中的Collations和Unicode</title>
+    <link href="http://blog.lizhen.pro/2019/09/22/SQL-Server%E4%B8%AD%E7%9A%84Collations%E5%92%8CUnicode/"/>
+    <id>http://blog.lizhen.pro/2019/09/22/SQL-Server中的Collations和Unicode/</id>
+    <published>2019-09-22T10:27:23.000Z</published>
+    <updated>2019-09-22T10:28:58.633Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;  我们知道计算机只能识别0和1, 当我们在SQL SERVER中保存和读取字符时就遇到了编码问题，SQL中字符从编码角度来看可分为2类，Unicode (nchar ,nvarchar)和非Unicode(char ,varchar)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pro/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计原理 SOLID</title>
+    <link href="http://blog.lizhen.pro/2019/09/22/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-SOLID/"/>
+    <id>http://blog.lizhen.pro/2019/09/22/设计原理-SOLID/</id>
+    <published>2019-09-22T08:08:56.000Z</published>
+    <updated>2019-09-22T08:40:51.742Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A class should have only a single responsibility&lt;/strong&gt;&lt;br&gt;  &lt;em&gt;单一职责(&lt;strong&gt;S&lt;/strong&gt;)&lt;/em&gt;:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="other" scheme="http://blog.lizhen.pro/categories/computer/other/"/>
+    
+    
+      <category term="program" scheme="http://blog.lizhen.pro/tags/program/"/>
+    
+  </entry>
   
   <entry>
     <title>JS THIS</title>
