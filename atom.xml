@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pro/"/>
-  <updated>2019-09-22T11:50:50.419Z</updated>
+  <updated>2019-09-24T12:39:19.919Z</updated>
   <id>http://blog.lizhen.pro/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Install vim 8.1 on Ubuntu</title>
+    <link href="http://blog.lizhen.pro/2019/09/24/Vim-8-1-On-Ubuntu-install/"/>
+    <id>http://blog.lizhen.pro/2019/09/24/Vim-8-1-On-Ubuntu-install/</id>
+    <published>2019-09-24T12:09:37.000Z</published>
+    <updated>2019-09-24T12:39:19.919Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;使用不受信任的 ppa, 安装不受支持的软件.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="vim" scheme="http://blog.lizhen.pro/tags/vim/"/>
+    
+  </entry>
   
   <entry>
     <title>Bash For Loop Examples(转载)</title>
@@ -595,29 +627,6 @@
     
     
       <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://blog.lizhen.pro/2019/09/12/hello-world/"/>
-    <id>http://blog.lizhen.pro/2019/09/12/hello-world/</id>
-    <published>2019-09-12T13:00:50.919Z</published>
-    <updated>2019-09-12T13:00:50.919Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
