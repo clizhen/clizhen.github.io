@@ -62,6 +62,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux-Shell-set-vs-env" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/26/Linux-Shell-set-vs-env/" class="article-date">
+  <time datetime="2019-09-26T13:14:04.000Z" itemprop="datePublished">2019-09-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/26/Linux-Shell-set-vs-env/">Linux Shell set vs env</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program.</strong></p>
+<p>  Since set is a built-in shell command, it also sees sees shell-local variables (including shell functions). env on the other hand is an independent executable; it only sees the variables that the shell passes to it, or environment variables.</p>
+<p>  When you type a line like a=1 then a local variable is created (unless it already existed in the environment). Environment variables are created with export a=1</p>
+<p>  What we have here the difference between environment variables and shell variables. Under sh (and variants) all environment variables are automatically shell variables as well, but the same is not true in the other direction (this originally was to save memory (I think)).</p>
+<p>  Environment variables are stored in an area of memory that is kept when a process calls <strong>exec()</strong>, this means that programs you run from the command line get a copy of the environment. Shell variables do not stay over an exec(), but are copied in a fork(). When you create a subshell the shell calls <strong>fork() </strong>in order to copy the present process, but it does NOT call exec() because the process it requires is already there thus the shell variables are kept.</p>
+<p>  Also most shells set for you certain shell variables when you start them up, PS1 is a perfect example of this, and you may have also set them yourself in your shell initalisation file.</p>
+<p>  In summary, shell variables are used by the shell and copies it makes of itself, while environment variables are used by everything.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pro/2019/09/26/Linux-Shell-set-vs-env/" data-id="ck10q56tm001bm7pwei16igfv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Vim-8-1-On-Ubuntu-install" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/24/Vim-8-1-On-Ubuntu-install/" class="article-date">
@@ -102,7 +151,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/24/Vim-8-1-On-Ubuntu-install/" data-id="ck0xttxot001jv8pwoq4jj0jc" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/24/Vim-8-1-On-Ubuntu-install/" data-id="ck10q56ts001nm7pwxi4bk5rw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -161,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/22/Bash-For-Loop-Examples-转载/" data-id="ck0xttxoi000vv8pw5xqa4ipq" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/22/Bash-For-Loop-Examples-转载/" data-id="ck10q56ta000pm7pw0ank851j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -242,7 +291,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/22/Linux-Find-Example/" data-id="ck0xttxoo0017v8pw0qfq8gn9" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/22/Linux-Find-Example/" data-id="ck10q56tg000zm7pw4snefh0y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -285,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/22/Bash中的环境变量拼接/" data-id="ck0xttxok000zv8pwbafzqr75" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/22/Bash中的环境变量拼接/" data-id="ck10q56tk0017m7pwy1pe8nxc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -331,7 +380,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/22/JS-函数上下文-闭包/" data-id="ck0xttxom0013v8pw9zc0ob9t" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/22/JS-函数上下文-闭包/" data-id="ck10q56ti0013m7pw2bb99s4a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -374,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck0xttxoq001bv8pwfb6lrflq" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck10q56tq001jm7pwzvwionlx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -423,7 +472,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/22/设计原理-SOLID/" data-id="ck0xttxos001fv8pwu1vo896f" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/22/设计原理-SOLID/" data-id="ck10q56tu001rm7pwzefptqol" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -474,7 +523,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/21/js-this/" data-id="ck0xttxof000pv8pwaulaufpg" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/21/js-this/" data-id="ck10q56t7000lm7pwyeofhzki" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -531,54 +580,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/21/sed/" data-id="ck0xttxoh000rv8pwmiy0xlwr" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/21/sed/" data-id="ck10q56tc000rm7pwsycmtf0o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-SQL2000-孤立用户修复" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/21/SQL2000-孤立用户修复/" class="article-date">
-  <time datetime="2019-09-21T11:23:55.000Z" itemprop="datePublished">2019-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/21/SQL2000-孤立用户修复/">SQL2000 孤立用户修复</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="孤立用户的产生"><a href="#孤立用户的产生" class="headerlink" title="孤立用户的产生"></a>孤立用户的产生</h3><p><em>当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。</em></p>
-<p>解决方法之一：使登录用户和数据库的孤立用户对应起来<br><strong>存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)</strong><br>– 列出孤立用户<br>  sp_change_users_login ‘report’<br>– 连接孤立用户(登录名已建)<br>  sp_change_users_login ‘update_one’,’用户名’,’登录名’<br>– 自动连接孤立用户<br>  sp_change_users_login ‘Auto_Fix’,’用户名’,NULL,’登录密码’</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/21/SQL2000-孤立用户修复/" data-id="ck0xttxod000lv8pwvwcvyvma" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
 
     </footer>
   </div>
@@ -644,6 +649,10 @@
       <ul>
         
           <li>
+            <a href="/2019/09/26/Linux-Shell-set-vs-env/">Linux Shell set vs env</a>
+          </li>
+        
+          <li>
             <a href="/2019/09/24/Vim-8-1-On-Ubuntu-install/">Install vim 8.1 on Ubuntu</a>
           </li>
         
@@ -657,10 +666,6 @@
         
           <li>
             <a href="/2019/09/22/Bash中的环境变量拼接/">Bash中的环境变量拼接</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/22/JS-函数上下文-闭包/">JS 函数上下文 闭包</a>
           </li>
         
       </ul>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pro/"/>
-  <updated>2019-09-24T12:46:07.181Z</updated>
+  <updated>2019-09-26T13:19:28.315Z</updated>
   <id>http://blog.lizhen.pro/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux Shell set vs env</title>
+    <link href="http://blog.lizhen.pro/2019/09/26/Linux-Shell-set-vs-env/"/>
+    <id>http://blog.lizhen.pro/2019/09/26/Linux-Shell-set-vs-env/</id>
+    <published>2019-09-26T13:14:04.000Z</published>
+    <updated>2019-09-26T13:19:28.315Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>Install vim 8.1 on Ubuntu</title>
@@ -593,40 +622,6 @@
     
     
       <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux终端 拷贝 粘贴</title>
-    <link href="http://blog.lizhen.pro/2019/09/13/begin/"/>
-    <id>http://blog.lizhen.pro/2019/09/13/begin/</id>
-    <published>2019-09-13T01:25:15.000Z</published>
-    <updated>2019-09-13T07:30:15.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;em&gt;不比Windows差哦&lt;/em&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在Linux中，使用光标选择要复制的文本，它会自动将文本复制到剪贴板。&lt;/li&gt;
-&lt;li&gt;右键点击鼠标，完成粘贴.&lt;/li&gt;
-&lt;/ol&gt;
-
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
-    
-    
-      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
     
   </entry>
   
