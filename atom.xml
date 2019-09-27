@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pro/"/>
-  <updated>2019-09-26T13:19:28.315Z</updated>
+  <updated>2019-09-27T12:38:21.717Z</updated>
   <id>http://blog.lizhen.pro/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Linux Shell set vs env</title>
+    <title>Linux Shell SET vs ENV</title>
     <link href="http://blog.lizhen.pro/2019/09/26/Linux-Shell-set-vs-env/"/>
     <id>http://blog.lizhen.pro/2019/09/26/Linux-Shell-set-vs-env/</id>
     <published>2019-09-26T13:14:04.000Z</published>
-    <updated>2019-09-26T13:19:28.315Z</updated>
+    <updated>2019-09-27T12:38:21.717Z</updated>
     
     <summary type="html">
     
