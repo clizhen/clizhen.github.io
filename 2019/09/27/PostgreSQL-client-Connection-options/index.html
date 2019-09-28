@@ -5,20 +5,20 @@
   
 
   
-  <title>KMS | li</title>
+  <title>PostgreSQL client Connection options | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="命令行激活,请使用管理员权限 激活WINDOWS  slmgr /skms X.X.X.X. 设置kms服务器 slmgr /ipk xxxx-xxxx-xxxx-xxxx 更换Key slmgr /ato 激活  激活OFFICE  ospp.vbs(C:\program files\microsoft office\officeXX) 注意32位版x86目录 cscript ospp.vbs">
-<meta name="keywords" content="system">
+  <meta name="description" content="PostgreSQL 客户端常用的连接参数注意:密码是不可能写在命令行上的,设置密码用.pgpass,环境变量 12345Connection options:    -d, --dbname=DBNAME     -h, --host=HOSTNAME    -p, --port=PORT    -U, --username=NAME connect as specified database">
+<meta name="keywords" content="sql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="KMS">
-<meta property="og:url" content="http://blog.lizhen.pro/2019/09/18/KMS/index.html">
+<meta property="og:title" content="PostgreSQL client Connection options">
+<meta property="og:url" content="http://blog.lizhen.pro/2019/09/27/PostgreSQL-client-Connection-options/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="命令行激活,请使用管理员权限 激活WINDOWS  slmgr /skms X.X.X.X. 设置kms服务器 slmgr /ipk xxxx-xxxx-xxxx-xxxx 更换Key slmgr /ato 激活  激活OFFICE  ospp.vbs(C:\program files\microsoft office\officeXX) 注意32位版x86目录 cscript ospp.vbs">
+<meta property="og:description" content="PostgreSQL 客户端常用的连接参数注意:密码是不可能写在命令行上的,设置密码用.pgpass,环境变量 12345Connection options:    -d, --dbname=DBNAME     -h, --host=HOSTNAME    -p, --port=PORT    -U, --username=NAME connect as specified database">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T12:25:46.414Z">
+<meta property="og:updated_time" content="2019-09-28T01:38:17.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KMS">
-<meta name="twitter:description" content="命令行激活,请使用管理员权限 激活WINDOWS  slmgr /skms X.X.X.X. 设置kms服务器 slmgr /ipk xxxx-xxxx-xxxx-xxxx 更换Key slmgr /ato 激活  激活OFFICE  ospp.vbs(C:\program files\microsoft office\officeXX) 注意32位版x86目录 cscript ospp.vbs">
+<meta name="twitter:title" content="PostgreSQL client Connection options">
+<meta name="twitter:description" content="PostgreSQL 客户端常用的连接参数注意:密码是不可能写在命令行上的,设置密码用.pgpass,环境变量 12345Connection options:    -d, --dbname=DBNAME     -h, --host=HOSTNAME    -p, --port=PORT    -U, --username=NAME connect as specified database">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -65,14 +65,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-KMS" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-PostgreSQL-client-Connection-options" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/18/KMS/" class="article-date">
-  <time datetime="2019-09-18T12:10:13.000Z" itemprop="datePublished">2019-09-18</time>
+    <a href="/2019/09/27/PostgreSQL-client-Connection-options/" class="article-date">
+  <time datetime="2019-09-27T13:31:28.000Z" itemprop="datePublished">2019-09-27</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
   </div>
 
   </div>
@@ -83,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      KMS
+      PostgreSQL client Connection options
     </h1>
   
 
@@ -91,34 +91,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>命令行激活,请使用管理员权限</strong></p>
-<p>激活WINDOWS</p>
-<ol>
-<li>slmgr /skms X.X.X.X. 设置kms服务器</li>
-<li>slmgr /ipk xxxx-xxxx-xxxx-xxxx 更换Key</li>
-<li>slmgr /ato 激活</li>
-</ol>
-<p>激活OFFICE</p>
-<ol>
-<li>ospp.vbs(C:\program files\microsoft office\officeXX) 注意32位版x86目录</li>
-<li>cscript ospp.vbs /sethst:X.X.X.X</li>
-<li>cscript ospp.vbs /act</li>
-</ol>
-<p>其他</p>
+        <p><strong>PostgreSQL 客户端常用的连接参数</strong><br><em>注意:密码是不可能写在命令行上的,设置密码用.pgpass,环境变量</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Connection options:</span><br><span class="line">    -d, --dbname=DBNAME </span><br><span class="line">    -h, --host=HOSTNAME</span><br><span class="line">    -p, --port=PORT</span><br><span class="line">    -U, --username=NAME connect as specified database user</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用环境变量 连接PostgreSQL</strong></p>
 <ul>
-<li>wmic os get caption 查看系统版本</li>
-<li>slmgr /dlv 详细许可证信息</li>
-<li><a href="https://github.com/Wind4/vlmcsd" target="_blank" rel="noopener">kms服务器</a></li>
-<li><a href="https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener">序列号</a></li>
+<li>PGHOST</li>
+<li>PGPORT</li>
+<li>PGUSER</li>
+<li>PGPASSWORD</li>
+<li>PGDATABASE</li>
 </ul>
+<p><strong>使用.pgpass 连接PostgreSQL</strong><br>在你的HOME目录下创建.pgpass文件,字段可用*<br>格式: <strong>hostname:port:database:username:password</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 0600 ~/.pgpass</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pro/2019/09/18/KMS/" data-id="ck12w47ha000jdapw9uqnjw3g" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pro/2019/09/27/PostgreSQL-client-Connection-options/" data-id="ck12w47j5002gdapwvpxvdcxo" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
 
     </footer>
   </div>
@@ -126,19 +120,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/18/Windows-AD-Time/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Windows AD Time
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/16/shell-Example/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/09/26/Linux-Shell-set-vs-env/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Linux Shell Example</div>
+      <div class="article-nav-title">Linux Shell SET vs ENV</div>
     </a>
   
 </nav>

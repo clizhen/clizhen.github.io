@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pro/"/>
-  <updated>2019-09-27T12:38:21.717Z</updated>
+  <updated>2019-09-28T01:38:17.047Z</updated>
   <id>http://blog.lizhen.pro/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PostgreSQL client Connection options</title>
+    <link href="http://blog.lizhen.pro/2019/09/27/PostgreSQL-client-Connection-options/"/>
+    <id>http://blog.lizhen.pro/2019/09/27/PostgreSQL-client-Connection-options/</id>
+    <published>2019-09-27T13:31:28.000Z</published>
+    <updated>2019-09-28T01:38:17.047Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;PostgreSQL 客户端常用的连接参数&lt;/strong&gt;&lt;br&gt;&lt;em&gt;注意:密码是不可能写在命令行上的,设置密码用.pgpass,环境变量&lt;/em&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pro/tags/sql/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux Shell SET vs ENV</title>
@@ -590,38 +620,6 @@
     
     
       <category term="software" scheme="http://blog.lizhen.pro/tags/software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu 语言设置</title>
-    <link href="http://blog.lizhen.pro/2019/09/15/Ubuntu-%E8%AF%AD%E8%A8%80%E8%AE%BE%E7%BD%AE/"/>
-    <id>http://blog.lizhen.pro/2019/09/15/Ubuntu-语言设置/</id>
-    <published>2019-09-14T22:47:18.000Z</published>
-    <updated>2019-09-15T06:50:23.185Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;查看当前系统语言环境: locale / locale -a&lt;/li&gt;
-&lt;li&gt;编辑配置文件 sudo vim /etc/default/locale (中文:zh_CN.UTF-8 ,英文:en_US:UTF-8).&lt;/li&gt;
-&lt;li&gt;安装编码: sudo
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
-    
-    
-      <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
     
   </entry>
   
