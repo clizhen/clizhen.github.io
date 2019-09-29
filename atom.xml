@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>li</title>
-  <icon>http://blog.lizhen.pro/icon.png</icon>
-  
+  <icon>http://blog.lizhen.pub/icon.png</icon>
+  <subtitle>908878422@qq.com</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.lizhen.pro/"/>
+  <link href="http://blog.lizhen.pub/"/>
   <updated>2019-09-28T01:38:17.047Z</updated>
-  <id>http://blog.lizhen.pro/</id>
+  <id>http://blog.lizhen.pub/</id>
   
   <author>
     <name>li zhen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>PostgreSQL client Connection options</title>
-    <link href="http://blog.lizhen.pro/2019/09/27/PostgreSQL-client-Connection-options/"/>
-    <id>http://blog.lizhen.pro/2019/09/27/PostgreSQL-client-Connection-options/</id>
+    <link href="http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/"/>
+    <id>http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/</id>
     <published>2019-09-27T13:31:28.000Z</published>
     <updated>2019-09-28T01:38:17.047Z</updated>
     
@@ -37,19 +37,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pro/tags/sql/"/>
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>Linux Shell SET vs ENV</title>
-    <link href="http://blog.lizhen.pro/2019/09/26/Linux-Shell-set-vs-env/"/>
-    <id>http://blog.lizhen.pro/2019/09/26/Linux-Shell-set-vs-env/</id>
+    <link href="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/"/>
+    <id>http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/</id>
     <published>2019-09-26T13:14:04.000Z</published>
     <updated>2019-09-27T12:38:21.717Z</updated>
     
@@ -66,19 +66,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>Install vim 8.1 on Ubuntu</title>
-    <link href="http://blog.lizhen.pro/2019/09/24/Vim-8-1-On-Ubuntu-install/"/>
-    <id>http://blog.lizhen.pro/2019/09/24/Vim-8-1-On-Ubuntu-install/</id>
+    <link href="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/"/>
+    <id>http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/</id>
     <published>2019-09-24T12:09:37.000Z</published>
     <updated>2019-09-24T12:46:07.181Z</updated>
     
@@ -98,19 +98,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="vim" scheme="http://blog.lizhen.pro/tags/vim/"/>
+      <category term="vim" scheme="http://blog.lizhen.pub/tags/vim/"/>
     
   </entry>
   
   <entry>
     <title>Bash For Loop Examples(转载)</title>
-    <link href="http://blog.lizhen.pro/2019/09/22/Bash-For-Loop-Examples-%E8%BD%AC%E8%BD%BD/"/>
-    <id>http://blog.lizhen.pro/2019/09/22/Bash-For-Loop-Examples-转载/</id>
+    <link href="http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-%E8%BD%AC%E8%BD%BD/"/>
+    <id>http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-转载/</id>
     <published>2019-09-22T11:25:08.000Z</published>
     <updated>2019-09-22T11:50:50.419Z</updated>
     
@@ -128,19 +128,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>Linux Find Example</title>
-    <link href="http://blog.lizhen.pro/2019/09/22/Linux-Find-Example/"/>
-    <id>http://blog.lizhen.pro/2019/09/22/Linux-Find-Example/</id>
+    <link href="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/"/>
+    <id>http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/</id>
     <published>2019-09-22T10:55:20.000Z</published>
     <updated>2019-09-22T11:27:15.533Z</updated>
     
@@ -159,19 +159,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>Bash中的环境变量拼接</title>
-    <link href="http://blog.lizhen.pro/2019/09/22/Bash%E4%B8%AD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%8B%BC%E6%8E%A5/"/>
-    <id>http://blog.lizhen.pro/2019/09/22/Bash中的环境变量拼接/</id>
+    <link href="http://blog.lizhen.pub/2019/09/22/Bash%E4%B8%AD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%8B%BC%E6%8E%A5/"/>
+    <id>http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/</id>
     <published>2019-09-22T10:44:27.000Z</published>
     <updated>2019-09-22T10:45:32.149Z</updated>
     
@@ -188,19 +188,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>JS 函数上下文 闭包</title>
-    <link href="http://blog.lizhen.pro/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/"/>
-    <id>http://blog.lizhen.pro/2019/09/22/JS-函数上下文-闭包/</id>
+    <link href="http://blog.lizhen.pub/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/"/>
+    <id>http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/</id>
     <published>2019-09-22T10:37:48.000Z</published>
     <updated>2019-09-22T10:40:42.155Z</updated>
     
@@ -218,19 +218,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="program" scheme="http://blog.lizhen.pro/tags/program/"/>
+      <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
     
   </entry>
   
   <entry>
     <title>SQL Server中的Collations和Unicode</title>
-    <link href="http://blog.lizhen.pro/2019/09/22/SQL-Server%E4%B8%AD%E7%9A%84Collations%E5%92%8CUnicode/"/>
-    <id>http://blog.lizhen.pro/2019/09/22/SQL-Server中的Collations和Unicode/</id>
+    <link href="http://blog.lizhen.pub/2019/09/22/SQL-Server%E4%B8%AD%E7%9A%84Collations%E5%92%8CUnicode/"/>
+    <id>http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/</id>
     <published>2019-09-22T10:27:23.000Z</published>
     <updated>2019-09-22T10:28:58.633Z</updated>
     
@@ -247,19 +247,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pro/tags/sql/"/>
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>设计原理 SOLID</title>
-    <link href="http://blog.lizhen.pro/2019/09/22/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-SOLID/"/>
-    <id>http://blog.lizhen.pro/2019/09/22/设计原理-SOLID/</id>
+    <link href="http://blog.lizhen.pub/2019/09/22/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-SOLID/"/>
+    <id>http://blog.lizhen.pub/2019/09/22/设计原理-SOLID/</id>
     <published>2019-09-22T08:08:56.000Z</published>
     <updated>2019-09-22T08:40:51.742Z</updated>
     
@@ -277,19 +277,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="other" scheme="http://blog.lizhen.pro/categories/computer/other/"/>
+      <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
     
     
-      <category term="program" scheme="http://blog.lizhen.pro/tags/program/"/>
+      <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
     
   </entry>
   
   <entry>
     <title>JS THIS</title>
-    <link href="http://blog.lizhen.pro/2019/09/21/js-this/"/>
-    <id>http://blog.lizhen.pro/2019/09/21/js-this/</id>
+    <link href="http://blog.lizhen.pub/2019/09/21/js-this/"/>
+    <id>http://blog.lizhen.pub/2019/09/21/js-this/</id>
     <published>2019-09-21T11:46:11.000Z</published>
     <updated>2019-09-21T11:52:37.995Z</updated>
     
@@ -307,19 +307,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="program" scheme="http://blog.lizhen.pro/tags/program/"/>
+      <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
     
   </entry>
   
   <entry>
     <title>SED</title>
-    <link href="http://blog.lizhen.pro/2019/09/21/sed/"/>
-    <id>http://blog.lizhen.pro/2019/09/21/sed/</id>
+    <link href="http://blog.lizhen.pub/2019/09/21/sed/"/>
+    <id>http://blog.lizhen.pub/2019/09/21/sed/</id>
     <published>2019-09-21T11:33:04.000Z</published>
     <updated>2019-09-21T11:43:52.515Z</updated>
     
@@ -337,19 +337,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>SQL2000 孤立用户修复</title>
-    <link href="http://blog.lizhen.pro/2019/09/21/SQL2000-%E5%AD%A4%E7%AB%8B%E7%94%A8%E6%88%B7%E4%BF%AE%E5%A4%8D/"/>
-    <id>http://blog.lizhen.pro/2019/09/21/SQL2000-孤立用户修复/</id>
+    <link href="http://blog.lizhen.pub/2019/09/21/SQL2000-%E5%AD%A4%E7%AB%8B%E7%94%A8%E6%88%B7%E4%BF%AE%E5%A4%8D/"/>
+    <id>http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/</id>
     <published>2019-09-21T11:23:55.000Z</published>
     <updated>2019-09-21T11:30:33.600Z</updated>
     
@@ -366,19 +366,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pro/tags/sql/"/>
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>Windows AD Time</title>
-    <link href="http://blog.lizhen.pro/2019/09/18/Windows-AD-Time/"/>
-    <id>http://blog.lizhen.pro/2019/09/18/Windows-AD-Time/</id>
+    <link href="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/"/>
+    <id>http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/</id>
     <published>2019-09-18T13:16:54.000Z</published>
     <updated>2019-09-19T12:04:26.739Z</updated>
     
@@ -396,19 +396,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
+      <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
     
   </entry>
   
   <entry>
     <title>KMS</title>
-    <link href="http://blog.lizhen.pro/2019/09/18/KMS/"/>
-    <id>http://blog.lizhen.pro/2019/09/18/KMS/</id>
+    <link href="http://blog.lizhen.pub/2019/09/18/KMS/"/>
+    <id>http://blog.lizhen.pub/2019/09/18/KMS/</id>
     <published>2019-09-18T12:10:13.000Z</published>
     <updated>2019-09-20T12:25:46.414Z</updated>
     
@@ -429,19 +429,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
+      <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
     
   </entry>
   
   <entry>
     <title>Linux Shell Example</title>
-    <link href="http://blog.lizhen.pro/2019/09/16/shell-Example/"/>
-    <id>http://blog.lizhen.pro/2019/09/16/shell-Example/</id>
+    <link href="http://blog.lizhen.pub/2019/09/16/shell-Example/"/>
+    <id>http://blog.lizhen.pub/2019/09/16/shell-Example/</id>
     <published>2019-09-16T12:55:44.000Z</published>
     <updated>2019-09-16T13:27:56.120Z</updated>
     
@@ -458,21 +458,21 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pro/tags/shell/"/>
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
-      <category term="grep" scheme="http://blog.lizhen.pro/tags/grep/"/>
+      <category term="grep" scheme="http://blog.lizhen.pub/tags/grep/"/>
     
   </entry>
   
   <entry>
     <title>vim plugin</title>
-    <link href="http://blog.lizhen.pro/2019/09/16/vim-plugin/"/>
-    <id>http://blog.lizhen.pro/2019/09/16/vim-plugin/</id>
+    <link href="http://blog.lizhen.pub/2019/09/16/vim-plugin/"/>
+    <id>http://blog.lizhen.pub/2019/09/16/vim-plugin/</id>
     <published>2019-09-16T12:25:36.000Z</published>
     <updated>2019-09-16T12:32:58.576Z</updated>
     
@@ -489,19 +489,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="vim" scheme="http://blog.lizhen.pro/tags/vim/"/>
+      <category term="vim" scheme="http://blog.lizhen.pub/tags/vim/"/>
     
   </entry>
   
   <entry>
     <title>Set TimeZone &amp; NTP In Ubuntu</title>
-    <link href="http://blog.lizhen.pro/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/"/>
-    <id>http://blog.lizhen.pro/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/</id>
+    <link href="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/"/>
+    <id>http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/</id>
     <published>2019-09-16T11:57:48.000Z</published>
     <updated>2019-09-16T12:10:53.667Z</updated>
     
@@ -519,19 +519,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="system" scheme="http://blog.lizhen.pro/tags/system/"/>
+      <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
     
   </entry>
   
   <entry>
     <title>SQL XACT_ABORT</title>
-    <link href="http://blog.lizhen.pro/2019/09/15/SQL-XACT-ABORT/"/>
-    <id>http://blog.lizhen.pro/2019/09/15/SQL-XACT-ABORT/</id>
+    <link href="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/"/>
+    <id>http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/</id>
     <published>2019-09-15T04:48:34.000Z</published>
     <updated>2019-09-15T12:51:35.380Z</updated>
     
@@ -548,19 +548,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pro/categories/computer/windows/"/>
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pro/tags/sql/"/>
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>收集的网站地址</title>
-    <link href="http://blog.lizhen.pro/2019/09/15/%E6%94%B6%E9%9B%86%E7%9A%84%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9D%80/"/>
-    <id>http://blog.lizhen.pro/2019/09/15/收集的网站地址/</id>
+    <link href="http://blog.lizhen.pub/2019/09/15/%E6%94%B6%E9%9B%86%E7%9A%84%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9D%80/"/>
+    <id>http://blog.lizhen.pub/2019/09/15/收集的网站地址/</id>
     <published>2019-09-15T04:16:56.000Z</published>
     <updated>2019-09-15T12:24:38.552Z</updated>
     
@@ -585,19 +585,19 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="other" scheme="http://blog.lizhen.pro/categories/computer/other/"/>
+      <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
     
     
-      <category term="url" scheme="http://blog.lizhen.pro/tags/url/"/>
+      <category term="url" scheme="http://blog.lizhen.pub/tags/url/"/>
     
   </entry>
   
   <entry>
     <title>node 安装和升级</title>
-    <link href="http://blog.lizhen.pro/2019/09/15/node-%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%87%E7%BA%A7/"/>
-    <id>http://blog.lizhen.pro/2019/09/15/node-安装和升级/</id>
+    <link href="http://blog.lizhen.pub/2019/09/15/node-%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%87%E7%BA%A7/"/>
+    <id>http://blog.lizhen.pub/2019/09/15/node-安装和升级/</id>
     <published>2019-09-14T23:10:05.000Z</published>
     <updated>2019-09-15T07:13:22.074Z</updated>
     
@@ -614,12 +614,12 @@
     </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pro/categories/computer/"/>
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pro/categories/computer/linux/"/>
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="software" scheme="http://blog.lizhen.pro/tags/software/"/>
+      <category term="software" scheme="http://blog.lizhen.pub/tags/software/"/>
     
   </entry>
   
