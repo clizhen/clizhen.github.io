@@ -5,18 +5,24 @@
   
 
   
-  <title>Category: linux | li</title>
+  <title>postgresql bitmap heap/index scan | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="IT Computer Program">
-<meta property="og:type" content="website">
-<meta property="og:title" content="li">
-<meta property="og:url" content="http://blog.lizhen.pub/categories/computer/linux/index.html">
+  <meta name="description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
+<meta name="keywords" content="sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="postgresql bitmap heap&#x2F;index scan">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="IT Computer Program">
+<meta property="og:description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.1.png">
+<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.2.png">
+<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.3.png">
+<meta property="og:updated_time" content="2019-10-04T04:28:23.714Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="li">
-<meta name="twitter:description" content="IT Computer Program">
+<meta name="twitter:title" content="postgresql bitmap heap&#x2F;index scan">
+<meta name="twitter:description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
+<meta name="twitter:image" content="http://blog.lizhen.pub/images/bitmapIndex.1.png">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -67,216 +73,65 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="archive-article-date">
-  <time datetime="2019-10-04T03:51:28.000Z" itemprop="datePublished">Oct 4</time>
+        <section id="main"><article id="post-postgresql-bitmap-heap-index-scan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="article-date">
+  <time datetime="2019-10-04T03:51:28.000Z" itemprop="datePublished">2019-10-04</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/04/postgresql-bitmap-heap-index-scan/">postgresql bitmap heap/index scan</a>
+    <h1 class="article-title" itemprop="name">
+      postgresql bitmap heap/index scan
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/29/PostgreSQL-Schema/" class="archive-article-date">
-  <time datetime="2019-09-29T08:48:10.000Z" itemprop="datePublished">Sep 29</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/29/PostgreSQL-Schema/">PostgreSQL -- Schema</a>
-    </h1>
-  
+        <p><a href="https://dba.stackexchange.com/questions/119386/understanding-bitmap-heap-scan-and-bitmap-index-scan" target="_blank" rel="noopener">转载</a></p>
+<ul>
+<li><p>index scan 扫描索引,查找后<strong>立即</strong>读取对应数据页,是<em>随机读</em>.</p>
+</li>
+<li><p>bitmap heap scan 最终是<em>顺序读</em>. 一般用在多个索引同时使用时或单个索引多次使用时.</p>
+</li>
+</ul>
+<p>举例(先bitmap index scan 再bitmap heap scan):<br><img src="/images/bitmapIndex.1.png" alt><br>bitmaps 按为与<br><img src="/images/bitmapIndex.2.png" alt><br>bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked).<br><img src="/images/bitmapIndex.3.png" alt>.</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/29/PostgreSQL-Move-Data-Directory/" class="archive-article-date">
-  <time datetime="2019-09-29T08:18:31.000Z" itemprop="datePublished">Sep 29</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/29/PostgreSQL-Move-Data-Directory/">PostgreSQL -- Move Data Directory</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/27/PostgreSQL-client-Connection-options/" class="archive-article-date">
-  <time datetime="2019-09-27T13:31:28.000Z" itemprop="datePublished">Sep 27</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ck1bmpdyw001ruupwuxxkb6nd" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/27/PostgreSQL-client-Connection-options/">PostgreSQL client Connection options</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/26/Linux-Shell-set-vs-env/" class="archive-article-date">
-  <time datetime="2019-09-26T13:14:04.000Z" itemprop="datePublished">Sep 26</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/26/Linux-Shell-set-vs-env/">Linux Shell SET vs ENV</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/09/29/PostgreSQL-Schema/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PostgreSQL -- Schema</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/24/Vim-8-1-On-Ubuntu-install/" class="archive-article-date">
-  <time datetime="2019-09-24T12:09:37.000Z" itemprop="datePublished">Sep 24</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/24/Vim-8-1-On-Ubuntu-install/">Install vim 8.1 on Ubuntu</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/Bash-For-Loop-Examples-转载/" class="archive-article-date">
-  <time datetime="2019-09-22T11:25:08.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/Bash-For-Loop-Examples-转载/">Bash For Loop Examples(转载)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/Linux-Find-Example/" class="archive-article-date">
-  <time datetime="2019-09-22T10:55:20.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/Linux-Find-Example/">Linux Find Example</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/Bash中的环境变量拼接/" class="archive-article-date">
-  <time datetime="2019-09-22T10:44:27.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/Bash中的环境变量拼接/">Bash中的环境变量拼接</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/JS-函数上下文-闭包/" class="archive-article-date">
-  <time datetime="2019-09-22T10:37:48.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/JS-函数上下文-闭包/">JS 函数上下文 闭包</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/categories/computer/linux/page/2/">2</a><a class="extend next" rel="next" href="/categories/computer/linux/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         

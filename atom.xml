@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-09-28T01:38:17.047Z</updated>
+  <updated>2019-10-04T04:28:23.714Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,93 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>postgresql bitmap heap/index scan</title>
+    <link href="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/"/>
+    <id>http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/</id>
+    <published>2019-10-04T03:51:28.000Z</published>
+    <updated>2019-10-04T04:28:23.714Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://dba.stackexchange.com/questions/119386/understanding-bitmap-heap-scan-and-bitmap-index-scan&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PostgreSQL -- Schema</title>
+    <link href="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/"/>
+    <id>http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/</id>
+    <published>2019-09-29T08:48:10.000Z</published>
+    <updated>2019-09-29T10:16:47.881Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;postgresql-架构命令&quot;&gt;&lt;a href=&quot;#postgresql-架构命令&quot; class=&quot;headerlink&quot; title=&quot;postgresql 架构命令&quot;&gt;&lt;/a&gt;postgresql 架构命令&lt;/h3&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PostgreSQL -- Move Data Directory</title>
+    <link href="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/"/>
+    <id>http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/</id>
+    <published>2019-09-29T08:18:31.000Z</published>
+    <updated>2019-09-29T08:44:24.643Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;移动PostgreSQL数据目录&quot;&gt;&lt;a href=&quot;#移动PostgreSQL数据目录&quot; class=&quot;headerlink&quot; title=&quot;移动PostgreSQL数据目录&quot;&gt;&lt;/a&gt;移动PostgreSQL数据目录&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+    
+  </entry>
   
   <entry>
     <title>PostgreSQL client Connection options</title>
@@ -525,101 +612,6 @@
     
     
       <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL XACT_ABORT</title>
-    <link href="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/"/>
-    <id>http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/</id>
-    <published>2019-09-15T04:48:34.000Z</published>
-    <updated>2019-09-15T12:51:35.380Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;When SET XACT_ABORT is ON, if a Transact-SQL statement raises a run-time error, the entire transaction is terminated and rolled back.
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
-    
-    
-      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>收集的网站地址</title>
-    <link href="http://blog.lizhen.pub/2019/09/15/%E6%94%B6%E9%9B%86%E7%9A%84%E7%BD%91%E7%AB%99%E5%9C%B0%E5%9D%80/"/>
-    <id>http://blog.lizhen.pub/2019/09/15/收集的网站地址/</id>
-    <published>2019-09-15T04:16:56.000Z</published>
-    <updated>2019-09-15T12:24:38.552Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;内容&lt;/th&gt;
-&lt;th&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://favicon.io/favicon-generator/&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
-    
-    
-      <category term="url" scheme="http://blog.lizhen.pub/tags/url/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>node 安装和升级</title>
-    <link href="http://blog.lizhen.pub/2019/09/15/node-%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%87%E7%BA%A7/"/>
-    <id>http://blog.lizhen.pub/2019/09/15/node-安装和升级/</id>
-    <published>2019-09-14T23:10:05.000Z</published>
-    <updated>2019-09-15T07:13:22.074Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;推荐使用nvm来管理node,&lt;a href=&quot;https://github.com/creationix/nvm&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="software" scheme="http://blog.lizhen.pub/tags/software/"/>
     
   </entry>
   

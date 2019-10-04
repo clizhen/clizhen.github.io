@@ -5,18 +5,20 @@
   
 
   
-  <title>Category: linux | li</title>
+  <title>PostgreSQL -- Schema | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="IT Computer Program">
-<meta property="og:type" content="website">
-<meta property="og:title" content="li">
-<meta property="og:url" content="http://blog.lizhen.pub/categories/computer/linux/index.html">
+  <meta name="description" content="postgresql 架构命令123456789Select current_schema();Show search_path;Create Schema ...;Alter Schema ...;Drop Schema ...;Set search_path To ..., ...Grant Usage On Schema schema_name To user_nameGrant Creat">
+<meta name="keywords" content="sql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PostgreSQL -- Schema">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="IT Computer Program">
+<meta property="og:description" content="postgresql 架构命令123456789Select current_schema();Show search_path;Create Schema ...;Alter Schema ...;Drop Schema ...;Set search_path To ..., ...Grant Usage On Schema schema_name To user_nameGrant Creat">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-29T10:16:47.881Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="li">
-<meta name="twitter:description" content="IT Computer Program">
+<meta name="twitter:title" content="PostgreSQL -- Schema">
+<meta name="twitter:description" content="postgresql 架构命令123456789Select current_schema();Show search_path;Create Schema ...;Alter Schema ...;Drop Schema ...;Set search_path To ..., ...Grant Usage On Schema schema_name To user_nameGrant Creat">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -67,216 +69,68 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="archive-article-date">
-  <time datetime="2019-10-04T03:51:28.000Z" itemprop="datePublished">Oct 4</time>
+        <section id="main"><article id="post-PostgreSQL-Schema" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/29/PostgreSQL-Schema/" class="article-date">
+  <time datetime="2019-09-29T08:48:10.000Z" itemprop="datePublished">2019-09-29</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/04/postgresql-bitmap-heap-index-scan/">postgresql bitmap heap/index scan</a>
+    <h1 class="article-title" itemprop="name">
+      PostgreSQL -- Schema
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/29/PostgreSQL-Schema/" class="archive-article-date">
-  <time datetime="2019-09-29T08:48:10.000Z" itemprop="datePublished">Sep 29</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/29/PostgreSQL-Schema/">PostgreSQL -- Schema</a>
-    </h1>
-  
+        <h3 id="postgresql-架构命令"><a href="#postgresql-架构命令" class="headerlink" title="postgresql 架构命令"></a>postgresql 架构命令</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> current_schema();</span><br><span class="line"><span class="keyword">Show</span> search_path;</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Alter</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Drop</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Set</span> search_path <span class="keyword">To</span> ..., ...</span><br><span class="line"><span class="keyword">Grant</span> <span class="keyword">Usage</span> <span class="keyword">On</span> <span class="keyword">Schema</span> schema_name <span class="keyword">To</span> user_name</span><br><span class="line"><span class="keyword">Grant</span> <span class="keyword">Create</span> <span class="keyword">On</span> <span class="keyword">Schema</span> schema_name <span class="keyword">To</span> user_name;</span><br><span class="line">\dn <span class="comment">#get the list of schemas;</span></span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/29/PostgreSQL-Move-Data-Directory/" class="archive-article-date">
-  <time datetime="2019-09-29T08:18:31.000Z" itemprop="datePublished">Sep 29</time>
-</a>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/29/PostgreSQL-Move-Data-Directory/">PostgreSQL -- Move Data Directory</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/27/PostgreSQL-client-Connection-options/" class="archive-article-date">
-  <time datetime="2019-09-27T13:31:28.000Z" itemprop="datePublished">Sep 27</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/" data-id="ck1bmpdzx003buupwe7bd0zcd" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/27/PostgreSQL-client-Connection-options/">PostgreSQL client Connection options</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/26/Linux-Shell-set-vs-env/" class="archive-article-date">
-  <time datetime="2019-09-26T13:14:04.000Z" itemprop="datePublished">Sep 26</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/26/Linux-Shell-set-vs-env/">Linux Shell SET vs ENV</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          postgresql bitmap heap/index scan
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/09/29/PostgreSQL-Move-Data-Directory/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">PostgreSQL -- Move Data Directory</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/24/Vim-8-1-On-Ubuntu-install/" class="archive-article-date">
-  <time datetime="2019-09-24T12:09:37.000Z" itemprop="datePublished">Sep 24</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/24/Vim-8-1-On-Ubuntu-install/">Install vim 8.1 on Ubuntu</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/Bash-For-Loop-Examples-转载/" class="archive-article-date">
-  <time datetime="2019-09-22T11:25:08.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/Bash-For-Loop-Examples-转载/">Bash For Loop Examples(转载)</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/Linux-Find-Example/" class="archive-article-date">
-  <time datetime="2019-09-22T10:55:20.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/Linux-Find-Example/">Linux Find Example</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/Bash中的环境变量拼接/" class="archive-article-date">
-  <time datetime="2019-09-22T10:44:27.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/Bash中的环境变量拼接/">Bash中的环境变量拼接</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/JS-函数上下文-闭包/" class="archive-article-date">
-  <time datetime="2019-09-22T10:37:48.000Z" itemprop="datePublished">Sep 22</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/JS-函数上下文-闭包/">JS 函数上下文 闭包</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-  <nav id="page-nav">
-    
-    <span class="page-number current">1</span><a class="page-number" href="/categories/computer/linux/page/2/">2</a><a class="extend next" rel="next" href="/categories/computer/linux/page/2/">Next &raquo;</a>
-  </nav>
 
 </section>
         
