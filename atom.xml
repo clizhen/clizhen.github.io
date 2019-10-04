@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-10-04T04:28:23.714Z</updated>
+  <updated>2019-10-04T07:43:28.299Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>postgresql show file loaction</title>
+    <link href="http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/"/>
+    <id>http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/</id>
+    <published>2019-10-04T07:39:27.000Z</published>
+    <updated>2019-10-04T07:43:28.299Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;显示文件位置的命令&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>postgresql reload config</title>
+    <link href="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/"/>
+    <id>http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/</id>
+    <published>2019-10-04T07:27:00.000Z</published>
+    <updated>2019-10-04T07:38:23.286Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;command-line reload&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+    
+  </entry>
   
   <entry>
     <title>postgresql bitmap heap/index scan</title>
@@ -553,65 +614,6 @@
       <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
       <category term="grep" scheme="http://blog.lizhen.pub/tags/grep/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vim plugin</title>
-    <link href="http://blog.lizhen.pub/2019/09/16/vim-plugin/"/>
-    <id>http://blog.lizhen.pub/2019/09/16/vim-plugin/</id>
-    <published>2019-09-16T12:25:36.000Z</published>
-    <updated>2019-09-16T12:32:58.576Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;插件管理使用&lt;a href=&quot;https://github.com/tpope/vim-pathogen&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="vim" scheme="http://blog.lizhen.pub/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Set TimeZone &amp; NTP In Ubuntu</title>
-    <link href="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/"/>
-    <id>http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/</id>
-    <published>2019-09-16T11:57:48.000Z</published>
-    <updated>2019-09-16T12:10:53.667Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;TimeZone&quot;&gt;&lt;a href=&quot;#TimeZone&quot; class=&quot;headerlink&quot; title=&quot;TimeZone&quot;&gt;&lt;/a&gt;TimeZone&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;timedatectl
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
     
   </entry>
   

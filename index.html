@@ -69,6 +69,102 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-postgresql-show-file-loaction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-show-file-loaction/" class="article-date">
+  <time datetime="2019-10-04T07:39:27.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/04/postgresql-show-file-loaction/">postgresql show file loaction</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>显示文件位置的命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> data_directory;</span><br><span class="line"><span class="keyword">SHOW</span> config_file;</span><br><span class="line"><span class="keyword">Select</span> <span class="keyword">name</span> ,setting <span class="keyword">From</span> pg_settings <span class="keyword">Where</span> <span class="keyword">category</span> = <span class="string">'File Locations'</span>;</span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">all</span>;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/" data-id="ck1bto9gp002ahnpwli26dixc" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-postgresql-reload-config" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-reload-config/" class="article-date">
+  <time datetime="2019-10-04T07:27:00.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/04/postgresql-reload-config/">postgresql reload config</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>command-line reload</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#方法1</span></span><br><span class="line">sudo service postgresql-x.x reload</span><br><span class="line"><span class="comment">#方法2</span></span><br><span class="line">su -c root <span class="string">'service postgresql-x.x reload'</span></span><br><span class="line"><span class="comment">#方法3</span></span><br><span class="line">su - postges</span><br><span class="line">/usr/bin/pg_ctl reload</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>using sql reload</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> pg_reload_conf();</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/" data-id="ck1bto9gn0027hnpwjj744fx1" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-postgresql-bitmap-heap-index-scan" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="article-date">
@@ -107,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ck1bmpdyw001ruupwuxxkb6nd" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ck1bto9gk0023hnpw3wx7hnkl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -151,7 +247,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/" data-id="ck1bmpdzx003buupwe7bd0zcd" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/" data-id="ck1bto9gi001zhnpw8gs6xn3b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -206,7 +302,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/" data-id="ck1bmpdzy003cuupwrk7iex9n" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/" data-id="ck1bto9gf001vhnpwf08vtrkh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -262,7 +358,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/" data-id="ck1bmpdyu001nuupw4v1ig3nj" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/" data-id="ck1bto9gc001rhnpwgnsn6wao" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -311,7 +407,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/" data-id="ck1bmpdyq001fuupwciltovcx" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/" data-id="ck1bto9g9001nhnpwwpm87zmg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -363,7 +459,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/" data-id="ck1bmpdys001juupwpmaqug6v" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/" data-id="ck1bto9g7001jhnpwh8o0boll" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -422,7 +518,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-转载/" data-id="ck1bmpdye000ruupwm539oi9b" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-转载/" data-id="ck1bto9fv000vhnpwr2xpzaiq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -503,99 +599,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/" data-id="ck1bmpdym0017uupwzd7gbqdr" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/" data-id="ck1bto9g20017hnpwhql2g7d0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Bash中的环境变量拼接" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/22/Bash中的环境变量拼接/" class="article-date">
-  <time datetime="2019-09-22T10:44:27.000Z" itemprop="datePublished">2019-09-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/Bash中的环境变量拼接/">Bash中的环境变量拼接</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  我们知道在Linux中取出变量使用$符号，当我第一次看到表达式PATH=$PATH:/usr/game时，我不能理解Shell是如何将字符串连接起来的,按照使用其他语言的经验，没有字符串连接运算符啊，后来偶然查到资料，前述表达式实际上就是PATH=”$PATH:/usr/game”，省略害死人。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/" data-id="ck1bmpdyi000zuupwv4gdugdd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JS-函数上下文-闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/22/JS-函数上下文-闭包/" class="article-date">
-  <time datetime="2019-09-22T10:37:48.000Z" itemprop="datePublished">2019-09-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/JS-函数上下文-闭包/">JS 函数上下文 闭包</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>在传统的OO语言中，函数的上下文是由声明函数时确定的，例如静态函数通过类名调用，上下文是类。非静态函数通过类的实例调用，上下文是类的实例。而在javascript中函数首先是一个对象，<strong>它的上下文不能由声明时确定，而是由谁来调用来确定</strong>。也可通过使用call()和apply()来强行指定上下文。</li>
-<li><strong>闭包就是一个函数实例，该实例执行时需要的局部变量，来自其声明处。</strong></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/" data-id="ck1bmpdyg000vuupw4dezkjw2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
 
     </footer>
   </div>
@@ -639,7 +646,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/program/" style="font-size: 15px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 20px;">sql</a> <a href="/tags/system/" style="font-size: 17.5px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12.5px;">vim</a>
+      <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/program/" style="font-size: 14px;">program</a> <a href="/tags/shell/" style="font-size: 18px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 20px;">sql</a> <a href="/tags/system/" style="font-size: 16px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12px;">vim</a>
     </div>
   </div>
 
@@ -661,6 +668,14 @@
       <ul>
         
           <li>
+            <a href="/2019/10/04/postgresql-show-file-loaction/">postgresql show file loaction</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/04/postgresql-reload-config/">postgresql reload config</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/">postgresql bitmap heap/index scan</a>
           </li>
         
@@ -670,14 +685,6 @@
         
           <li>
             <a href="/2019/09/29/PostgreSQL-Move-Data-Directory/">PostgreSQL -- Move Data Directory</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/27/PostgreSQL-client-Connection-options/">PostgreSQL client Connection options</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/26/Linux-Shell-set-vs-env/">Linux Shell SET vs ENV</a>
           </li>
         
       </ul>
