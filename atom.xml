@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-10-04T07:43:28.299Z</updated>
+  <updated>2019-10-05T11:29:39.584Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/"/>
     <id>http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/</id>
     <published>2019-10-04T07:39:27.000Z</published>
-    <updated>2019-10-04T07:43:28.299Z</updated>
+    <updated>2019-10-05T11:29:39.584Z</updated>
     
     <summary type="html">
     
@@ -42,7 +42,7 @@
       <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
     
   </entry>
   
@@ -51,7 +51,7 @@
     <link href="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/"/>
     <id>http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/</id>
     <published>2019-10-04T07:27:00.000Z</published>
-    <updated>2019-10-04T07:38:23.286Z</updated>
+    <updated>2019-10-05T11:29:39.584Z</updated>
     
     <summary type="html">
     
@@ -73,7 +73,7 @@
       <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
     
   </entry>
   
@@ -82,7 +82,7 @@
     <link href="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/"/>
     <id>http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/</id>
     <published>2019-10-04T03:51:28.000Z</published>
-    <updated>2019-10-04T04:28:23.714Z</updated>
+    <updated>2019-10-05T11:29:39.584Z</updated>
     
     <summary type="html">
     
@@ -102,7 +102,7 @@
       <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
     
   </entry>
   
@@ -111,7 +111,7 @@
     <link href="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/"/>
     <id>http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/</id>
     <published>2019-09-29T08:48:10.000Z</published>
-    <updated>2019-09-29T10:16:47.881Z</updated>
+    <updated>2019-10-05T11:29:39.584Z</updated>
     
     <summary type="html">
     
@@ -131,7 +131,7 @@
       <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
     
   </entry>
   
@@ -140,7 +140,7 @@
     <link href="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/"/>
     <id>http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/</id>
     <published>2019-09-29T08:18:31.000Z</published>
-    <updated>2019-09-29T08:44:24.643Z</updated>
+    <updated>2019-10-05T11:29:39.584Z</updated>
     
     <summary type="html">
     
@@ -160,7 +160,7 @@
       <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
     
   </entry>
   
@@ -169,7 +169,7 @@
     <link href="http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/"/>
     <id>http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/</id>
     <published>2019-09-27T13:31:28.000Z</published>
-    <updated>2019-09-28T01:38:17.047Z</updated>
+    <updated>2019-10-05T11:29:39.584Z</updated>
     
     <summary type="html">
     
@@ -190,7 +190,7 @@
       <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
+      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
     
   </entry>
   
@@ -469,7 +469,7 @@
     <link href="http://blog.lizhen.pub/2019/09/21/sed/"/>
     <id>http://blog.lizhen.pub/2019/09/21/sed/</id>
     <published>2019-09-21T11:33:04.000Z</published>
-    <updated>2019-09-21T11:43:52.515Z</updated>
+    <updated>2019-10-05T11:46:01.910Z</updated>
     
     <summary type="html">
     
