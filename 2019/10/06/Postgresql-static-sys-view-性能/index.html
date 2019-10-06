@@ -5,20 +5,20 @@
   
 
   
-  <title>Install vim 8.1 on Ubuntu | li</title>
+  <title>Postgresql static sys-view 性能 | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用不受信任的 ppa, 安装不受支持的软件.  123sudo add-apt-repository ppa:jonathonf/vimsudo apt-get updatesudo apt-get install vim   删除 vim  1sudo apt-get remove vim">
-<meta name="keywords" content="vim">
+  <meta name="description" content="pg_stat_activity(观察当前系统活动),每个连接一行记录. 12\d pg_stat_activitySelect pid ,query_stat ,state_change ,state ,query From pg_stat_activity;   pg_cancel_backend. (Select pg_cancel_backend(pid)),终止pid,保留连接. pg">
+<meta name="keywords" content="postgresql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Install vim 8.1 on Ubuntu">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/index.html">
+<meta property="og:title" content="Postgresql static sys-view 性能">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-性能/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="使用不受信任的 ppa, 安装不受支持的软件.  123sudo add-apt-repository ppa:jonathonf/vimsudo apt-get updatesudo apt-get install vim   删除 vim  1sudo apt-get remove vim">
+<meta property="og:description" content="pg_stat_activity(观察当前系统活动),每个连接一行记录. 12\d pg_stat_activitySelect pid ,query_stat ,state_change ,state ,query From pg_stat_activity;   pg_cancel_backend. (Select pg_cancel_backend(pid)),终止pid,保留连接. pg">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-24T12:46:07.181Z">
+<meta property="og:updated_time" content="2019-10-06T06:23:46.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Install vim 8.1 on Ubuntu">
-<meta name="twitter:description" content="使用不受信任的 ppa, 安装不受支持的软件.  123sudo add-apt-repository ppa:jonathonf/vimsudo apt-get updatesudo apt-get install vim   删除 vim  1sudo apt-get remove vim">
+<meta name="twitter:title" content="Postgresql static sys-view 性能">
+<meta name="twitter:description" content="pg_stat_activity(观察当前系统活动),每个连接一行记录. 12\d pg_stat_activitySelect pid ,query_stat ,state_change ,state ,query From pg_stat_activity;   pg_cancel_backend. (Select pg_cancel_backend(pid)),终止pid,保留连接. pg">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -69,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Vim-8-1-On-Ubuntu-install" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Postgresql-static-sys-view-性能" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/24/Vim-8-1-On-Ubuntu-install/" class="article-date">
-  <time datetime="2019-09-24T12:09:37.000Z" itemprop="datePublished">2019-09-24</time>
+    <a href="/2019/10/06/Postgresql-static-sys-view-性能/" class="article-date">
+  <time datetime="2019-10-06T05:55:53.000Z" itemprop="datePublished">2019-10-06</time>
 </a>
     
   <div class="article-category">
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Install vim 8.1 on Ubuntu
+      Postgresql static sys-view 性能
     </h1>
   
 
@@ -95,24 +95,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>使用不受信任的 ppa, 安装不受支持的软件.</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:jonathonf/vim</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install vim</span><br></pre></td></tr></table></figure>
+        <ol>
+<li><p>pg_stat_activity(观察当前系统活动),每个连接一行记录.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_activity</span><br><span class="line"><span class="keyword">Select</span> pid ,query_stat ,state_change ,state ,<span class="keyword">query</span> <span class="keyword">From</span> pg_stat_activity;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>删除 vim</li>
+<li>pg_cancel_backend. (Select pg_cancel_backend(pid)),终止pid,保留连接.</li>
+<li>pg_terminate_backend.</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove vim</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查数据库,pg_state_database</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d pg_state_database</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查表 pg_stat_user_tables ,pg_statio_user_tables</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_user_tables</span><br><span class="line"><span class="keyword">Select</span> schemaname, relname ,seq_scan ,seq_tup_read,</span><br><span class="line">  seq_tup_read /seq_scan <span class="keyword">as</span> <span class="keyword">avg</span>, idx_scan</span><br><span class="line"><span class="keyword">From</span> pg_stat_user_tables</span><br><span class="line"><span class="keyword">Where</span> seq_scan &gt; <span class="number">0</span></span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">By</span> seq_tup_read <span class="keyword">Desc</span></span><br><span class="line"><span class="keyword">Limit</span> <span class="number">25</span>;</span><br><span class="line">\d pg_statio_user_tables</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>深入索引 pg_stat_user_indexes</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_user_indexes</span><br><span class="line"><span class="keyword">Select</span> schemaname ,relname ,indexrelname ,idx_scan,</span><br><span class="line">  pg_size_pretty(pg_relation_size(indexrelid)) <span class="keyword">as</span> idx_size,</span><br><span class="line">  pg_size_pretty(<span class="keyword">sum</span>(pg_relation_size(indexrelid))</span><br><span class="line">                  <span class="keyword">Over</span> (<span class="keyword">Order</span> <span class="keyword">By</span> idx_scan ,indexrelid)) <span class="keyword">as</span> total</span><br><span class="line"><span class="keyword">From</span> pg_stat_user_indexes</span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">By</span> <span class="number">6</span>;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/" data-id="ck1elp8bw002hj6pw14zlbqeb" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-性能/" data-id="ck1elp8cp0030j6pwcojwpzzg" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
 
     </footer>
   </div>
@@ -120,19 +130,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/26/Linux-Shell-set-vs-env/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Linux Shell SET vs ENV
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/22/Bash-For-Loop-Examples-转载/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/04/postgresql-show-file-loaction/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Bash For Loop Examples(转载)</div>
+      <div class="article-nav-title">Postgresql show file loaction</div>
     </a>
   
 </nav>
