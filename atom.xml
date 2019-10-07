@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-10-06T06:23:46.678Z</updated>
+  <updated>2019-10-07T06:35:21.155Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Postgresql static sys-view 性能</title>
-    <link href="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/"/>
-    <id>http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-性能/</id>
-    <published>2019-10-06T05:55:53.000Z</published>
-    <updated>2019-10-06T06:23:46.678Z</updated>
+    <title>Postgresql join</title>
+    <link href="http://blog.lizhen.pub/2019/10/06/Postgresql-join/"/>
+    <id>http://blog.lizhen.pub/2019/10/06/Postgresql-join/</id>
+    <published>2019-10-06T12:21:04.000Z</published>
+    <updated>2019-10-07T06:35:21.155Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,36 @@
       
         
         
-          &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;pg_stat_activity(观察当前系统活动),每个连接一行记录.&lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+          &lt;h3 id=&quot;postgresql-中join的选项&quot;&gt;&lt;a href=&quot;#postgresql-中join的选项&quot; class=&quot;headerlink&quot; title=&quot;postgresql 中join的选项&quot;&gt;&lt;/a&gt;postgresql
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Postgresql static sys-view 性能</title>
+    <link href="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/"/>
+    <id>http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-性能/</id>
+    <published>2019-10-06T05:55:53.000Z</published>
+    <updated>2019-10-07T06:37:29.292Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://www.cybertec-postgresql.com/en/3-ways-to-detect-slow-queries-in-postgresql/&quot; target=&quot;_blank&quot;
         
       
     
@@ -569,39 +596,6 @@
         
           &lt;p&gt;&lt;img src=&quot;/images/ad_time.gif&quot; alt&gt;&lt;/p&gt;
 &lt;h3 id=&quot;Windows-AD域-单域-内的时间同步只需掌握以下几点&quot;&gt;&lt;a href=&quot;#Windows-AD域-单域-内的时间同步只需掌握以下几点&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
-    
-    
-      <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KMS</title>
-    <link href="http://blog.lizhen.pub/2019/09/18/KMS/"/>
-    <id>http://blog.lizhen.pub/2019/09/18/KMS/</id>
-    <published>2019-09-18T12:10:13.000Z</published>
-    <updated>2019-09-20T12:25:46.414Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;命令行激活,请使用管理员权限&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;激活WINDOWS&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;slmgr /skms X.X.X.X. 设置kms服务器&lt;/li&gt;
-&lt;li&gt;slmgr /ipk xxxx-xxxx-xxxx-xxxx
         
       
     

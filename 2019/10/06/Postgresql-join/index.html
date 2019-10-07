@@ -5,20 +5,20 @@
   
 
   
-  <title>SQL Server中的Collations和Unicode | li</title>
+  <title>Postgresql join | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我们知道计算机只能识别0和1, 当我们在SQL SERVER中保存和读取字符时就遇到了编码问题，SQL中字符从编码角度来看可分为2类，Unicode (nchar ,nvarchar)和非Unicode(char ,varchar) ,对于Unicode来说每个字符的码是一样的，不同语言不同版本的工具处理Unicode不存在问题。对于非Unicode 的字符，每个字符的码不一样，依赖于所属的代">
-<meta name="keywords" content="sql">
+  <meta name="description" content="postgresql 中join的选项 Nested Loops(O(n2)) 123456for x in table1:  for y in table2:    if x.field == y.field      issue row    else      keep doing  Hash joins 123Hash join  Sequentialscan table 1  Seque">
+<meta name="keywords" content="postgresql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL Server中的Collations和Unicode">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/index.html">
+<meta property="og:title" content="Postgresql join">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/10/06/Postgresql-join/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="我们知道计算机只能识别0和1, 当我们在SQL SERVER中保存和读取字符时就遇到了编码问题，SQL中字符从编码角度来看可分为2类，Unicode (nchar ,nvarchar)和非Unicode(char ,varchar) ,对于Unicode来说每个字符的码是一样的，不同语言不同版本的工具处理Unicode不存在问题。对于非Unicode 的字符，每个字符的码不一样，依赖于所属的代">
+<meta property="og:description" content="postgresql 中join的选项 Nested Loops(O(n2)) 123456for x in table1:  for y in table2:    if x.field == y.field      issue row    else      keep doing  Hash joins 123Hash join  Sequentialscan table 1  Seque">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-22T10:28:58.633Z">
+<meta property="og:updated_time" content="2019-10-07T06:35:21.155Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SQL Server中的Collations和Unicode">
-<meta name="twitter:description" content="我们知道计算机只能识别0和1, 当我们在SQL SERVER中保存和读取字符时就遇到了编码问题，SQL中字符从编码角度来看可分为2类，Unicode (nchar ,nvarchar)和非Unicode(char ,varchar) ,对于Unicode来说每个字符的码是一样的，不同语言不同版本的工具处理Unicode不存在问题。对于非Unicode 的字符，每个字符的码不一样，依赖于所属的代">
+<meta name="twitter:title" content="Postgresql join">
+<meta name="twitter:description" content="postgresql 中join的选项 Nested Loops(O(n2)) 123456for x in table1:  for y in table2:    if x.field == y.field      issue row    else      keep doing  Hash joins 123Hash join  Sequentialscan table 1  Seque">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -69,14 +69,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-SQL-Server中的Collations和Unicode" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Postgresql-join" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/22/SQL-Server中的Collations和Unicode/" class="article-date">
-  <time datetime="2019-09-22T10:27:23.000Z" itemprop="datePublished">2019-09-22</time>
+    <a href="/2019/10/06/Postgresql-join/" class="article-date">
+  <time datetime="2019-10-06T12:21:04.000Z" itemprop="datePublished">2019-10-06</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
   </div>
 
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      SQL Server中的Collations和Unicode
+      Postgresql join
     </h1>
   
 
@@ -95,15 +95,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  我们知道计算机只能识别0和1, 当我们在SQL SERVER中保存和读取字符时就遇到了编码问题，SQL中字符从编码角度来看可分为2类，Unicode (nchar ,nvarchar)和非Unicode(char ,varchar) ,对于Unicode来说每个字符的码是一样的，不同语言不同版本的工具处理Unicode不存在问题。对于非Unicode 的字符，每个字符的码不一样，依赖于所属的代码页，只有知道了代码页，才能正确解释构成字符的0和1。而查询Collations就能得到代码页，同时Collations 对所有的Unicode 和非Unicode 规定了排序规则：大小写、重音、假名等。对于nvarchar ,nchar来说无关Collations中的代码页。</p>
+        <h3 id="postgresql-中join的选项"><a href="#postgresql-中join的选项" class="headerlink" title="postgresql 中join的选项"></a>postgresql 中join的选项</h3><ul>
+<li><p><strong>Nested Loops(O(n2))</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for x in table1:</span><br><span class="line">  for y in table2:</span><br><span class="line">    if x.field == y.field</span><br><span class="line">      issue row</span><br><span class="line">    else</span><br><span class="line">      keep doing</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Hash joins</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hash join</span><br><span class="line">  Sequentialscan table 1</span><br><span class="line">  Sequentialscan table 2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Merge joins(O(n * log(n)))</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Merge join</span><br><span class="line">  Sort table 1</span><br><span class="line">    Sequetial scan table 1</span><br><span class="line">  Sort table 2</span><br><span class="line">    Sequetial scan table 2</span><br><span class="line">---</span><br><span class="line">Merge join</span><br><span class="line">  Index scan table 1</span><br><span class="line">  Index scan table 2</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck1g2n5t4001bpqpwbcn1yvts" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-join/" data-id="ck1g2n5tt002fpqpw3s861n99" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
 
     </footer>
   </div>
@@ -111,19 +122,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/22/JS-函数上下文-闭包/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          JS 函数上下文 闭包
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/22/设计原理-SOLID/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/06/Postgresql-static-sys-view-性能/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">设计原理 SOLID</div>
+      <div class="article-nav-title">Postgresql static sys-view 性能</div>
     </a>
   
 </nav>
