@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-10-07T06:35:21.155Z</updated>
+  <updated>2019-10-10T11:45:10.470Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker entrypoint vs cmd</title>
+    <link href="http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/"/>
+    <id>http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/</id>
+    <published>2019-10-09T13:49:38.000Z</published>
+    <updated>2019-10-10T11:45:10.470Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="docker" scheme="http://blog.lizhen.pub/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>华为交换机 ACL 单向流量控制</title>
+    <link href="http://blog.lizhen.pub/2019/10/08/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA-ACL-%E5%8D%95%E5%90%91%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/"/>
+    <id>http://blog.lizhen.pub/2019/10/08/华为交换机-ACL-单向流量控制/</id>
+    <published>2019-10-08T11:50:40.000Z</published>
+    <updated>2019-10-08T11:58:10.828Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;我们假设有VLAN A和B，需要做到A可以访问B，而B不可以访问A&lt;/strong&gt;&lt;br&gt;  A的地址段为 X.X.X.X/24&lt;br&gt;  B的地址段为 Y.Y.Y.Y/24&lt;/p&gt;
+&lt;p&gt; 
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+    
+      <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
+    
+  </entry>
   
   <entry>
     <title>Postgresql join</title>
@@ -549,65 +606,6 @@
     
     
       <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL2000 孤立用户修复</title>
-    <link href="http://blog.lizhen.pub/2019/09/21/SQL2000-%E5%AD%A4%E7%AB%8B%E7%94%A8%E6%88%B7%E4%BF%AE%E5%A4%8D/"/>
-    <id>http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/</id>
-    <published>2019-09-21T11:23:55.000Z</published>
-    <updated>2019-09-21T11:30:33.600Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;孤立用户的产生&quot;&gt;&lt;a href=&quot;#孤立用户的产生&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
-    
-    
-      <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows AD Time</title>
-    <link href="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/"/>
-    <id>http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/</id>
-    <published>2019-09-18T13:16:54.000Z</published>
-    <updated>2019-09-19T12:04:26.739Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/images/ad_time.gif&quot; alt&gt;&lt;/p&gt;
-&lt;h3 id=&quot;Windows-AD域-单域-内的时间同步只需掌握以下几点&quot;&gt;&lt;a href=&quot;#Windows-AD域-单域-内的时间同步只需掌握以下几点&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
-    
-    
-      <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
     
   </entry>
   

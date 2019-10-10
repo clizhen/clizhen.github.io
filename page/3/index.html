@@ -69,6 +69,108 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-SQL2000-孤立用户修复" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/21/SQL2000-孤立用户修复/" class="article-date">
+  <time datetime="2019-09-21T11:23:55.000Z" itemprop="datePublished">2019-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/21/SQL2000-孤立用户修复/">SQL2000 孤立用户修复</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="孤立用户的产生"><a href="#孤立用户的产生" class="headerlink" title="孤立用户的产生"></a>孤立用户的产生</h3><p><em>当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。</em></p>
+<p>解决方法之一：使登录用户和数据库的孤立用户对应起来<br><strong>存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)</strong><br>– 列出孤立用户<br>  sp_change_users_login ‘report’<br>– 连接孤立用户(登录名已建)<br>  sp_change_users_login ‘update_one’,’用户名’,’登录名’<br>– 自动连接孤立用户<br>  sp_change_users_login ‘Auto_Fix’,’用户名’,NULL,’登录密码’</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck1knbhrz000rhwpw4ce2libg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Windows-AD-Time" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/18/Windows-AD-Time/" class="article-date">
+  <time datetime="2019-09-18T13:16:54.000Z" itemprop="datePublished">2019-09-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/18/Windows-AD-Time/">Windows AD Time</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/ad_time.gif" alt></p>
+<h3 id="Windows-AD域-单域-内的时间同步只需掌握以下几点"><a href="#Windows-AD域-单域-内的时间同步只需掌握以下几点" class="headerlink" title="Windows AD域(单域)内的时间同步只需掌握以下几点:"></a>Windows AD域(单域)内的时间同步只需掌握以下几点:</h3><p><strong>* 域内工作站/服务器与登陆时的联络的DC同步时间，此DC与Root PDC角色的DC同步时间。*</strong></p>
+<p><em>有效的时间服务器可查询 <a href="http://www.pool.ntp.org/" target="_blank" rel="noopener">http://www.pool.ntp.org/</a></em></p>
+<ol>
+<li><p>域控(Root PDC角色)上需要与外部时间源同步,命令如下:<br>W32tm /config /manualpeerlist:time.nrc.ca /syncfromflags:manual /reliable:yes /update<br>W32tm /resync /rediscover<br>net stop w32time &amp;&amp; net start w32time  </p>
+</li>
+<li><p>域控(非PDC角色),运行以下命令:<br>w32tm /config /syncfromflags:domhier /update<br>w32tm /resync /rediscover<br>net stop w32time &amp;&amp; net start w32time  </p>
+</li>
+<li><p>遇到问题，重建时间配置：<br>net stop w32time<br>w32tm /unregister<br>w32tm /register<br>net start w32time</p>
+</li>
+</ol>
+<ul>
+<li>域内机器同步: net time \DC Name或ip /set /y</li>
+<li>查看时间源: w32tm /monitor</li>
+<li>查看登录服务器: echo %logonserver%</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck1knbhrl000ghwpwx68yabkq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-KMS" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/18/KMS/" class="article-date">
@@ -119,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck1g2n5se000gpqpw5ntl130i" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck1knbhrs000jhwpwei3jzjpq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -168,7 +270,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck1g2n5sa000bpqpwb0zolduw" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck1knbhri000bhwpwy500xr1t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -224,7 +326,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck1g2n5sd000epqpwey2fwvk8" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck1knbhrk000ehwpw0wn4loan" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -278,7 +380,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck1g2n5s8000apqpw7nwkg8fi" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck1knbhrg000ahwpwoku54416" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -321,7 +423,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck1g2n5rw0001pqpwgyen97lt" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck1knbhr50001hwpw82oa6icc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -375,7 +477,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck1g2n5s50006pqpw3t34j8ib" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck1knbhre0006hwpwj5jrm19y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url/">url</a></li></ul>
@@ -418,7 +520,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck1g2n5s40005pqpwtqg64zcv" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck1knbhrc0005hwpwhlkf4wyu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/">software</a></li></ul>
@@ -466,7 +568,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/Ubuntu-语言设置/" data-id="ck1g2n5s10004pqpwlxh0mks7" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/Ubuntu-语言设置/" data-id="ck1knbhra0004hwpwlx7ycd4h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -478,107 +580,11 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
 
 
   
-    <article id="post-begin" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/13/begin/" class="article-date">
-  <time datetime="2019-09-13T01:25:15.000Z" itemprop="datePublished">2019-09-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/13/begin/">Linux终端 拷贝 粘贴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>不比Windows差哦</em></p>
-<ol>
-<li>在Linux中，使用光标选择要复制的文本，它会自动将文本复制到剪贴板。</li>
-<li>右键点击鼠标，完成粘贴.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/13/begin/" data-id="ck1g2n5ro0000pqpw0iqtp9kn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/12/hello-world/" class="article-date">
-  <time datetime="2019-09-12T13:00:50.919Z" itemprop="datePublished">2019-09-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/12/hello-world/" data-id="ck1g2n5u0002npqpwwaa7q6hy" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -599,7 +605,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postgresql/">postgresql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postgresql/">postgresql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
     </div>
   </div>
 
@@ -609,7 +615,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/postgresql/" style="font-size: 20px;">postgresql</a> <a href="/tags/program/" style="font-size: 14px;">program</a> <a href="/tags/shell/" style="font-size: 18px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/system/" style="font-size: 16px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12px;">vim</a>
+      <a href="/tags/docker/" style="font-size: 10px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/postgresql/" style="font-size: 20px;">postgresql</a> <a href="/tags/program/" style="font-size: 14px;">program</a> <a href="/tags/shell/" style="font-size: 18px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/system/" style="font-size: 16px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12px;">vim</a>
     </div>
   </div>
 
@@ -631,6 +637,14 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       <ul>
         
           <li>
+            <a href="/2019/10/09/Docker-entrypoint-vs-cmd/">Docker entrypoint vs cmd</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/08/华为交换机-ACL-单向流量控制/">华为交换机 ACL 单向流量控制</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/06/Postgresql-join/">Postgresql join</a>
           </li>
         
@@ -640,14 +654,6 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
         
           <li>
             <a href="/2019/10/04/postgresql-show-file-loaction/">Postgresql show file loaction</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/04/postgresql-reload-config/">Postgresql reload config</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/">Postgresql bitmap heap/index scan</a>
           </li>
         
       </ul>
