@@ -69,6 +69,67 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-sed" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/21/sed/" class="article-date">
+  <time datetime="2019-09-21T11:33:04.000Z" itemprop="datePublished">2019-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/21/sed/">SED</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>两种执行方式</strong><br>-n 禁止默认输出</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed [-n] [-e] <span class="string">'command'</span> file(s)</span><br><span class="line">sed [-n] -f scriptfile file(s)</span><br></pre></td></tr></table></figure>
+
+<p>command结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- [addr [,addr]] [!] action [arguments]</span><br><span class="line">- [/pattern/[,/pattern/]] &#123;</span><br><span class="line">  cmd</span><br><span class="line">  cmd</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>action</p>
+<ul>
+<li>a 拼接</li>
+<li>c 替换</li>
+<li>i 插入</li>
+<li>d 删除</li>
+<li>s 替换</li>
+<li>y 翻译</li>
+<li>p 打印</li>
+</ul>
+<p><strong>举例</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># only print</span></span><br><span class="line">sed -ne <span class="string">'/regexp/p'</span> inputfile(s)</span><br><span class="line">sed -n <span class="string">'/GREEN/,$p'</span> inputfile(s)</span><br><span class="line"></span><br><span class="line"><span class="comment"># append after the pattern (-i 直接修改源文件)</span></span><br><span class="line">sed -i <span class="string">'/pattern/a \</span></span><br><span class="line"><span class="string">line1 \</span></span><br><span class="line"><span class="string">line2'</span> inputfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># insert before the pattern</span></span><br><span class="line">sed -i <span class="string">'/This is line two/i\your text 1\nyout text 2'</span> inputfile(s)</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ck275tvf6002b0ipw6qh538dj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-SQL2000-孤立用户修复" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/21/SQL2000-孤立用户修复/" class="article-date">
@@ -101,7 +162,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck1knbhrz000rhwpw4ce2libg" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck275tve9000r0ipwc3yh13rc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -159,7 +220,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck1knbhrl000ghwpwx68yabkq" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck275tvdu000g0ipw8wvz9ct6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -221,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck1knbhrs000jhwpwei3jzjpq" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck275tve1000j0ipw2r8sozp9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -270,7 +331,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck1knbhri000bhwpwy500xr1t" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck275tvdp000b0ipw8vzyx166" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -326,7 +387,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck1knbhrk000ehwpw0wn4loan" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck275tvdr000e0ipwyzkhbmhs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -380,7 +441,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck1knbhrg000ahwpwoku54416" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck275tvdn000a0ipwya6v9ej2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -423,7 +484,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck1knbhr50001hwpw82oa6icc" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck275tvd500010ipwvsl5979i" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -477,7 +538,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck1knbhre0006hwpwj5jrm19y" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck275tvdj00060ipwryca9jhw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url/">url</a></li></ul>
@@ -520,58 +581,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck1knbhrc0005hwpwhlkf4wyu" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck275tvdd00050ipw8w1k12u8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/">software</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Ubuntu-语言设置" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/15/Ubuntu-语言设置/" class="article-date">
-  <time datetime="2019-09-14T22:47:18.000Z" itemprop="datePublished">2019-09-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/Ubuntu-语言设置/">Ubuntu 语言设置</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>查看当前系统语言环境: locale / locale -a</li>
-<li>编辑配置文件 sudo vim /etc/default/locale (中文:zh_CN.UTF-8 ,英文:en_US:UTF-8).</li>
-<li>安装编码: sudo locale-gen zh_CN.UTF-8.</li>
-<li>重启.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/Ubuntu-语言设置/" data-id="ck1knbhra0004hwpwlx7ycd4h" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
 
     </footer>
   </div>
@@ -637,6 +650,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       <ul>
         
           <li>
+            <a href="/2019/10/26/set-timezone-in-pg/">set timezone in pg</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/09/Docker-entrypoint-vs-cmd/">Docker entrypoint vs cmd</a>
           </li>
         
@@ -650,10 +667,6 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
         
           <li>
             <a href="/2019/10/06/Postgresql-static-sys-view-性能/">Postgresql static sys-view 性能</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/04/postgresql-show-file-loaction/">Postgresql show file loaction</a>
           </li>
         
       </ul>

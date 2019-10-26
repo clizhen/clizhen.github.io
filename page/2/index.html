@@ -69,6 +69,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-PostgreSQL-client-Connection-options" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/27/PostgreSQL-client-Connection-options/" class="article-date">
+  <time datetime="2019-09-27T13:31:28.000Z" itemprop="datePublished">2019-09-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/27/PostgreSQL-client-Connection-options/">Postgresql client Connection options</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>PostgreSQL 客户端常用的连接参数</strong><br><em>注意:密码是不可能写在命令行上的,设置密码用.pgpass,环境变量</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Connection options:</span><br><span class="line">    -d, --dbname=DBNAME </span><br><span class="line">    -h, --host=HOSTNAME</span><br><span class="line">    -p, --port=PORT</span><br><span class="line">    -U, --username=NAME connect as specified database user</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用环境变量 连接PostgreSQL</strong></p>
+<ul>
+<li>PGHOST</li>
+<li>PGPORT</li>
+<li>PGUSER</li>
+<li>PGPASSWORD</li>
+<li>PGDATABASE</li>
+</ul>
+<p><strong>使用.pgpass 连接PostgreSQL</strong><br>在你的HOME目录下创建.pgpass文件,字段可用*<br>格式: <strong>hostname:port:database:username:password</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 0600 ~/.pgpass</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/" data-id="ck275tvep001n0ipwgi8vxsy3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Linux-Shell-set-vs-env" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/26/Linux-Shell-set-vs-env/" class="article-date">
@@ -95,9 +151,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program.</strong></p>
+        <p><strong>Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program. set can see shell-local variables, env cannot.</strong></p>
 <p>  Since set is a built-in shell command, it also sees sees shell-local variables (including shell functions). env on the other hand is an independent executable; it only sees the variables that the shell passes to it, or environment variables.</p>
-<p>  When you type a line like a=1 then a local variable is created (unless it already existed in the environment). Environment variables are created with export a=1</p>
+<p><strong>When you type a line like a=1 then a local variable is created (unless it already existed in the environment). Environment variables are created with export a=1</strong></p>
 <p>  What we have here the difference between environment variables and shell variables. Under sh (and variants) all environment variables are automatically shell variables as well, but the same is not true in the other direction (this originally was to save memory (I think)).</p>
 <p>  Environment variables are stored in an area of memory that is kept when a process calls <strong>exec()</strong>, this means that programs you run from the command line get a copy of the environment. Shell variables do not stay over an exec(), but are copied in a fork(). When you create a subshell the shell calls <strong>fork() </strong>in order to copy the present process, but it does NOT call exec() because the process it requires is already there thus the shell variables are kept.</p>
 <p>  Also most shells set for you certain shell variables when you start them up, PS1 is a perfect example of this, and you may have also set them yourself in your shell initalisation file.</p>
@@ -106,7 +162,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/" data-id="ck1knbhsg001nhwpwpf6bm8td" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/" data-id="ck275tven001j0ipwksb5u7fe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -158,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/" data-id="ck1knbhs80017hwpw5et1trr6" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/" data-id="ck275tvej001b0ipw4bnxkz93" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -217,7 +273,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-转载/" data-id="ck1knbhry000phwpwl5festz3" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-转载/" data-id="ck275tve7000p0ipwmv8dsr2n" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -298,7 +354,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/" data-id="ck1knbhs1000vhwpw3j3bef8l" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/" data-id="ck275tvec000z0ipwnro4kspt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -341,7 +397,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/" data-id="ck1knbhs60013hwpwy1patrha" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/" data-id="ck275tveb000v0ipwdklhrm0t" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -387,7 +443,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/" data-id="ck1knbhs4000zhwpwa5ompbtb" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/" data-id="ck275tvef00130ipw5k1at9v4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -430,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck1knbhsc001fhwpwh4pl96q1" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck275tveh00170ipwieyiwbdg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -479,7 +535,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/设计原理-SOLID/" data-id="ck1knbhsa001bhwpwiaqttumf" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/设计原理-SOLID/" data-id="ck275tvel001f0ipwoivzsyzm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -530,71 +586,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/js-this/" data-id="ck1knbhrw000lhwpwebdlub0p" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/js-this/" data-id="ck275tve5000l0ipwq6qltyak" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-sed" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/21/sed/" class="article-date">
-  <time datetime="2019-09-21T11:33:04.000Z" itemprop="datePublished">2019-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/21/sed/">SED</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>两种执行方式</strong><br>-n 禁止默认输出</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed [-n] [-e] <span class="string">'command'</span> file(s)</span><br><span class="line">sed [-n] -f scriptfile file(s)</span><br></pre></td></tr></table></figure>
-
-<p>command结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- [addr [,addr]] [!] action [arguments]</span><br><span class="line">- [/pattern/[,/pattern/]] &#123;</span><br><span class="line">  cmd</span><br><span class="line">  cmd</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>action</p>
-<ul>
-<li>a 拼接</li>
-<li>c 替换</li>
-<li>i 插入</li>
-<li>d 删除</li>
-<li>s 替换</li>
-<li>y 翻译</li>
-<li>p 打印</li>
-</ul>
-<p><strong>举例</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># only print</span></span><br><span class="line">sed -ne <span class="string">'/regexp/p'</span> inputfile(s)</span><br><span class="line">sed -n <span class="string">'/GREEN/,$p'</span> inputfile(s)</span><br><span class="line"></span><br><span class="line"><span class="comment"># append after the pattern (-i 直接修改源文件)</span></span><br><span class="line">sed -i <span class="string">'/pattern/a \</span></span><br><span class="line"><span class="string">line1 \</span></span><br><span class="line"><span class="string">line2'</span> inputfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># insert before the pattern</span></span><br><span class="line">sed -i <span class="string">'/This is line two/i\your text 1\nyout text 2'</span> inputfile(s)</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ck1knbhu9003ohwpw9ea2ela8" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -660,6 +655,10 @@
       <ul>
         
           <li>
+            <a href="/2019/10/26/set-timezone-in-pg/">set timezone in pg</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/09/Docker-entrypoint-vs-cmd/">Docker entrypoint vs cmd</a>
           </li>
         
@@ -673,10 +672,6 @@
         
           <li>
             <a href="/2019/10/06/Postgresql-static-sys-view-性能/">Postgresql static sys-view 性能</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/04/postgresql-show-file-loaction/">Postgresql show file loaction</a>
           </li>
         
       </ul>

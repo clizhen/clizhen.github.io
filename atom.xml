@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-10-10T11:45:10.470Z</updated>
+  <updated>2019-10-26T06:04:16.542Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>set timezone in pg</title>
+    <link href="http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/"/>
+    <id>http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/</id>
+    <published>2019-10-26T05:57:46.000Z</published>
+    <updated>2019-10-26T06:04:16.542Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;timezone-的设置&quot;&gt;&lt;a href=&quot;#timezone-的设置&quot; class=&quot;headerlink&quot; title=&quot;timezone 的设置&quot;&gt;&lt;/a&gt;timezone
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker entrypoint vs cmd</title>
@@ -314,7 +343,7 @@
     <link href="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/"/>
     <id>http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/</id>
     <published>2019-09-26T13:14:04.000Z</published>
-    <updated>2019-09-27T12:38:21.717Z</updated>
+    <updated>2019-10-10T12:43:20.189Z</updated>
     
     <summary type="html">
     
@@ -576,36 +605,6 @@
     
     
       <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SED</title>
-    <link href="http://blog.lizhen.pub/2019/09/21/sed/"/>
-    <id>http://blog.lizhen.pub/2019/09/21/sed/</id>
-    <published>2019-09-21T11:33:04.000Z</published>
-    <updated>2019-10-05T11:46:01.910Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;两种执行方式&lt;/strong&gt;&lt;br&gt;-n 禁止默认输出&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   

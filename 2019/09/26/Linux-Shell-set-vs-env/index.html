@@ -7,18 +7,18 @@
   
   <title>Linux Shell SET vs ENV | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program.   Since set is a bu">
+  <meta name="description" content="Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program. set can see shell-l">
 <meta name="keywords" content="shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux Shell SET vs ENV">
 <meta property="og:url" content="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program.   Since set is a bu">
+<meta property="og:description" content="Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program. set can see shell-l">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-27T12:38:21.717Z">
+<meta property="og:updated_time" content="2019-10-10T12:43:20.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux Shell SET vs ENV">
-<meta name="twitter:description" content="Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program.   Since set is a bu">
+<meta name="twitter:description" content="Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program. set can see shell-l">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -95,9 +95,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program.</strong></p>
+        <p><strong>Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program. set can see shell-local variables, env cannot.</strong></p>
 <p>  Since set is a built-in shell command, it also sees sees shell-local variables (including shell functions). env on the other hand is an independent executable; it only sees the variables that the shell passes to it, or environment variables.</p>
-<p>  When you type a line like a=1 then a local variable is created (unless it already existed in the environment). Environment variables are created with export a=1</p>
+<p><strong>When you type a line like a=1 then a local variable is created (unless it already existed in the environment). Environment variables are created with export a=1</strong></p>
 <p>  What we have here the difference between environment variables and shell variables. Under sh (and variants) all environment variables are automatically shell variables as well, but the same is not true in the other direction (this originally was to save memory (I think)).</p>
 <p>  Environment variables are stored in an area of memory that is kept when a process calls <strong>exec()</strong>, this means that programs you run from the command line get a copy of the environment. Shell variables do not stay over an exec(), but are copied in a fork(). When you create a subshell the shell calls <strong>fork() </strong>in order to copy the present process, but it does NOT call exec() because the process it requires is already there thus the shell variables are kept.</p>
 <p>  Also most shells set for you certain shell variables when you start them up, PS1 is a perfect example of this, and you may have also set them yourself in your shell initalisation file.</p>
@@ -106,7 +106,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/" data-id="ck1knbhsg001nhwpwpf6bm8td" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/" data-id="ck275tven001j0ipwksb5u7fe" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -187,6 +187,10 @@
       <ul>
         
           <li>
+            <a href="/2019/10/26/set-timezone-in-pg/">set timezone in pg</a>
+          </li>
+        
+          <li>
             <a href="/2019/10/09/Docker-entrypoint-vs-cmd/">Docker entrypoint vs cmd</a>
           </li>
         
@@ -200,10 +204,6 @@
         
           <li>
             <a href="/2019/10/06/Postgresql-static-sys-view-性能/">Postgresql static sys-view 性能</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/04/postgresql-show-file-loaction/">Postgresql show file loaction</a>
           </li>
         
       </ul>

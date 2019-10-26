@@ -5,20 +5,20 @@
   
 
   
-  <title>收集的网站地址 | li</title>
+  <title>set timezone in pg | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="内容 备注    Favicon 生成Favicon">
-<meta name="keywords" content="url">
+  <meta name="description" content="timezone 的设置可以在连接参数中设置,也可以在服务器中修改或修改conf文件. 12SELECT * FROM pg_timezone_names;ALTER DATABASE postgres SET timezone TO &apos;Europe/Berlin&apos;;">
+<meta name="keywords" content="postgresql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="收集的网站地址">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/09/15/收集的网站地址/index.html">
+<meta property="og:title" content="set timezone in pg">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="内容 备注    Favicon 生成Favicon">
+<meta property="og:description" content="timezone 的设置可以在连接参数中设置,也可以在服务器中修改或修改conf文件. 12SELECT * FROM pg_timezone_names;ALTER DATABASE postgres SET timezone TO &apos;Europe/Berlin&apos;;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-15T12:24:38.552Z">
+<meta property="og:updated_time" content="2019-10-26T06:04:16.542Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="收集的网站地址">
-<meta name="twitter:description" content="内容 备注    Favicon 生成Favicon">
+<meta name="twitter:title" content="set timezone in pg">
+<meta name="twitter:description" content="timezone 的设置可以在连接参数中设置,也可以在服务器中修改或修改conf文件. 12SELECT * FROM pg_timezone_names;ALTER DATABASE postgres SET timezone TO &apos;Europe/Berlin&apos;;">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -69,14 +69,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-收集的网站地址" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-set-timezone-in-pg" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/15/收集的网站地址/" class="article-date">
-  <time datetime="2019-09-15T04:16:56.000Z" itemprop="datePublished">2019-09-15</time>
+    <a href="/2019/10/26/set-timezone-in-pg/" class="article-date">
+  <time datetime="2019-10-26T05:57:46.000Z" itemprop="datePublished">2019-10-26</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/other/">other</a>
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
   </div>
 
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      收集的网站地址
+      set timezone in pg
     </h1>
   
 
@@ -95,26 +95,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <table>
-<thead>
-<tr>
-<th>内容</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://favicon.io/favicon-generator/" target="_blank" rel="noopener">Favicon</a></td>
-<td>生成Favicon</td>
-</tr>
-</tbody></table>
+        <h3 id="timezone-的设置"><a href="#timezone-的设置" class="headerlink" title="timezone 的设置"></a>timezone 的设置</h3><p>可以在连接参数中设置,也可以在服务器中修改或修改conf文件.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> pg_timezone_names;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">DATABASE</span> postgres <span class="keyword">SET</span> timezone <span class="keyword">TO</span> <span class="string">'Europe/Berlin'</span>;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck275tvdj00060ipwryca9jhw" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/" data-id="ck275tvfb002j0ipwmal8zmb3" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url/">url</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
 
     </footer>
   </div>
@@ -122,19 +113,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/15/SQL-XACT-ABORT/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          SQL XACT_ABORT
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/15/node-安装和升级/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/09/Docker-entrypoint-vs-cmd/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">node 安装和升级</div>
+      <div class="article-nav-title">Docker entrypoint vs cmd</div>
     </a>
   
 </nav>
