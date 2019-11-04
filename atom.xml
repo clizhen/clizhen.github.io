@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-10-26T06:04:16.542Z</updated>
+  <updated>2019-11-04T11:37:53.057Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unix and Windows 文本文件转换</title>
+    <link href="http://blog.lizhen.pub/2019/11/04/Unix-and-Windows-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/"/>
+    <id>http://blog.lizhen.pub/2019/11/04/Unix-and-Windows-文本文件转换/</id>
+    <published>2019-11-04T11:33:08.000Z</published>
+    <updated>2019-11-04T11:37:53.057Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://kb.iu.edu/d/acux&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;windows: line feed + carriage
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows中sha1 md5校验</title>
+    <link href="http://blog.lizhen.pub/2019/11/03/windows%E4%B8%ADsha1-md5%E6%A0%A1%E9%AA%8C/"/>
+    <id>http://blog.lizhen.pub/2019/11/03/windows中sha1-md5校验/</id>
+    <published>2019-11-03T12:47:49.000Z</published>
+    <updated>2019-11-04T11:22:59.615Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;命令行&quot;&gt;&lt;a href=&quot;#命令行&quot; class=&quot;headerlink&quot; title=&quot;命令行&quot;&gt;&lt;/a&gt;命令行&lt;/h4&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>set timezone in pg</title>
@@ -545,66 +605,6 @@
     
     
       <category term="sql" scheme="http://blog.lizhen.pub/tags/sql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计原理 SOLID</title>
-    <link href="http://blog.lizhen.pub/2019/09/22/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-SOLID/"/>
-    <id>http://blog.lizhen.pub/2019/09/22/设计原理-SOLID/</id>
-    <published>2019-09-22T08:08:56.000Z</published>
-    <updated>2019-09-22T08:40:51.742Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;A class should have only a single responsibility&lt;/strong&gt;&lt;br&gt;  &lt;em&gt;单一职责(&lt;strong&gt;S&lt;/strong&gt;)&lt;/em&gt;:
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
-    
-    
-      <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS THIS</title>
-    <link href="http://blog.lizhen.pub/2019/09/21/js-this/"/>
-    <id>http://blog.lizhen.pub/2019/09/21/js-this/</id>
-    <published>2019-09-21T11:46:11.000Z</published>
-    <updated>2019-09-21T11:52:37.995Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Javascript 的this绑定使用时容易混淆，是语言的一个设计失误。而Js的闭包是这门语言的精髓。其实this是由函数的调用方式决定的，this代表函数执行时的上下文，而函数的调用有五种&lt;/p&gt;
-&lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
     
   </entry>
   

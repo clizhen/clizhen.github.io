@@ -5,20 +5,20 @@
   
 
   
-  <title>SQL2000 孤立用户修复 | li</title>
+  <title>Windows中sha1 md5校验 | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="孤立用户的产生当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。 解决方法之一：使登录用户和数据库的孤立用户对应起来存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)– 列出孤立用户  sp_change_users_login ‘report’– 连接孤立用户(登录名已建)">
-<meta name="keywords" content="sql">
+  <meta name="description" content="命令行1certutil -hashfile &amp;lt;文件名&amp;gt; &amp;lt;hash类型&amp;gt;">
+<meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL2000 孤立用户修复">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/index.html">
+<meta property="og:title" content="Windows中sha1 md5校验">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/11/03/windows中sha1-md5校验/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="孤立用户的产生当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。 解决方法之一：使登录用户和数据库的孤立用户对应起来存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)– 列出孤立用户  sp_change_users_login ‘report’– 连接孤立用户(登录名已建)">
+<meta property="og:description" content="命令行1certutil -hashfile &amp;lt;文件名&amp;gt; &amp;lt;hash类型&amp;gt;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T11:30:33.600Z">
+<meta property="og:updated_time" content="2019-11-04T11:22:59.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SQL2000 孤立用户修复">
-<meta name="twitter:description" content="孤立用户的产生当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。 解决方法之一：使登录用户和数据库的孤立用户对应起来存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)– 列出孤立用户  sp_change_users_login ‘report’– 连接孤立用户(登录名已建)">
+<meta name="twitter:title" content="Windows中sha1 md5校验">
+<meta name="twitter:description" content="命令行1certutil -hashfile &amp;lt;文件名&amp;gt; &amp;lt;hash类型&amp;gt;">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -69,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-SQL2000-孤立用户修复" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-windows中sha1-md5校验" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/21/SQL2000-孤立用户修复/" class="article-date">
-  <time datetime="2019-09-21T11:23:55.000Z" itemprop="datePublished">2019-09-21</time>
+    <a href="/2019/11/03/windows中sha1-md5校验/" class="article-date">
+  <time datetime="2019-11-03T12:47:49.000Z" itemprop="datePublished">2019-11-03</time>
 </a>
     
   <div class="article-category">
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      SQL2000 孤立用户修复
+      Windows中sha1 md5校验
     </h1>
   
 
@@ -95,16 +95,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="孤立用户的产生"><a href="#孤立用户的产生" class="headerlink" title="孤立用户的产生"></a>孤立用户的产生</h3><p><em>当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。</em></p>
-<p>解决方法之一：使登录用户和数据库的孤立用户对应起来<br><strong>存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)</strong><br>– 列出孤立用户<br>  sp_change_users_login ‘report’<br>– 连接孤立用户(登录名已建)<br>  sp_change_users_login ‘update_one’,’用户名’,’登录名’<br>– 自动连接孤立用户<br>  sp_change_users_login ‘Auto_Fix’,’用户名’,NULL,’登录密码’</p>
+        <h4 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -hashfile &lt;文件名&gt; &lt;hash类型&gt;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck2kdmzpc000r6kpwixeolusu" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/03/windows中sha1-md5校验/" data-id="ck2kdmzrv00436kpwp6f0eh74" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -112,19 +112,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/21/sed/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/04/Unix-and-Windows-文本文件转换/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          SED
+          Unix and Windows 文本文件转换
         
       </div>
     </a>
   
   
-    <a href="/2019/09/18/Windows-AD-Time/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/10/26/set-timezone-in-pg/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Windows AD Time</div>
+      <div class="article-nav-title">set timezone in pg</div>
     </a>
   
 </nav>

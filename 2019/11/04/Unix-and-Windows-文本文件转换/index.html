@@ -5,20 +5,20 @@
   
 
   
-  <title>SQL2000 孤立用户修复 | li</title>
+  <title>Unix and Windows 文本文件转换 | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="孤立用户的产生当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。 解决方法之一：使登录用户和数据库的孤立用户对应起来存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)– 列出孤立用户  sp_change_users_login ‘report’– 连接孤立用户(登录名已建)">
-<meta name="keywords" content="sql">
+  <meta name="description" content="原文  windows: line feed + carriage return unin: a line feed  vim中转换文本文件(方法之一)12:set ff=unix:set ff=dos">
+<meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL2000 孤立用户修复">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/index.html">
+<meta property="og:title" content="Unix and Windows 文本文件转换">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/11/04/Unix-and-Windows-文本文件转换/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="孤立用户的产生当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。 解决方法之一：使登录用户和数据库的孤立用户对应起来存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)– 列出孤立用户  sp_change_users_login ‘report’– 连接孤立用户(登录名已建)">
+<meta property="og:description" content="原文  windows: line feed + carriage return unin: a line feed  vim中转换文本文件(方法之一)12:set ff=unix:set ff=dos">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-21T11:30:33.600Z">
+<meta property="og:updated_time" content="2019-11-04T11:37:53.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SQL2000 孤立用户修复">
-<meta name="twitter:description" content="孤立用户的产生当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。 解决方法之一：使登录用户和数据库的孤立用户对应起来存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)– 列出孤立用户  sp_change_users_login ‘report’– 连接孤立用户(登录名已建)">
+<meta name="twitter:title" content="Unix and Windows 文本文件转换">
+<meta name="twitter:description" content="原文  windows: line feed + carriage return unin: a line feed  vim中转换文本文件(方法之一)12:set ff=unix:set ff=dos">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -69,14 +69,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-SQL2000-孤立用户修复" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Unix-and-Windows-文本文件转换" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/21/SQL2000-孤立用户修复/" class="article-date">
-  <time datetime="2019-09-21T11:23:55.000Z" itemprop="datePublished">2019-09-21</time>
+    <a href="/2019/11/04/Unix-and-Windows-文本文件转换/" class="article-date">
+  <time datetime="2019-11-04T11:33:08.000Z" itemprop="datePublished">2019-11-04</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
   </div>
 
   </div>
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      SQL2000 孤立用户修复
+      Unix and Windows 文本文件转换
     </h1>
   
 
@@ -95,16 +95,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="孤立用户的产生"><a href="#孤立用户的产生" class="headerlink" title="孤立用户的产生"></a>孤立用户的产生</h3><p><em>当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。</em></p>
-<p>解决方法之一：使登录用户和数据库的孤立用户对应起来<br><strong>存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)</strong><br>– 列出孤立用户<br>  sp_change_users_login ‘report’<br>– 连接孤立用户(登录名已建)<br>  sp_change_users_login ‘update_one’,’用户名’,’登录名’<br>– 自动连接孤立用户<br>  sp_change_users_login ‘Auto_Fix’,’用户名’,NULL,’登录密码’</p>
+        <p><a href="https://kb.iu.edu/d/acux" target="_blank" rel="noopener">原文</a></p>
+<ul>
+<li>windows: line feed + carriage return</li>
+<li>unin: a line feed</li>
+</ul>
+<h4 id="vim中转换文本文件-方法之一"><a href="#vim中转换文本文件-方法之一" class="headerlink" title="vim中转换文本文件(方法之一)"></a>vim中转换文本文件(方法之一)</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">:<span class="keyword">set</span> ff=unix</span><br><span class="line">:<span class="keyword">set</span> ff=dos</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck2kdmzpc000r6kpwixeolusu" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/04/Unix-and-Windows-文本文件转换/" data-id="ck2kdmzrx00456kpwlraua8ga" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -112,19 +117,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/21/sed/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          SED
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/18/Windows-AD-Time/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/03/windows中sha1-md5校验/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Windows AD Time</div>
+      <div class="article-nav-title">Windows中sha1 md5校验</div>
     </a>
   
 </nav>
