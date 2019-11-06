@@ -5,24 +5,20 @@
   
 
   
-  <title>Postgresql bitmap heap/index scan | li</title>
+  <title>netsh 命令行修改网络配置 | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
-<meta name="keywords" content="postgresql">
+  <meta name="description" content="netsh example1234567netshnetsh&amp;gt;interface ip show confignetsh&amp;gt;netsh interface ip set address &quot;connection name&quot; static 192.168.x.x 255.255.255.0 192.168.x.xnetsh&amp;gt;netsh interface ip add dns &quot;con">
+<meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Postgresql bitmap heap&#x2F;index scan">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/index.html">
+<meta property="og:title" content="netsh 命令行修改网络配置">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/11/06/netsh-命令行修改网络配置/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
+<meta property="og:description" content="netsh example1234567netshnetsh&amp;gt;interface ip show confignetsh&amp;gt;netsh interface ip set address &quot;connection name&quot; static 192.168.x.x 255.255.255.0 192.168.x.xnetsh&amp;gt;netsh interface ip add dns &quot;con">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.1.png">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.2.png">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.3.png">
-<meta property="og:updated_time" content="2019-10-06T06:23:46.678Z">
+<meta property="og:updated_time" content="2019-11-06T12:04:03.530Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Postgresql bitmap heap&#x2F;index scan">
-<meta name="twitter:description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
-<meta name="twitter:image" content="http://blog.lizhen.pub/images/bitmapIndex.1.png">
+<meta name="twitter:title" content="netsh 命令行修改网络配置">
+<meta name="twitter:description" content="netsh example1234567netshnetsh&amp;gt;interface ip show confignetsh&amp;gt;netsh interface ip set address &quot;connection name&quot; static 192.168.x.x 255.255.255.0 192.168.x.xnetsh&amp;gt;netsh interface ip add dns &quot;con">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -73,14 +69,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-postgresql-bitmap-heap-index-scan" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-netsh-命令行修改网络配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="article-date">
-  <time datetime="2019-10-04T03:51:28.000Z" itemprop="datePublished">2019-10-04</time>
+    <a href="/2019/11/06/netsh-命令行修改网络配置/" class="article-date">
+  <time datetime="2019-11-06T11:58:56.000Z" itemprop="datePublished">2019-11-06</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
   </div>
 
   </div>
@@ -91,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Postgresql bitmap heap/index scan
+      netsh 命令行修改网络配置
     </h1>
   
 
@@ -99,22 +95,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://dba.stackexchange.com/questions/119386/understanding-bitmap-heap-scan-and-bitmap-index-scan" target="_blank" rel="noopener">转载</a></p>
-<ul>
-<li><p>index scan 扫描索引,查找后<strong>立即</strong>读取对应数据页,是<em>随机读</em>.</p>
-</li>
-<li><p>bitmap heap scan 最终是<em>顺序读</em>. 一般用在多个索引同时使用时或单个索引多次使用时.</p>
-</li>
-</ul>
-<p>举例(先bitmap index scan 再bitmap heap scan):<br><img src="/images/bitmapIndex.1.png" alt><br>bitmaps 按为与<br><img src="/images/bitmapIndex.2.png" alt><br>bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked).<br><img src="/images/bitmapIndex.3.png" alt>.</p>
+        <h4 id="netsh-example"><a href="#netsh-example" class="headerlink" title="netsh example"></a>netsh example</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">netsh</span><br><span class="line">netsh&gt;interface ip show config</span><br><span class="line">netsh&gt;netsh interface ip <span class="built_in">set</span> address "connection name" static <span class="number">192</span>.<span class="number">168</span>.x.x <span class="number">255</span>.<span class="number">255</span>.<span class="number">255</span>.<span class="number">0</span> <span class="number">192</span>.<span class="number">168</span>.x.x</span><br><span class="line">netsh&gt;netsh interface ip add dns "connection name" <span class="number">8</span>.<span class="number">8</span>.<span class="number">8</span>.<span class="number">8</span></span><br><span class="line">netsh&gt;netsh interface ip add dns "connection name" <span class="number">114</span>.<span class="number">114</span>.<span class="number">114</span>.<span class="number">114</span> index=<span class="number">2</span></span><br><span class="line">netsh&gt;netsh interface ip <span class="built_in">set</span> address "connection name" dhcp</span><br><span class="line">netsh&gt;netsh interface ip <span class="built_in">set</span> dns "connection name" dhcp</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ck2n8j5tt0023tzpwtk08ofle" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/06/netsh-命令行修改网络配置/" data-id="ck2n8j5us0034tzpwklh9jcso" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -122,19 +112,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/10/04/postgresql-reload-config/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Postgresql reload config
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/29/PostgreSQL-Schema/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/04/Unix-and-Windows-文本文件转换/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Postgresql -- Schema</div>
+      <div class="article-nav-title">Unix and Windows 文本文件转换</div>
     </a>
   
 </nav>
