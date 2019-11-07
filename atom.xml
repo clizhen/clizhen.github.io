@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-11-06T12:04:03.530Z</updated>
+  <updated>2019-11-07T11:35:35.705Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PowerShell &amp;&amp; FireWall</title>
+    <link href="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/"/>
+    <id>http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/</id>
+    <published>2019-11-07T11:31:53.000Z</published>
+    <updated>2019-11-07T11:35:35.705Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;PowerShell-设置防火墙&quot;&gt;&lt;a href=&quot;#PowerShell-设置防火墙&quot; class=&quot;headerlink&quot; title=&quot;PowerShell 设置防火墙&quot;&gt;&lt;/a&gt;PowerShell 设置防火墙&lt;/h4&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>netsh 命令行修改网络配置</title>
@@ -575,36 +604,6 @@
     
     
       <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JS 函数上下文 闭包</title>
-    <link href="http://blog.lizhen.pub/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/"/>
-    <id>http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/</id>
-    <published>2019-09-22T10:37:48.000Z</published>
-    <updated>2019-09-22T10:40:42.155Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;在传统的OO语言中，函数的上下文是由声明函数时确定的，例如静态函数通过类名调用，上下文是类。非静态函数通过类的实例调用，上下文是类的实例。而在javascript中函数首先是一个对象，&lt;strong&gt;它的上下文不能由声明时确定，而是由谁来调用来确定&lt;/stron
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
     
   </entry>
   

@@ -69,6 +69,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-PowerShell-FireWall" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/07/PowerShell-FireWall/" class="article-date">
+  <time datetime="2019-11-07T11:31:53.000Z" itemprop="datePublished">2019-11-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="PowerShell-设置防火墙"><a href="#PowerShell-设置防火墙" class="headerlink" title="PowerShell 设置防火墙"></a>PowerShell 设置防火墙</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##关闭防火墙</span></span><br><span class="line">Get-NetFirewallProfile | Set-NetFirewallProfile -enabled false</span><br><span class="line"><span class="comment">##允许ping</span></span><br><span class="line">Set-NetFirewallRule –Name “FPS-ICMP4-ERQ-In” –Enabled True</span><br><span class="line">Set-NetFirewallRule –Name “FPS-ICMP4-ERQ-Out” –Enabled True</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/" data-id="ck2omxfld0038wdpwrrso3vtp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-netsh-命令行修改网络配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/06/netsh-命令行修改网络配置/" class="article-date">
@@ -101,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/06/netsh-命令行修改网络配置/" data-id="ck2n8j5us0034tzpwklh9jcso" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/06/netsh-命令行修改网络配置/" data-id="ck2omxflb0034wdpw92h79g8f" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -150,7 +194,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/04/Unix-and-Windows-文本文件转换/" data-id="ck2n8j5ur0031tzpwiaqr2m85" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/04/Unix-and-Windows-文本文件转换/" data-id="ck2omxfla0031wdpw9z0pk2su" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -194,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/03/windows中sha1-md5校验/" data-id="ck2n8j5un002xtzpwc1picso3" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/03/windows中sha1-md5校验/" data-id="ck2omxfl6002xwdpwmymd4bkj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -239,7 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/" data-id="ck2n8j5um002utzpw8ltd7rew" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/" data-id="ck2omxfl4002uwdpw3hke3sju" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -290,7 +334,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/" data-id="ck2n8j5uc002qtzpw5udelt5u" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/" data-id="ck2omxfku002qwdpwpz8xuoo0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
@@ -352,7 +396,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/08/华为交换机-ACL-单向流量控制/" data-id="ck2n8j5u7002ntzpwwwaymvy9" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/08/华为交换机-ACL-单向流量控制/" data-id="ck2omxfkp002nwdpwlp8dkoju" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/">network</a></li></ul>
@@ -406,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-join/" data-id="ck2n8j5u2002ftzpw54gwlc19" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-join/" data-id="ck2omxfkl002fwdpwwkn2cnd9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -480,7 +524,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-性能/" data-id="ck2n8j5u4002itzpwn4zlxvzp" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-性能/" data-id="ck2omxfkn002iwdpw6drpowlh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -525,58 +569,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/" data-id="ck2n8j5tz002btzpw5v9ecg8h" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-postgresql-reload-config" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/04/postgresql-reload-config/" class="article-date">
-  <time datetime="2019-10-04T07:27:00.000Z" itemprop="datePublished">2019-10-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/04/postgresql-reload-config/">Postgresql reload config</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><p>command-line reload</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#方法1</span></span><br><span class="line">sudo service postgresql-x.x reload</span><br><span class="line"><span class="comment">#方法2</span></span><br><span class="line">su -c root <span class="string">'service postgresql-x.x reload'</span></span><br><span class="line"><span class="comment">#方法3</span></span><br><span class="line">su - postges</span><br><span class="line">/usr/bin/pg_ctl reload</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>using sql reload</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> pg_reload_conf();</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/" data-id="ck2n8j5tw0027tzpwckube1wo" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/" data-id="ck2omxfki002bwdpw3vpefl02" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -645,6 +638,10 @@
       <ul>
         
           <li>
+            <a href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/06/netsh-命令行修改网络配置/">netsh 命令行修改网络配置</a>
           </li>
         
@@ -658,10 +655,6 @@
         
           <li>
             <a href="/2019/10/26/set-timezone-in-pg/">set timezone in pg</a>
-          </li>
-        
-          <li>
-            <a href="/2019/10/09/Docker-entrypoint-vs-cmd/">Docker entrypoint vs cmd</a>
           </li>
         
       </ul>
