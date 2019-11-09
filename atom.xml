@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-11-07T11:35:35.705Z</updated>
+  <updated>2019-11-09T03:50:51.646Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PowerShell Remoting</title>
+    <link href="http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/"/>
+    <id>http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/</id>
+    <published>2019-11-09T03:43:19.000Z</published>
+    <updated>2019-11-09T03:50:51.646Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;远程&quot;&gt;&lt;a href=&quot;#远程&quot; class=&quot;headerlink&quot; title=&quot;远程&quot;&gt;&lt;/a&gt;远程&lt;/h4&gt;&lt;p&gt;WinRM 打开: Enable-PSRemoting -force&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PowerShell &amp;&amp; FireWall</title>
     <link href="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/"/>
     <id>http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/</id>
     <published>2019-11-07T11:31:53.000Z</published>
-    <updated>2019-11-07T11:35:35.705Z</updated>
+    <updated>2019-11-09T03:48:07.757Z</updated>
     
     <summary type="html">
     
@@ -563,35 +593,6 @@
           &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;名字&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bash中的环境变量拼接</title>
-    <link href="http://blog.lizhen.pub/2019/09/22/Bash%E4%B8%AD%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%8B%BC%E6%8E%A5/"/>
-    <id>http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/</id>
-    <published>2019-09-22T10:44:27.000Z</published>
-    <updated>2019-09-22T10:45:32.149Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt; 
         
       
     
