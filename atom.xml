@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-11-09T03:50:51.646Z</updated>
+  <updated>2019-11-09T12:21:09.043Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>PowerShell Remoting</title>
+    <title>PowerShell Remoting &amp;&amp; Job</title>
     <link href="http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/"/>
     <id>http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/</id>
     <published>2019-11-09T03:43:19.000Z</published>
-    <updated>2019-11-09T03:50:51.646Z</updated>
+    <updated>2019-11-09T12:21:09.043Z</updated>
     
     <summary type="html">
     

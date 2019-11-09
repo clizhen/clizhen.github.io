@@ -5,20 +5,20 @@
   
 
   
-  <title>PowerShell Remoting | li</title>
+  <title>PowerShell Remoting &amp;&amp; Job | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="远程WinRM 打开: Enable-PSRemoting -force 1Enter-PSSession -ComputerName XXXName -Credential domainxxx\userxx  远程编辑 使用vs code 中的powershell插件 ,进入其集成的PS环境,远程后调用psedit.">
+  <meta name="description" content="远程WinRM 打开: Enable-PSRemoting -force 12345678##交互Enter-PSSession -ComputerName XXXName -Credential domainxxx\userxx##运行远程命令Invoke-Command -ComputerName SErver01, SErver02 -ScriptBlock &amp;#123;...&amp;#125;I">
 <meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PowerShell Remoting">
+<meta property="og:title" content="PowerShell Remoting &amp;&amp; Job">
 <meta property="og:url" content="http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="远程WinRM 打开: Enable-PSRemoting -force 1Enter-PSSession -ComputerName XXXName -Credential domainxxx\userxx  远程编辑 使用vs code 中的powershell插件 ,进入其集成的PS环境,远程后调用psedit.">
+<meta property="og:description" content="远程WinRM 打开: Enable-PSRemoting -force 12345678##交互Enter-PSSession -ComputerName XXXName -Credential domainxxx\userxx##运行远程命令Invoke-Command -ComputerName SErver01, SErver02 -ScriptBlock &amp;#123;...&amp;#125;I">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-09T03:50:51.646Z">
+<meta property="og:updated_time" content="2019-11-09T12:21:09.043Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PowerShell Remoting">
-<meta name="twitter:description" content="远程WinRM 打开: Enable-PSRemoting -force 1Enter-PSSession -ComputerName XXXName -Credential domainxxx\userxx  远程编辑 使用vs code 中的powershell插件 ,进入其集成的PS环境,远程后调用psedit.">
+<meta name="twitter:title" content="PowerShell Remoting &amp;&amp; Job">
+<meta name="twitter:description" content="远程WinRM 打开: Enable-PSRemoting -force 12345678##交互Enter-PSSession -ComputerName XXXName -Credential domainxxx\userxx##运行远程命令Invoke-Command -ComputerName SErver01, SErver02 -ScriptBlock &amp;#123;...&amp;#125;I">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      PowerShell Remoting
+      PowerShell Remoting &amp;&amp; Job
     </h1>
   
 
@@ -96,11 +96,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h4 id="远程"><a href="#远程" class="headerlink" title="远程"></a>远程</h4><p>WinRM 打开: Enable-PSRemoting -force</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Enter-PSSession</span> -ComputerName XXXName -Credential domainxxx\userxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##交互</span></span><br><span class="line"><span class="built_in">Enter-PSSession</span> -ComputerName XXXName -Credential domainxxx\userxx</span><br><span class="line"><span class="comment">##运行远程命令</span></span><br><span class="line"><span class="built_in">Invoke-Command</span> -ComputerName SErver01, SErver02 -ScriptBlock &#123;...&#125;</span><br><span class="line"><span class="built_in">Invoke-Command</span> -ComputerName SErver01, SErver02 -FielPath c:\Scripts\...</span><br><span class="line"><span class="comment">##建立连接</span></span><br><span class="line"><span class="variable">$s</span> = <span class="built_in">New-PSSession</span> -ComputerName SErver01, SErver02</span><br><span class="line"><span class="built_in">Invoke-Command</span> -Session <span class="variable">$s</span> ...</span><br></pre></td></tr></table></figure>
 
 <h4 id="远程编辑"><a href="#远程编辑" class="headerlink" title="远程编辑"></a>远程编辑</h4><ul>
 <li>使用vs code 中的powershell插件 ,进入其集成的PS环境,远程后调用psedit.</li>
 </ul>
+<h4 id="JOB"><a href="#JOB" class="headerlink" title="JOB"></a>JOB</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Start-Job</span> -ScriptBlock &#123;...&#125;</span><br><span class="line"><span class="variable">$job</span> = <span class="built_in">Get-Job</span> -Id <span class="number">1</span></span><br><span class="line"><span class="comment">##查询结果</span></span><br><span class="line"><span class="built_in">Receive-Job</span> -Job <span class="variable">$job</span></span><br><span class="line"><span class="comment">##删除</span></span><br><span class="line"><span class="built_in">Remove-Job</span> -Job <span class="variable">$job</span></span><br><span class="line"><span class="comment">##查找失败原因</span></span><br><span class="line"><span class="variable">$job</span>.ChildJobs[<span class="number">0</span>].JobStateInfo.Reason</span><br><span class="line"><span class="comment">##远程 </span></span><br><span class="line"><span class="built_in">Invoke-Command</span> -ComputerName SErver01  -ScriptBlock &#123;...&#125; -asjob</span><br><span class="line"><span class="built_in">Invoke-Command</span> -Session <span class="variable">$s</span> -ScriptBlock &#123; <span class="built_in">start-job</span> -ScriptBlock &#123; ... &#125;&#125;</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -177,7 +179,7 @@
       <ul>
         
           <li>
-            <a href="/2019/11/09/PowerShell-Remoting/">PowerShell Remoting</a>
+            <a href="/2019/11/09/PowerShell-Remoting/">PowerShell Remoting &amp;&amp; Job</a>
           </li>
         
           <li>
