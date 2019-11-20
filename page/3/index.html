@@ -69,6 +69,87 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux-Find-Example" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/22/Linux-Find-Example/" class="article-date">
+  <time datetime="2019-09-22T10:55:20.000Z" itemprop="datePublished">2019-09-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/22/Linux-Find-Example/">Linux Find Example</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>名字</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">"lizhen.c"</span>; </span><br><span class="line">find / -iname <span class="string">"lizhen.c"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>目录深度</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find -maxdepth 2 -name passwd ; </span><br><span class="line">find / -mindepth 3 - maxdepth 5 -name passwd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>反向</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -not -iname <span class="string">"lizhen.c"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -iname <span class="string">"lizhen.c"</span> -<span class="built_in">exec</span> md5sum &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>文件权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find. -perm -g=r -<span class="built_in">type</span> f -<span class="built_in">exec</span> ls -l &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>空文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -empty</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>大小</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -size +100M</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Top 5 Big files</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> ls -s &#123;&#125; \; | sort  -n -r | head -5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>find files by comaring with the modification time of other file</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -newer ordinary_file</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>最近几天没有修改的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -mtime +60</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>xargs </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -name <span class="string">'*.log'</span> -print0 | xargs -0 cat</span><br></pre></td></tr></table></figure>
+
+<p><em>备注: xargs 默认是以空白字符 (空格, TAB, 换行符) 来分割记录的,当这些不能分割时需设置为NULL分割.</em></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/" data-id="ck37d62jy0013gwpwd15fazdq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Bash中的环境变量拼接" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/22/Bash中的环境变量拼接/" class="article-date">
@@ -100,7 +181,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/" data-id="ck2r17fre000zdapwxwwqirem" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/" data-id="ck37d62jw000zgwpwptjtzkiz" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -146,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/" data-id="ck2r17frg0013dapwi59ul16l" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/" data-id="ck37d62ju000vgwpwsf49y2av" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -189,7 +270,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck2r17frk001bdapwqi359up7" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck37d62k00017gwpwv1n9lrry" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -238,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/设计原理-SOLID/" data-id="ck2r17frl001fdapwlc2x5ha1" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/设计原理-SOLID/" data-id="ck37d62k2001bgwpwx9atce6b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -289,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/js-this/" data-id="ck2r17fr8000pdapw2ubcyzhv" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/js-this/" data-id="ck37d62jr000pgwpwnn4pshhm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -350,7 +431,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ck2r17fra000rdapwg131yqo9" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ck37d62jp000lgwpwt9x9oegg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -394,7 +475,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck2r17fr5000ldapwqzn8whw0" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck37d62mf0053gwpwzss3dhcu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -452,7 +533,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck2r17fr4000jdapw58x5b2go" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck37d62jn000jgwpwpw8r67bd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -514,59 +595,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck2r17fqw000gdapwr4rvz9qz" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck37d62jc000bgwpwr5o6ztuo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-shell-Example" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/16/shell-Example/" class="article-date">
-  <time datetime="2019-09-16T12:55:44.000Z" itemprop="datePublished">2019-09-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/16/shell-Example/">Linux Shell Example</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><pre><code class="bash"><span class="comment">#-r 递归目录</span>
-<span class="comment">#-i 大小写不敏感</span>
-<span class="comment">#--exclude-dir 排除目录</span>
-<span class="comment">#--include 包含指定文件 </span>
-<span class="comment">#-l 只显示搜索到内容的文件名</span>
-<span class="comment">#-L 只显示搜索不到内容的文件名</span>
-grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span class="string">'deve'</span> ./</code></pre>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck2r17fqt000bdapw8t06m4lm" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -632,6 +664,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       <ul>
         
           <li>
+            <a href="/2019/11/20/NFS-权限/">NFS 权限</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/09/PowerShell-Remoting/">PowerShell Remoting &amp;&amp; Job</a>
           </li>
         
@@ -645,10 +681,6 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
         
           <li>
             <a href="/2019/11/04/Unix-and-Windows-文本文件转换/">Unix and Windows 文本文件转换</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/03/windows中sha1-md5校验/">Windows中sha1 md5校验</a>
           </li>
         
       </ul>
