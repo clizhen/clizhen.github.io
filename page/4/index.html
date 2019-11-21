@@ -69,6 +69,126 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Windows-AD-Time" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/18/Windows-AD-Time/" class="article-date">
+  <time datetime="2019-09-18T13:16:54.000Z" itemprop="datePublished">2019-09-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/18/Windows-AD-Time/">Windows AD Time</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/images/ad_time.gif" alt></p>
+<h3 id="Windows-AD域-单域-内的时间同步只需掌握以下几点"><a href="#Windows-AD域-单域-内的时间同步只需掌握以下几点" class="headerlink" title="Windows AD域(单域)内的时间同步只需掌握以下几点:"></a>Windows AD域(单域)内的时间同步只需掌握以下几点:</h3><p><strong>* 域内工作站/服务器与登陆时的联络的DC同步时间，此DC与Root PDC角色的DC同步时间。*</strong></p>
+<p><em>有效的时间服务器可查询 <a href="http://www.pool.ntp.org/" target="_blank" rel="noopener">http://www.pool.ntp.org/</a></em></p>
+<ol>
+<li><p>域控(Root PDC角色)上需要与外部时间源同步,命令如下:<br>W32tm /config /manualpeerlist:time.nrc.ca /syncfromflags:manual /reliable:yes /update<br>W32tm /resync /rediscover<br>net stop w32time &amp;&amp; net start w32time  </p>
+</li>
+<li><p>域控(非PDC角色),运行以下命令:<br>w32tm /config /syncfromflags:domhier /update<br>w32tm /resync /rediscover<br>net stop w32time &amp;&amp; net start w32time  </p>
+</li>
+<li><p>遇到问题，重建时间配置：<br>net stop w32time<br>w32tm /unregister<br>w32tm /register<br>net start w32time</p>
+</li>
+</ol>
+<ul>
+<li>域内机器同步: net time \DC Name或ip /set /y</li>
+<li>查看时间源: w32tm /monitor</li>
+<li>查看登录服务器: echo %logonserver%</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck38pqcx5000jp9pwxmibs7ak" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-KMS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/18/KMS/" class="article-date">
+  <time datetime="2019-09-18T12:10:13.000Z" itemprop="datePublished">2019-09-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/18/KMS/">KMS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>命令行激活,请使用管理员权限</strong></p>
+<p>激活WINDOWS</p>
+<ol>
+<li>slmgr /skms X.X.X.X. 设置kms服务器</li>
+<li>slmgr /ipk xxxx-xxxx-xxxx-xxxx 更换Key</li>
+<li>slmgr /ato 激活</li>
+</ol>
+<p>激活OFFICE</p>
+<ol>
+<li>ospp.vbs(C:\program files\microsoft office\officeXX) 注意32位版x86目录</li>
+<li>cscript ospp.vbs /sethst:X.X.X.X</li>
+<li>cscript ospp.vbs /act</li>
+</ol>
+<p>其他</p>
+<ul>
+<li>wmic os get caption 查看系统版本</li>
+<li>slmgr /dlv 详细许可证信息</li>
+<li><a href="https://github.com/Wind4/vlmcsd" target="_blank" rel="noopener">kms服务器</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener">序列号</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck38pqcwx000gp9pwewoeulqd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-shell-Example" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/16/shell-Example/" class="article-date">
@@ -106,7 +226,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck37d62j50005gwpwe7gwasqm" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck38pqcwt000bp9pwej2cv967" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -162,7 +282,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck37d62j60006gwpwrefvmb3t" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck38pqcww000ep9pwnk9oqe5w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -216,7 +336,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck37d62j20004gwpw1iwaciav" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck38pqcwr000ap9pwwe9nm5mh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -259,7 +379,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck37d62ix0001gwpwdeyqbgus" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck38pqcw70001p9pwcy72kelf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -313,7 +433,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck37d62ja000agwpwn289qrlw" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck38pqcwn0006p9pwktq1801v" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url/">url</a></li></ul>
@@ -356,7 +476,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck37d62je000egwpwuj5iu88d" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck38pqcwg0005p9pwi86v9uk7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/">software</a></li></ul>
@@ -404,7 +524,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/Ubuntu-语言设置/" data-id="ck37d62jf000ggwpwiqm778fu" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/Ubuntu-语言设置/" data-id="ck38pqcwd0004p9pwu9p1bxa6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -451,7 +571,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/13/begin/" data-id="ck37d62ip0000gwpwxrbwnzdj" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/13/begin/" data-id="ck38pqcw10000p9pw4jor7py8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -463,60 +583,11 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/12/hello-world/" class="article-date">
-  <time datetime="2019-09-12T13:00:50.919Z" itemprop="datePublished">2019-09-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/12/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/12/hello-world/" data-id="ck37d62ln003agwpweypp2toe" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -569,6 +640,14 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       <ul>
         
           <li>
+            <a href="/2019/11/21/Set-TimeZone/">Set TimeZone</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/21/NFS-Mount/">NFS Mount</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/20/NFS-权限/">NFS 权限</a>
           </li>
         
@@ -578,14 +657,6 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
         
           <li>
             <a href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/06/netsh-命令行修改网络配置/">netsh 命令行修改网络配置</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/04/Unix-and-Windows-文本文件转换/">Unix and Windows 文本文件转换</a>
           </li>
         
       </ul>

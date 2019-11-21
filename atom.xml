@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-11-20T14:10:47.239Z</updated>
+  <updated>2019-11-21T12:49:08.684Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Set TimeZone</title>
+    <link href="http://blog.lizhen.pub/2019/11/21/Set-TimeZone/"/>
+    <id>http://blog.lizhen.pub/2019/11/21/Set-TimeZone/</id>
+    <published>2019-11-21T12:46:43.000Z</published>
+    <updated>2019-11-21T12:49:08.684Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;timedatectl&quot;&gt;&lt;a href=&quot;#timedatectl&quot; class=&quot;headerlink&quot; title=&quot;timedatectl&quot;&gt;&lt;/a&gt;timedatectl&lt;/h4&gt;&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NFS Mount</title>
+    <link href="http://blog.lizhen.pub/2019/11/21/NFS-Mount/"/>
+    <id>http://blog.lizhen.pub/2019/11/21/NFS-Mount/</id>
+    <published>2019-11-21T12:26:21.000Z</published>
+    <updated>2019-11-21T12:36:38.932Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>NFS 权限</title>
@@ -530,68 +588,6 @@
         
         
           &lt;p&gt;&lt;strong&gt;Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Install vim 8.1 on Ubuntu</title>
-    <link href="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/"/>
-    <id>http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/</id>
-    <published>2019-09-24T12:09:37.000Z</published>
-    <updated>2019-09-24T12:46:07.181Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;使用不受信任的 ppa, 安装不受支持的软件.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="vim" scheme="http://blog.lizhen.pub/tags/vim/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bash For Loop Examples(转载)</title>
-    <link href="http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-%E8%BD%AC%E8%BD%BD/"/>
-    <id>http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-转载/</id>
-    <published>2019-09-22T11:25:08.000Z</published>
-    <updated>2019-09-22T11:50:50.419Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;http://www.cyberciti.biz/faq/bash-for-loop/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;转载&lt;/a&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight
         
       
     

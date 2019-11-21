@@ -69,6 +69,117 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Vim-8-1-On-Ubuntu-install" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/24/Vim-8-1-On-Ubuntu-install/" class="article-date">
+  <time datetime="2019-09-24T12:09:37.000Z" itemprop="datePublished">2019-09-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/24/Vim-8-1-On-Ubuntu-install/">Install vim 8.1 on Ubuntu</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>使用不受信任的 ppa, 安装不受支持的软件.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:jonathonf/vim</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install vim</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除 vim</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove vim</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/24/Vim-8-1-On-Ubuntu-install/" data-id="ck38pqcxq001jp9pwena4l63c" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Bash-For-Loop-Examples-转载" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/22/Bash-For-Loop-Examples-转载/" class="article-date">
+  <time datetime="2019-09-22T11:25:08.000Z" itemprop="datePublished">2019-09-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/22/Bash-For-Loop-Examples-转载/">Bash For Loop Examples(转载)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.cyberciti.biz/faq/bash-for-loop/" target="_blank" rel="noopener">转载</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> VARIABLE <span class="keyword">in</span> 1 2 3 4 5 .. N</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  command1</span><br><span class="line">  command2</span><br><span class="line">  commandN</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> VARIABLE <span class="keyword">in</span> file1 file2 file3</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  command1 on <span class="variable">$VARIABLE</span></span><br><span class="line">  command2</span><br><span class="line">  commandN</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> OUTPUT <span class="keyword">in</span> $(Linux-Or-Unix-Command-Here)</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  command1 on <span class="variable">$OUTPUT</span></span><br><span class="line">  command2 on <span class="variable">$OUTPUT</span></span><br><span class="line">  commandN</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (( EXP1; EXP2; EXP3 ))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  command1</span><br><span class="line">  command2</span><br><span class="line">  command3</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">for</span> (( c=1; c&amp;lt;=5; c++ ))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line"> <span class="built_in">echo</span> <span class="string">"Welcome <span class="variable">$c</span> times"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#infinite loops</span></span><br><span class="line"><span class="keyword">for</span> (( ; ; ))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"infinite loops [ hit CTRL+C to stop]"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> /etc/*</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  <span class="keyword">if</span> [ <span class="string">"<span class="variable">$&#123;file&#125;</span>"</span> == <span class="string">"/etc/resolv.conf"</span> ]</span><br><span class="line">  <span class="keyword">then</span></span><br><span class="line">    countNameservers=$(grep -c nameserver /etc/resolv.conf)</span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Total  <span class="variable">$&#123;countNameservers&#125;</span> nameservers defined in <span class="variable">$&#123;file&#125;</span>"</span></span><br><span class="line">    <span class="built_in">break</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">FILES=<span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line"><span class="keyword">for</span> f <span class="keyword">in</span> <span class="variable">$FILES</span></span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">  <span class="comment"># if .bak backup file exists, read next file</span></span><br><span class="line">  <span class="keyword">if</span> [ -f <span class="variable">$&#123;f&#125;</span>.bak ]</span><br><span class="line">  <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Skiping <span class="variable">$f</span> file..."</span></span><br><span class="line">    <span class="built_in">continue</span>  <span class="comment"># read next file and skip cp command</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">  <span class="comment"># we are hear means no backup file exists, just use cp command to copy file</span></span><br><span class="line">  /bin/cp <span class="variable">$f</span> <span class="variable">$f</span>.bak</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash-For-Loop-Examples-转载/" data-id="ck38pqcxc000vp9pwmguw9j8u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Linux-Find-Example" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/22/Linux-Find-Example/" class="article-date">
@@ -138,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/" data-id="ck37d62jy0013gwpwd15fazdq" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/" data-id="ck38pqcxj0017p9pw47iqi4ka" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -181,7 +292,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/" data-id="ck37d62jw000zgwpwptjtzkiz" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/Bash中的环境变量拼接/" data-id="ck38pqcxf000zp9pwmsa5t52q" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -227,7 +338,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/" data-id="ck37d62ju000vgwpwsf49y2av" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-函数上下文-闭包/" data-id="ck38pqcxh0013p9pworkfcefd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -270,7 +381,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck37d62k00017gwpwv1n9lrry" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/SQL-Server中的Collations和Unicode/" data-id="ck38pqcxl001bp9pwmdb2tw04" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -319,7 +430,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/设计原理-SOLID/" data-id="ck37d62k2001bgwpwx9atce6b" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/22/设计原理-SOLID/" data-id="ck38pqcxo001fp9pwx1nv5lq8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -370,7 +481,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/js-this/" data-id="ck37d62jr000pgwpwnn4pshhm" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/js-this/" data-id="ck38pqcx9000pp9pwuwacwj8s" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
@@ -431,7 +542,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ck37d62jp000lgwpwt9x9oegg" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ck38pqcxa000rp9pwbg8qyrb5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -475,130 +586,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck37d62mf0053gwpwzss3dhcu" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck38pqcx7000lp9pwgh3z4nd2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Windows-AD-Time" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/18/Windows-AD-Time/" class="article-date">
-  <time datetime="2019-09-18T13:16:54.000Z" itemprop="datePublished">2019-09-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/18/Windows-AD-Time/">Windows AD Time</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="/images/ad_time.gif" alt></p>
-<h3 id="Windows-AD域-单域-内的时间同步只需掌握以下几点"><a href="#Windows-AD域-单域-内的时间同步只需掌握以下几点" class="headerlink" title="Windows AD域(单域)内的时间同步只需掌握以下几点:"></a>Windows AD域(单域)内的时间同步只需掌握以下几点:</h3><p><strong>* 域内工作站/服务器与登陆时的联络的DC同步时间，此DC与Root PDC角色的DC同步时间。*</strong></p>
-<p><em>有效的时间服务器可查询 <a href="http://www.pool.ntp.org/" target="_blank" rel="noopener">http://www.pool.ntp.org/</a></em></p>
-<ol>
-<li><p>域控(Root PDC角色)上需要与外部时间源同步,命令如下:<br>W32tm /config /manualpeerlist:time.nrc.ca /syncfromflags:manual /reliable:yes /update<br>W32tm /resync /rediscover<br>net stop w32time &amp;&amp; net start w32time  </p>
-</li>
-<li><p>域控(非PDC角色),运行以下命令:<br>w32tm /config /syncfromflags:domhier /update<br>w32tm /resync /rediscover<br>net stop w32time &amp;&amp; net start w32time  </p>
-</li>
-<li><p>遇到问题，重建时间配置：<br>net stop w32time<br>w32tm /unregister<br>w32tm /register<br>net start w32time</p>
-</li>
-</ol>
-<ul>
-<li>域内机器同步: net time \DC Name或ip /set /y</li>
-<li>查看时间源: w32tm /monitor</li>
-<li>查看登录服务器: echo %logonserver%</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck37d62jn000jgwpwpw8r67bd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-KMS" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/18/KMS/" class="article-date">
-  <time datetime="2019-09-18T12:10:13.000Z" itemprop="datePublished">2019-09-18</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/18/KMS/">KMS</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>命令行激活,请使用管理员权限</strong></p>
-<p>激活WINDOWS</p>
-<ol>
-<li>slmgr /skms X.X.X.X. 设置kms服务器</li>
-<li>slmgr /ipk xxxx-xxxx-xxxx-xxxx 更换Key</li>
-<li>slmgr /ato 激活</li>
-</ol>
-<p>激活OFFICE</p>
-<ol>
-<li>ospp.vbs(C:\program files\microsoft office\officeXX) 注意32位版x86目录</li>
-<li>cscript ospp.vbs /sethst:X.X.X.X</li>
-<li>cscript ospp.vbs /act</li>
-</ol>
-<p>其他</p>
-<ul>
-<li>wmic os get caption 查看系统版本</li>
-<li>slmgr /dlv 详细许可证信息</li>
-<li><a href="https://github.com/Wind4/vlmcsd" target="_blank" rel="noopener">kms服务器</a></li>
-<li><a href="https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener">序列号</a></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck37d62jc000bgwpwr5o6ztuo" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
 
     </footer>
   </div>
@@ -611,7 +602,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -664,6 +655,14 @@
       <ul>
         
           <li>
+            <a href="/2019/11/21/Set-TimeZone/">Set TimeZone</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/21/NFS-Mount/">NFS Mount</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/20/NFS-权限/">NFS 权限</a>
           </li>
         
@@ -673,14 +672,6 @@
         
           <li>
             <a href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/06/netsh-命令行修改网络配置/">netsh 命令行修改网络配置</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/04/Unix-and-Windows-文本文件转换/">Unix and Windows 文本文件转换</a>
           </li>
         
       </ul>

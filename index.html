@@ -69,6 +69,95 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Set-TimeZone" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/21/Set-TimeZone/" class="article-date">
+  <time datetime="2019-11-21T12:46:43.000Z" itemprop="datePublished">2019-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/21/Set-TimeZone/">Set TimeZone</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="timedatectl"><a href="#timedatectl" class="headerlink" title="timedatectl"></a>timedatectl</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">timedatectl list-timezones</span><br><span class="line">timedatectl <span class="built_in">set</span>-timezone Region/Location</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/11/21/Set-TimeZone/" data-id="ck38pqczg003mp9pwbo0364fm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-NFS-Mount" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/21/NFS-Mount/" class="article-date">
+  <time datetime="2019-11-21T12:26:21.000Z" itemprop="datePublished">2019-11-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/21/NFS-Mount/">NFS Mount</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04" target="_blank" rel="noopener">原文</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># On the Host</span></span><br><span class="line">sudo apt install nfs-kernel-server</span><br><span class="line">sudo mkdir /var/nfs/general -p</span><br><span class="line">sudo chown nobody:nogroup /var/nfs/general</span><br><span class="line">sudo vim /etc/exports</span><br><span class="line"></span><br><span class="line"><span class="comment"># exports on the host</span></span><br><span class="line"><span class="comment"># /var/nfs/general x.x.x.x(rw,sync,no_subtree_check)</span></span><br><span class="line">sudo systemctl restart nfs-kernel-server  </span><br><span class="line"></span><br><span class="line"><span class="comment"># On the Client</span></span><br><span class="line">sudo apt install nfs-common</span><br><span class="line"></span><br><span class="line">sudo mkdir -p /nfs/general</span><br><span class="line">sudo mount x.x.x.x:/var/nfs/general /nfs/general</span><br><span class="line"></span><br><span class="line"><span class="comment"># At Boot</span></span><br><span class="line">sudo vim /etc/fstab</span><br><span class="line"><span class="comment"># /etc/fstab</span></span><br><span class="line"><span class="comment"># x.x.x.x:/var/nfs/general  /nfs/general nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Unmounting </span></span><br><span class="line">sudo umount /nfs/home</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/11/21/NFS-Mount/" data-id="ck38pqcze003ip9pw9be9ly0x" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-NFS-权限" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/20/NFS-权限/" class="article-date">
@@ -114,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/20/NFS-权限/" data-id="ck37d62lh0030gwpwqfxb9yrw" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/20/NFS-权限/" data-id="ck38pqczb003fp9pwfwln9wg1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -164,7 +253,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/" data-id="ck37d62lj0033gwpw62xsmxe2" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/" data-id="ck38pqcz7003bp9pwm5sbmjvk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -208,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/" data-id="ck37d62ll0037gwpwh9vz7kdl" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/" data-id="ck38pqcz50038p9pw8l2ljnqn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -252,7 +341,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/06/netsh-命令行修改网络配置/" data-id="ck37d62lf002wgwpwcgl5yrni" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/06/netsh-命令行修改网络配置/" data-id="ck38pqcz30034p9pwuvssdk2j" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -301,7 +390,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/04/Unix-and-Windows-文本文件转换/" data-id="ck37d62l6002tgwpwznr8v0u2" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/04/Unix-and-Windows-文本文件转换/" data-id="ck38pqcz20031p9pwmkkxyq4p" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -345,7 +434,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/03/windows中sha1-md5校验/" data-id="ck37d62l0002pgwpwa92f6xah" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/03/windows中sha1-md5校验/" data-id="ck38pqcz0002xp9pw40ujijq6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -390,7 +479,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/" data-id="ck37d62kz002ngwpwseayohod" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/" data-id="ck38pqcyy002up9pwm2pexzhl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -441,126 +530,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/" data-id="ck37d62ku002fgwpwr1v6o6g7" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/" data-id="ck38pqcyo002qp9pw0zo9af2k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-华为交换机-ACL-单向流量控制" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/08/华为交换机-ACL-单向流量控制/" class="article-date">
-  <time datetime="2019-10-08T11:50:40.000Z" itemprop="datePublished">2019-10-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/08/华为交换机-ACL-单向流量控制/">华为交换机 ACL 单向流量控制</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>我们假设有VLAN A和B，需要做到A可以访问B，而B不可以访问A</strong><br>  A的地址段为 X.X.X.X/24<br>  B的地址段为 Y.Y.Y.Y/24</p>
-<p>  对于单向流量的控制，一般来说是属于防火墙的功能。但实际上，交换机也是可以通过ACL的灵活配置，来实现最基本的单向流量控制。具体配置如下：</p>
-<p>对于ICMP协议，需要允许B-&gt;A的icmp echo-reply报文：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acl 3001</span><br><span class="line">   rule 5 permit icmp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255  icmp-type echo-reply</span><br></pre></td></tr></table></figure>
-
-<p>对于TCP协议，需要允许B-&gt;A，报文头中SYN Flag的类型为ack(010000)或rst(000100)的TCP报文：<br>———-V2R2版本及以前的配置————</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rule 9 permit tcp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255 tcp-flag ack</span><br><span class="line">rule 10 permit tcp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255 tcp-flag rst</span><br></pre></td></tr></table></figure>
-
-<p>———-V2R3版本及以后的配置————</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rule 10 permit tcp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255 tcp-flag established</span><br></pre></td></tr></table></figure>
-
-<p>对于UDP协议，由于其为无状态的特性，无法实现单通，基于业务优先原则，放开所有UDP协议文：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rule 15 permit udp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255</span><br></pre></td></tr></table></figure>
-
-<p>最后，deny其他B-&gt;A的IP流量，并基于业务优先原则，放开其他所有未知流量：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rule 20 deny ip source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255</span><br><span class="line">rule 25 permit ip</span><br></pre></td></tr></table></figure>
-
-<p>将该ACL通过traffic-filter应用于VLAN之上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traffic-filter vlan B inbound acl 3001</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/08/华为交换机-ACL-单向流量控制/" data-id="ck37d62kw002igwpw7ms3zbjx" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/">network</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Postgresql-join" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/06/Postgresql-join/" class="article-date">
-  <time datetime="2019-10-06T12:21:04.000Z" itemprop="datePublished">2019-10-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/06/Postgresql-join/">Postgresql join</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="postgresql-中join的选项"><a href="#postgresql-中join的选项" class="headerlink" title="postgresql 中join的选项"></a>postgresql 中join的选项</h3><ul>
-<li><p><strong>Nested Loops(O(n2))</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for x in table1:</span><br><span class="line">  for y in table2:</span><br><span class="line">    if x.field == y.field</span><br><span class="line">      issue row</span><br><span class="line">    else</span><br><span class="line">      keep doing</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Hash joins</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hash join</span><br><span class="line">  Sequentialscan table 1</span><br><span class="line">  Sequentialscan table 2</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Merge joins(O(n * log(n)))</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Merge join</span><br><span class="line">  Sort table 1</span><br><span class="line">    Sequetial scan table 1</span><br><span class="line">  Sort table 2</span><br><span class="line">    Sequetial scan table 2</span><br><span class="line">---</span><br><span class="line">Merge join</span><br><span class="line">  Index scan table 1</span><br><span class="line">  Index scan table 2</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-join/" data-id="ck37d62km0023gwpwheihasu9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
 
     </footer>
   </div>
@@ -573,7 +546,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -626,6 +599,14 @@
       <ul>
         
           <li>
+            <a href="/2019/11/21/Set-TimeZone/">Set TimeZone</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/21/NFS-Mount/">NFS Mount</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/20/NFS-权限/">NFS 权限</a>
           </li>
         
@@ -635,14 +616,6 @@
         
           <li>
             <a href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/06/netsh-命令行修改网络配置/">netsh 命令行修改网络配置</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/04/Unix-and-Windows-文本文件转换/">Unix and Windows 文本文件转换</a>
           </li>
         
       </ul>

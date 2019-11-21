@@ -5,24 +5,18 @@
   
 
   
-  <title>Postgresql bitmap heap/index scan | li</title>
+  <title>li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
-<meta name="keywords" content="postgresql">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Postgresql bitmap heap&#x2F;index scan">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/index.html">
+  <meta name="description" content="IT Computer Program">
+<meta property="og:type" content="website">
+<meta property="og:title" content="li">
+<meta property="og:url" content="http://blog.lizhen.pub/page/5/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
+<meta property="og:description" content="IT Computer Program">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.1.png">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.2.png">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.3.png">
-<meta property="og:updated_time" content="2019-10-06T06:23:46.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Postgresql bitmap heap&#x2F;index scan">
-<meta name="twitter:description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
-<meta name="twitter:image" content="http://blog.lizhen.pub/images/bitmapIndex.1.png">
+<meta name="twitter:title" content="li">
+<meta name="twitter:description" content="IT Computer Program">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -73,16 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-postgresql-bitmap-heap-index-scan" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="article-date">
-  <time datetime="2019-10-04T03:51:28.000Z" itemprop="datePublished">2019-10-04</time>
+    <a href="/2019/09/12/hello-world/" class="article-date">
+  <time datetime="2019-09-12T13:00:50.919Z" itemprop="datePublished">2019-09-12</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -90,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Postgresql bitmap heap/index scan
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/12/hello-world/">Hello World</a>
     </h1>
   
 
@@ -99,48 +91,39 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://dba.stackexchange.com/questions/119386/understanding-bitmap-heap-scan-and-bitmap-index-scan" target="_blank" rel="noopener">转载</a></p>
-<ul>
-<li><p>index scan 扫描索引,查找后<strong>立即</strong>读取对应数据页,是<em>随机读</em>.</p>
-</li>
-<li><p>bitmap heap scan 最终是<em>顺序读</em>. 一般用在多个索引同时使用时或单个索引多次使用时.</p>
-</li>
-</ul>
-<p>举例(先bitmap index scan 再bitmap heap scan):<br><img src="/images/bitmapIndex.1.png" alt><br>bitmaps 按为与<br><img src="/images/bitmapIndex.2.png" alt><br>bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked).<br><img src="/images/bitmapIndex.3.png" alt>.</p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ck38pqcy60023p9pwlbmy4snl" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/12/hello-world/" data-id="ck38pqczi003pp9pwec73vkh5" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
-
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2019/10/04/postgresql-reload-config/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Postgresql reload config
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/09/29/PostgreSQL-Schema/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Postgresql -- Schema</div>
-    </a>
-  
-</nav>
+</article>
+
 
   
-</article>
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+  </nav>
 
 </section>
         

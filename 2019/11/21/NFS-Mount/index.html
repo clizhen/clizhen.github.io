@@ -5,24 +5,20 @@
   
 
   
-  <title>Postgresql bitmap heap/index scan | li</title>
+  <title>NFS Mount | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
-<meta name="keywords" content="postgresql">
+  <meta name="description" content="原文 1234567891011121314151617181920212223# On the Hostsudo apt install nfs-kernel-serversudo mkdir /var/nfs/general -psudo chown nobody:nogroup /var/nfs/generalsudo vim /etc/exports# exports on the hos">
+<meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Postgresql bitmap heap&#x2F;index scan">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/index.html">
+<meta property="og:title" content="NFS Mount">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/11/21/NFS-Mount/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
+<meta property="og:description" content="原文 1234567891011121314151617181920212223# On the Hostsudo apt install nfs-kernel-serversudo mkdir /var/nfs/general -psudo chown nobody:nogroup /var/nfs/generalsudo vim /etc/exports# exports on the hos">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.1.png">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.2.png">
-<meta property="og:image" content="http://blog.lizhen.pub/images/bitmapIndex.3.png">
-<meta property="og:updated_time" content="2019-10-06T06:23:46.678Z">
+<meta property="og:updated_time" content="2019-11-21T12:36:38.932Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Postgresql bitmap heap&#x2F;index scan">
-<meta name="twitter:description" content="转载  index scan 扫描索引,查找后立即读取对应数据页,是随机读.  bitmap heap scan 最终是顺序读. 一般用在多个索引同时使用时或单个索引多次使用时.   举例(先bitmap index scan 再bitmap heap scan):bitmaps 按为与bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked)..">
-<meta name="twitter:image" content="http://blog.lizhen.pub/images/bitmapIndex.1.png">
+<meta name="twitter:title" content="NFS Mount">
+<meta name="twitter:description" content="原文 1234567891011121314151617181920212223# On the Hostsudo apt install nfs-kernel-serversudo mkdir /var/nfs/general -psudo chown nobody:nogroup /var/nfs/generalsudo vim /etc/exports# exports on the hos">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -73,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-postgresql-bitmap-heap-index-scan" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-NFS-Mount" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="article-date">
-  <time datetime="2019-10-04T03:51:28.000Z" itemprop="datePublished">2019-10-04</time>
+    <a href="/2019/11/21/NFS-Mount/" class="article-date">
+  <time datetime="2019-11-21T12:26:21.000Z" itemprop="datePublished">2019-11-21</time>
 </a>
     
   <div class="article-category">
@@ -91,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Postgresql bitmap heap/index scan
+      NFS Mount
     </h1>
   
 
@@ -99,22 +95,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://dba.stackexchange.com/questions/119386/understanding-bitmap-heap-scan-and-bitmap-index-scan" target="_blank" rel="noopener">转载</a></p>
-<ul>
-<li><p>index scan 扫描索引,查找后<strong>立即</strong>读取对应数据页,是<em>随机读</em>.</p>
-</li>
-<li><p>bitmap heap scan 最终是<em>顺序读</em>. 一般用在多个索引同时使用时或单个索引多次使用时.</p>
-</li>
-</ul>
-<p>举例(先bitmap index scan 再bitmap heap scan):<br><img src="/images/bitmapIndex.1.png" alt><br>bitmaps 按为与<br><img src="/images/bitmapIndex.2.png" alt><br>bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked).<br><img src="/images/bitmapIndex.3.png" alt>.</p>
+        <p><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04" target="_blank" rel="noopener">原文</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># On the Host</span></span><br><span class="line">sudo apt install nfs-kernel-server</span><br><span class="line">sudo mkdir /var/nfs/general -p</span><br><span class="line">sudo chown nobody:nogroup /var/nfs/general</span><br><span class="line">sudo vim /etc/exports</span><br><span class="line"></span><br><span class="line"><span class="comment"># exports on the host</span></span><br><span class="line"><span class="comment"># /var/nfs/general x.x.x.x(rw,sync,no_subtree_check)</span></span><br><span class="line">sudo systemctl restart nfs-kernel-server  </span><br><span class="line"></span><br><span class="line"><span class="comment"># On the Client</span></span><br><span class="line">sudo apt install nfs-common</span><br><span class="line"></span><br><span class="line">sudo mkdir -p /nfs/general</span><br><span class="line">sudo mount x.x.x.x:/var/nfs/general /nfs/general</span><br><span class="line"></span><br><span class="line"><span class="comment"># At Boot</span></span><br><span class="line">sudo vim /etc/fstab</span><br><span class="line"><span class="comment"># /etc/fstab</span></span><br><span class="line"><span class="comment"># x.x.x.x:/var/nfs/general  /nfs/general nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Unmounting </span></span><br><span class="line">sudo umount /nfs/home</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ck38pqcy60023p9pwlbmy4snl" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/21/NFS-Mount/" data-id="ck38pqcze003ip9pw9be9ly0x" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -122,19 +113,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/10/04/postgresql-reload-config/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/21/Set-TimeZone/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Postgresql reload config
+          Set TimeZone
         
       </div>
     </a>
   
   
-    <a href="/2019/09/29/PostgreSQL-Schema/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/20/NFS-权限/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Postgresql -- Schema</div>
+      <div class="article-nav-title">NFS 权限</div>
     </a>
   
 </nav>
