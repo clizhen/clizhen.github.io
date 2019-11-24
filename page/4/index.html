@@ -69,6 +69,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-SQL2000-孤立用户修复" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/21/SQL2000-孤立用户修复/" class="article-date">
+  <time datetime="2019-09-21T11:23:55.000Z" itemprop="datePublished">2019-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/21/SQL2000-孤立用户修复/">SQL2000 孤立用户修复</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="孤立用户的产生"><a href="#孤立用户的产生" class="headerlink" title="孤立用户的产生"></a>孤立用户的产生</h3><p><em>当我们把备份的数据库恢复到新服务器时，原有的数据库用户名没有对应的登录名。就产生了孤立用户。</em></p>
+<p>解决方法之一：使登录用户和数据库的孤立用户对应起来<br><strong>存储过程- sp_change_users_login. 可使用3种操作(report, update_one ,auto_fix)</strong><br>– 列出孤立用户<br>  sp_change_users_login ‘report’<br>– 连接孤立用户(登录名已建)<br>  sp_change_users_login ‘update_one’,’用户名’,’登录名’<br>– 自动连接孤立用户<br>  sp_change_users_login ‘Auto_Fix’,’用户名’,NULL,’登录密码’</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck3cye5zr003qo2pwvewprm3w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Windows-AD-Time" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/18/Windows-AD-Time/" class="article-date">
@@ -115,7 +159,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck38pqcx5000jp9pwxmibs7ak" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck3cye5x7000ho2pwkkkebn8w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -177,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck38pqcwx000gp9pwewoeulqd" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck3cye5x1000ao2pwm94ndnd2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -226,7 +270,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck38pqcwt000bp9pwej2cv967" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck3cye5xv001do2pwyf6d5vjb" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -282,7 +326,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck38pqcww000ep9pwnk9oqe5w" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck3cye5wy0006o2pwka0y9oi1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -336,7 +380,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck38pqcwr000ap9pwwe9nm5mh" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck3cye5x6000fo2pw1cn947s0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -379,7 +423,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck38pqcw70001p9pwcy72kelf" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck3cye5wu0004o2pwnw7c2gmf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -433,7 +477,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck38pqcwn0006p9pwktq1801v" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck3cye5ww0005o2pwxvup8p3k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url/">url</a></li></ul>
@@ -476,7 +520,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck38pqcwg0005p9pwi86v9uk7" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck3cye5x3000bo2pwfoaz2ccv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/">software</a></li></ul>
@@ -524,57 +568,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/Ubuntu-语言设置/" data-id="ck38pqcwd0004p9pwu9p1bxa6" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/Ubuntu-语言设置/" data-id="ck3cye5wp0001o2pwlcbfrwmn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-begin" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/13/begin/" class="article-date">
-  <time datetime="2019-09-13T01:25:15.000Z" itemprop="datePublished">2019-09-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/13/begin/">Linux终端 拷贝 粘贴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>不比Windows差哦</em></p>
-<ol>
-<li>在Linux中，使用光标选择要复制的文本，它会自动将文本复制到剪贴板。</li>
-<li>右键点击鼠标，完成粘贴.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/13/begin/" data-id="ck38pqcw10000p9pw4jor7py8" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -640,6 +637,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       <ul>
         
           <li>
+            <a href="/2019/11/24/阿里源/">阿里源</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/21/Set-TimeZone/">Set TimeZone</a>
           </li>
         
@@ -653,10 +654,6 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
         
           <li>
             <a href="/2019/11/09/PowerShell-Remoting/">PowerShell Remoting &amp;&amp; Job</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
           </li>
         
       </ul>

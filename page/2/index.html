@@ -69,6 +69,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Docker-entrypoint-vs-cmd" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/09/Docker-entrypoint-vs-cmd/" class="article-date">
+  <time datetime="2019-10-09T13:49:38.000Z" itemprop="datePublished">2019-10-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/09/Docker-entrypoint-vs-cmd/">Docker entrypoint vs cmd</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile" target="_blank" rel="noopener">原文</a></p>
+<p>  <strong>Docker has a default entrypoint which is /bin/sh -c but does not have a default command.</strong></p>
+<p>  When you run docker like this: docker run -i -t ubuntu bash the entrypoint is the default /bin/sh -c, the image is ubuntu and the command is bash.</p>
+<p>  The command is run via the entrypoint. i.e., the actual thing that gets executed is /bin/sh -c bash. This allowed Docker to implement RUN quickly by relying on the shell’s parser.</p>
+<p>  Later on, people asked to be able to customize this, so ENTRYPOINT and –entrypoint were introduced.</p>
+<p>  Everything after ubuntu in the example above is the command and is passed to the entrypoint. When using the CMD instruction, it is exactly as if you were doing docker run -i -t ubuntu <cmd>. <cmd> will be the parameter of the entrypoint.</cmd></cmd></p>
+<p>  You will also get the same result if you instead type this command docker run -i -t ubuntu. You will still start a bash shell in the container because of the ubuntu Dockerfile specified a default CMD: CMD [“bash”]</p>
+<p>  As everything is passed to the entrypoint, you can have a very nice behavior from your images. @Jiri example is good, it shows how to use an image as a “binary”. When using [“/bin/cat”] as entrypoint and then doing docker run img /etc/passwd, you get it, /etc/passwd is the command and is passed to the entrypoint so the end result execution is simply /bin/cat /etc/passwd.</p>
+<p>  Another example would be to have any cli as entrypoint. For instance, if you have a redis image, instead of running docker run redisimg redis -H something -u toto get key, you can simply have ENTRYPOINT [“redis”, “-H”, “something”, “-u”, “toto”] and then run like this for the same result: docker run redisimg get key.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/" data-id="ck3cye5ym002ho2pw353oi8jo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-华为交换机-ACL-单向流量控制" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/08/华为交换机-ACL-单向流量控制/" class="article-date">
@@ -119,7 +170,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/08/华为交换机-ACL-单向流量控制/" data-id="ck38pqcym002np9pwpg3wsb5w" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/08/华为交换机-ACL-单向流量控制/" data-id="ck3cye5yk002co2pwu1hlfecy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/">network</a></li></ul>
@@ -173,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-join/" data-id="ck38pqcye002fp9pwhu7dw89a" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-join/" data-id="ck3cye5zb0035o2pwx2enr1y7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -247,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-性能/" data-id="ck38pqcyj002ip9pwu3pbnwob" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-性能/" data-id="ck3cye5yi0029o2pwl8q7b8kx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -292,7 +343,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/" data-id="ck38pqcyc002bp9pw5u9e2ozm" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/" data-id="ck3cye5yf0024o2pwik57wrxw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -343,7 +394,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/" data-id="ck38pqcya0027p9pwyav0xjup" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/" data-id="ck3cye5y9001xo2pwcomex1vc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -393,7 +444,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ck38pqcy60023p9pwlbmy4snl" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ck3cye5yb0021o2pwdbjs4ezg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -437,7 +488,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/" data-id="ck38pqcy3001zp9pw958zcwoh" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/" data-id="ck3cye5zp003no2pwqw09xe08" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -492,7 +543,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/" data-id="ck38pqcxz001vp9pwwhcolwj8" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/" data-id="ck3cye5y2001po2pwn5jijslg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
@@ -548,59 +599,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/" data-id="ck38pqcxv001rp9pwdnycowjm" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/" data-id="ck3cye5y4001to2pwf2v7sg03" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/">postgresql</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Linux-Shell-set-vs-env" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/26/Linux-Shell-set-vs-env/" class="article-date">
-  <time datetime="2019-09-26T13:14:04.000Z" itemprop="datePublished">2019-09-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/26/Linux-Shell-set-vs-env/">Linux Shell SET vs ENV</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Shells can have variables of 2 types: locals, which are only accessible from the current shell, and (exported) environment variables, which are passed on to every executed program. set can see shell-local variables, env cannot.</strong></p>
-<p>  Since set is a built-in shell command, it also sees sees shell-local variables (including shell functions). env on the other hand is an independent executable; it only sees the variables that the shell passes to it, or environment variables.</p>
-<p><strong>When you type a line like a=1 then a local variable is created (unless it already existed in the environment). Environment variables are created with export a=1</strong></p>
-<p>  What we have here the difference between environment variables and shell variables. Under sh (and variants) all environment variables are automatically shell variables as well, but the same is not true in the other direction (this originally was to save memory (I think)).</p>
-<p>  Environment variables are stored in an area of memory that is kept when a process calls <strong>exec()</strong>, this means that programs you run from the command line get a copy of the environment. Shell variables do not stay over an exec(), but are copied in a fork(). When you create a subshell the shell calls <strong>fork() </strong>in order to copy the present process, but it does NOT call exec() because the process it requires is already there thus the shell variables are kept.</p>
-<p>  Also most shells set for you certain shell variables when you start them up, PS1 is a perfect example of this, and you may have also set them yourself in your shell initalisation file.</p>
-<p>  In summary, shell variables are used by the shell and copies it makes of itself, while environment variables are used by everything.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/26/Linux-Shell-set-vs-env/" data-id="ck38pqcxs001np9pwn2x5yw8b" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -666,6 +668,10 @@
       <ul>
         
           <li>
+            <a href="/2019/11/24/阿里源/">阿里源</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/21/Set-TimeZone/">Set TimeZone</a>
           </li>
         
@@ -679,10 +685,6 @@
         
           <li>
             <a href="/2019/11/09/PowerShell-Remoting/">PowerShell Remoting &amp;&amp; Job</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
           </li>
         
       </ul>
