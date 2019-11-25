@@ -5,20 +5,20 @@
   
 
   
-  <title>Linux Find Example | li</title>
+  <title>Docker 按名称批量删除image | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="名字 12find . -name &quot;lizhen.c&quot;; find / -iname &quot;lizhen.c&quot;  目录深度 12find -maxdepth 2 -name passwd ; find / -mindepth 3 - maxdepth 5 -name passwd  反向 1find -not -iname &quot;lizhen.c&quot;  执行命令 1find -iname &quot;lizhen">
-<meta name="keywords" content="shell">
+  <meta name="description" content="go 模板1docker rmi $(docker images --format &apos;&amp;#123;&amp;#123;.Repository&amp;#125;&amp;#125;:&amp;#123;&amp;#123;.Tag&amp;#125;&amp;#125;&apos; | grep &apos;imagename&apos;)">
+<meta name="keywords" content="shell,docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux Find Example">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/index.html">
+<meta property="og:title" content="Docker 按名称批量删除image">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/11/25/Docker-按名称批量删除image/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="名字 12find . -name &quot;lizhen.c&quot;; find / -iname &quot;lizhen.c&quot;  目录深度 12find -maxdepth 2 -name passwd ; find / -mindepth 3 - maxdepth 5 -name passwd  反向 1find -not -iname &quot;lizhen.c&quot;  执行命令 1find -iname &quot;lizhen">
+<meta property="og:description" content="go 模板1docker rmi $(docker images --format &apos;&amp;#123;&amp;#123;.Repository&amp;#125;&amp;#125;:&amp;#123;&amp;#123;.Tag&amp;#125;&amp;#125;&apos; | grep &apos;imagename&apos;)">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-22T11:27:15.533Z">
+<meta property="og:updated_time" content="2019-11-25T12:01:22.664Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux Find Example">
-<meta name="twitter:description" content="名字 12find . -name &quot;lizhen.c&quot;; find / -iname &quot;lizhen.c&quot;  目录深度 12find -maxdepth 2 -name passwd ; find / -mindepth 3 - maxdepth 5 -name passwd  反向 1find -not -iname &quot;lizhen.c&quot;  执行命令 1find -iname &quot;lizhen">
+<meta name="twitter:title" content="Docker 按名称批量删除image">
+<meta name="twitter:description" content="go 模板1docker rmi $(docker images --format &apos;&amp;#123;&amp;#123;.Repository&amp;#125;&amp;#125;:&amp;#123;&amp;#123;.Tag&amp;#125;&amp;#125;&apos; | grep &apos;imagename&apos;)">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -69,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Linux-Find-Example" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Docker-按名称批量删除image" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/22/Linux-Find-Example/" class="article-date">
-  <time datetime="2019-09-22T10:55:20.000Z" itemprop="datePublished">2019-09-22</time>
+    <a href="/2019/11/25/Docker-按名称批量删除image/" class="article-date">
+  <time datetime="2019-11-25T11:56:25.000Z" itemprop="datePublished">2019-11-25</time>
 </a>
     
   <div class="article-category">
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Linux Find Example
+      Docker 按名称批量删除image
     </h1>
   
 
@@ -95,53 +95,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li><p>名字</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find . -name <span class="string">"lizhen.c"</span>; </span><br><span class="line">find / -iname <span class="string">"lizhen.c"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>目录深度</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find -maxdepth 2 -name passwd ; </span><br><span class="line">find / -mindepth 3 - maxdepth 5 -name passwd</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>反向</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -not -iname <span class="string">"lizhen.c"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -iname <span class="string">"lizhen.c"</span> -<span class="built_in">exec</span> md5sum &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>文件权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find. -perm -g=r -<span class="built_in">type</span> f -<span class="built_in">exec</span> ls -l &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>空文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -empty</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>大小</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -size +100M</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Top 5 Big files</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -<span class="built_in">type</span> f -<span class="built_in">exec</span> ls -s &#123;&#125; \; | sort  -n -r | head -5</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>find files by comaring with the modification time of other file</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -newer ordinary_file</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>最近几天没有修改的文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -mtime +60</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>xargs </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find ~ -name <span class="string">'*.log'</span> -print0 | xargs -0 cat</span><br></pre></td></tr></table></figure>
+        <h4 id="go-模板"><a href="#go-模板" class="headerlink" title="go 模板"></a>go 模板</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images --format <span class="string">'&#123;&#123;.Repository&#125;&#125;:&#123;&#123;.Tag&#125;&#125;'</span> | grep <span class="string">'imagename'</span>)</span><br></pre></td></tr></table></figure>
 
-<p><em>备注: xargs 默认是以空白字符 (空格, TAB, 换行符) 来分割记录的,当这些不能分割时需设置为NULL分割.</em></p>
-</li>
-</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/Linux-Find-Example/" data-id="ck3eds1es0017k6pwlz0mx1mf" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/25/Docker-按名称批量删除image/" data-id="ck3eds1gv003tk6pwu89cw61q" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
 
     </footer>
   </div>
@@ -149,19 +112,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/22/Bash-For-Loop-Examples-转载/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Bash For Loop Examples(转载)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/22/Bash中的环境变量拼接/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/24/阿里源/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Bash中的环境变量拼接</div>
+      <div class="article-nav-title">阿里源</div>
     </a>
   
 </nav>
