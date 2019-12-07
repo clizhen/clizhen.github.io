@@ -5,18 +5,20 @@
   
 
   
-  <title>Category: windows | li</title>
+  <title>kubenetes 安装 | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="IT Computer Program">
-<meta property="og:type" content="website">
-<meta property="og:title" content="li">
-<meta property="og:url" content="http://blog.lizhen.pub/categories/computer/windows/index.html">
+  <meta name="description" content="我基本上是按照这篇文章的指导安装的. Linux网桥的概念请参考这篇文章  kubelet,kubeadm,kubectl的安装,使用阿里源  docker-ce 安装,使用阿里源  关闭swap 12sudo swapoff -asudo sed -i &apos;/swap/s/^/#/&apos; /etc/fstab  获取镜像(非MASTER NODE上,需要kube-proxy,pause),从阿里源pu">
+<meta name="keywords" content="kubenetes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="kubenetes 安装">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/12/06/kubenetes-安装/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="IT Computer Program">
+<meta property="og:description" content="我基本上是按照这篇文章的指导安装的. Linux网桥的概念请参考这篇文章  kubelet,kubeadm,kubectl的安装,使用阿里源  docker-ce 安装,使用阿里源  关闭swap 12sudo swapoff -asudo sed -i &apos;/swap/s/^/#/&apos; /etc/fstab  获取镜像(非MASTER NODE上,需要kube-proxy,pause),从阿里源pu">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-07T12:23:34.603Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="li">
-<meta name="twitter:description" content="IT Computer Program">
+<meta name="twitter:title" content="kubenetes 安装">
+<meta name="twitter:description" content="我基本上是按照这篇文章的指导安装的. Linux网桥的概念请参考这篇文章  kubelet,kubeadm,kubectl的安装,使用阿里源  docker-ce 安装,使用阿里源  关闭swap 12sudo swapoff -asudo sed -i &apos;/swap/s/^/#/&apos; /etc/fstab  获取镜像(非MASTER NODE上,需要kube-proxy,pause),从阿里源pu">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -67,192 +69,78 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/11/09/PowerShell-Remoting/" class="archive-article-date">
-  <time datetime="2019-11-09T03:43:19.000Z" itemprop="datePublished">Nov 9</time>
+        <section id="main"><article id="post-kubenetes-安装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/06/kubenetes-安装/" class="article-date">
+  <time datetime="2019-12-06T12:14:59.000Z" itemprop="datePublished">2019-12-06</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/09/PowerShell-Remoting/">PowerShell Remoting &amp;&amp; Job</a>
+    <h1 class="article-title" itemprop="name">
+      kubenetes 安装
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/11/07/PowerShell-FireWall/" class="archive-article-date">
-  <time datetime="2019-11-07T11:31:53.000Z" itemprop="datePublished">Nov 7</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
-    </h1>
-  
+        <p><strong>我基本上是按照这篇<a href="https://www.cnblogs.com/leisurelylicht/p/Ubuntu-guo-nei-an-zhuang-kubernetes.html" target="_blank" rel="noopener">文章</a>的指导安装的.</strong></p>
+<p><strong>Linux网桥的概念请参考这篇<a href="https://segmentfault.com/a/1190000009491002" target="_blank" rel="noopener">文章</a></strong></p>
+<ol>
+<li><p>kubelet,kubeadm,kubectl的安装,使用<a href="https://developer.aliyun.com/mirror" target="_blank" rel="noopener">阿里源</a></p>
+</li>
+<li><p>docker-ce 安装,使用<a href="https://developer.aliyun.com/mirror" target="_blank" rel="noopener">阿里源</a></p>
+</li>
+<li><p>关闭swap</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo swapoff -a</span><br><span class="line">sudo sed -i <span class="string">'/swap/s/^/#/'</span> /etc/fstab</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取镜像(非MASTER NODE上,需要kube-proxy,pause),从阿里源pull,然后改名.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">kubeadm config images list</span><br><span class="line">images=(</span><br><span class="line">kube-apiserver:v1.13.4</span><br><span class="line">kube-controller-manager:v1.13.4</span><br><span class="line">kube-scheduler:v1.13.4</span><br><span class="line">kube-proxy:v1.13.4</span><br><span class="line">pause:3.1</span><br><span class="line">etcd:3.2.24</span><br><span class="line">coredns:1.2.6</span><br><span class="line">)</span><br><span class="line"><span class="keyword">for</span> imageName <span class="keyword">in</span> <span class="variable">$&#123;images[@]&#125;</span> ; <span class="keyword">do</span></span><br><span class="line">        docker pull registry.aliyuncs.com/google_containers/<span class="variable">$imageName</span></span><br><span class="line">        docker tag registry.aliyuncs.com/google_containers/<span class="variable">$imageName</span> k8s.gcr.io/<span class="variable">$imageName</span></span><br><span class="line">        docker rmi registry.aliyuncs.com/google_containers/<span class="variable">$imageName</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装master(使用flannel网络,需指定pod-network-cidr)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init --pod-network-cidr=10.244.0.0/16</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>应用flannel插件(非MASTER NODE上需要flannel镜像,具体的镜像名,可在下面的yml文件中找到.例如: query.io/coreos/flannel:v0.11.0-amd64)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml</span><br></pre></td></tr></table></figure>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/11/06/netsh-命令行修改网络配置/" class="archive-article-date">
-  <time datetime="2019-11-06T11:58:56.000Z" itemprop="datePublished">Nov 6</time>
-</a>
+</li>
+</ol>
+
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/06/netsh-命令行修改网络配置/">netsh 命令行修改网络配置</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/11/03/windows中sha1-md5校验/" class="archive-article-date">
-  <time datetime="2019-11-03T12:47:49.000Z" itemprop="datePublished">Nov 3</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/12/06/kubenetes-安装/" data-id="ck3vjuoeh003m9tpwo382r4g6" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/03/windows中sha1-md5校验/">Windows中sha1 md5校验</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/22/SQL-Server中的Collations和Unicode/" class="archive-article-date">
-  <time datetime="2019-09-22T10:27:23.000Z" itemprop="datePublished">Sep 22</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/SQL-Server中的Collations和Unicode/">SQL Server中的Collations和Unicode</a>
-    </h1>
-  
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kubenetes/">kubenetes</a></li></ul>
 
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/21/SQL2000-孤立用户修复/" class="archive-article-date">
-  <time datetime="2019-09-21T11:23:55.000Z" itemprop="datePublished">Sep 21</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/21/SQL2000-孤立用户修复/">SQL2000 孤立用户修复</a>
-    </h1>
   
+    <a href="/2019/11/25/Docker-按名称批量删除image/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Docker 按名称批量删除image</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/18/Windows-AD-Time/" class="archive-article-date">
-  <time datetime="2019-09-18T13:16:54.000Z" itemprop="datePublished">Sep 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/18/Windows-AD-Time/">Windows AD Time</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/18/KMS/" class="archive-article-date">
-  <time datetime="2019-09-18T12:10:13.000Z" itemprop="datePublished">Sep 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/18/KMS/">KMS</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/09/15/SQL-XACT-ABORT/" class="archive-article-date">
-  <time datetime="2019-09-15T04:48:34.000Z" itemprop="datePublished">Sep 15</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/15/SQL-XACT-ABORT/">SQL XACT_ABORT</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
 
 </section>
         

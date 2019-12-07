@@ -69,6 +69,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-js-this" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/21/js-this/" class="article-date">
+  <time datetime="2019-09-21T11:46:11.000Z" itemprop="datePublished">2019-09-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/21/js-this/">JS THIS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Javascript 的this绑定使用时容易混淆，是语言的一个设计失误。而Js的闭包是这门语言的精髓。其实this是由函数的调用方式决定的，this代表函数执行时的上下文，而函数的调用有五种</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ex1</span>(<span class="params">name</span>) </span>&#123;&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Obj</span>(<span class="params">name</span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  ex1: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ex1(<span class="string">'li'</span>); <span class="comment">//直接调用</span></span><br><span class="line">obj.ex1(<span class="string">'li'</span>); <span class="comment">//方法调用</span></span><br><span class="line">objnew = <span class="keyword">new</span> Obj(<span class="string">'li'</span>); <span class="comment">//构造器</span></span><br><span class="line">ex1.call(objnew ,<span class="string">'li'</span>); <span class="comment">//call方法</span></span><br><span class="line">ex1.apply(objnew ,[<span class="string">'li'</span>]);&amp;nbsp; <span class="comment">// apply 方法</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>函数直接执行: 严格模式下是undefine,非严格模式是global context.(浏览器中是Window对象).</li>
+<li>函数做为对象的方法被调用: this绑定到对象.</li>
+<li>函数做为构造器被调用(new): this绑定到创建的对象</li>
+<li>call / apply 调用时可指定this对象.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/21/js-this/" data-id="ck3vjuoc9000p9tpwxkm75f0o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/">program</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-sed" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/21/sed/" class="article-date">
@@ -118,7 +169,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ck3eds1el000rk6pwhfbvidqm" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ck3vjuocb000r9tpwrlt5hu06" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -162,7 +213,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck3eds1eh000lk6pw1pslfbnj" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/21/SQL2000-孤立用户修复/" data-id="ck3vjuoc7000l9tpwo83kqff0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -220,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck3eds1eg000jk6pw293a8bxf" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/Windows-AD-Time/" data-id="ck3vjuoc6000j9tpw6xhuc5qu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -282,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck3eds1e8000gk6pwupehtjj1" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ck3vjuoby000g9tpwal3yk7f3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -331,7 +382,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck3eds1e3000bk6pw6s161krz" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/shell-Example/" data-id="ck3vjuobu000b9tpwyohx9hjv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
@@ -387,7 +438,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck3eds1e5000ek6pw0csj05za" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/vim-plugin/" data-id="ck3vjuobw000e9tpwwwz962np" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
@@ -441,7 +492,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck3eds1e2000ak6pwgotcghiu" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ck3vjuobt000a9tpwegmnl19k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/">system</a></li></ul>
@@ -484,7 +535,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck3eds1dk0001k6pw8hdg3ogc" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/SQL-XACT-ABORT/" data-id="ck3vjuobd00019tpwz5wbf39p" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
@@ -538,53 +589,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck3eds1dy0006k6pwzs4j8phi" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/09/15/收集的网站地址/" data-id="ck3vjuobp00069tpwp669kxna" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url/">url</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-node-安装和升级" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/15/node-安装和升级/" class="article-date">
-  <time datetime="2019-09-14T23:10:05.000Z" itemprop="datePublished">2019-09-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/15/node-安装和升级/">node 安装和升级</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>推荐使用nvm来管理node,<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">GitHub</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/15/node-安装和升级/" data-id="ck3eds1ds0005k6pw65o2qf0o" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/software/">software</a></li></ul>
 
     </footer>
   </div>
@@ -618,7 +626,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postgresql/">postgresql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kubenetes/">kubenetes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postgresql/">postgresql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
     </div>
   </div>
 
@@ -628,7 +636,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/docker/" style="font-size: 12px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/postgresql/" style="font-size: 18px;">postgresql</a> <a href="/tags/program/" style="font-size: 14px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/system/" style="font-size: 16px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12px;">vim</a>
+      <a href="/tags/docker/" style="font-size: 12px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/postgresql/" style="font-size: 18px;">postgresql</a> <a href="/tags/program/" style="font-size: 14px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/system/" style="font-size: 16px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12px;">vim</a>
     </div>
   </div>
 
@@ -637,7 +645,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
     </div>
   </div>
 
@@ -648,6 +656,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/12/06/kubenetes-安装/">kubenetes 安装</a>
+          </li>
         
           <li>
             <a href="/2019/11/25/Docker-按名称批量删除image/">Docker 按名称批量删除image</a>
@@ -663,10 +675,6 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
         
           <li>
             <a href="/2019/11/21/NFS-Mount/">NFS Mount</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/20/NFS-权限/">NFS 权限</a>
           </li>
         
       </ul>

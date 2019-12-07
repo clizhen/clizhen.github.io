@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2019-11-25T12:01:22.664Z</updated>
+  <updated>2019-12-07T12:23:34.603Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kubenetes 安装</title>
+    <link href="http://blog.lizhen.pub/2019/12/06/kubenetes-%E5%AE%89%E8%A3%85/"/>
+    <id>http://blog.lizhen.pub/2019/12/06/kubenetes-安装/</id>
+    <published>2019-12-06T12:14:59.000Z</published>
+    <updated>2019-12-07T12:23:34.603Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;我基本上是按照这篇&lt;a href=&quot;https://www.cnblogs.com/leisurelylicht/p/Ubuntu-guo-nei-an-zhuang-kubernetes.html&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="kubenetes" scheme="http://blog.lizhen.pub/tags/kubenetes/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker 按名称批量删除image</title>
@@ -560,35 +589,6 @@
         
         
           &lt;h3 id=&quot;postgresql-架构命令&quot;&gt;&lt;a href=&quot;#postgresql-架构命令&quot; class=&quot;headerlink&quot; title=&quot;postgresql 架构命令&quot;&gt;&lt;/a&gt;postgresql 架构命令&lt;/h3&gt;&lt;figure
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Postgresql -- Move Data Directory</title>
-    <link href="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/"/>
-    <id>http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/</id>
-    <published>2019-09-29T08:18:31.000Z</published>
-    <updated>2019-10-06T06:23:46.678Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;移动PostgreSQL数据目录&quot;&gt;&lt;a href=&quot;#移动PostgreSQL数据目录&quot; class=&quot;headerlink&quot; title=&quot;移动PostgreSQL数据目录&quot;&gt;&lt;/a&gt;移动PostgreSQL数据目录&lt;/h3&gt;&lt;p&gt;&lt;a
         
       
     
