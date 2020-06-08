@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="utf-8">
   
 
   
   <title>netsh 命令行修改网络配置 | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="netsh example1234567netshnetsh&amp;gt;interface ip show confignetsh&amp;gt;netsh interface ip set address &quot;connection name&quot; static 192.168.x.x 255.255.255.0 192.168.x.xnetsh&amp;gt;netsh interface ip add dns &quot;con">
-<meta name="keywords" content="shell">
+  <meta name="description" content="netsh example1234567netshnetsh&gt;interface ip show confignetsh&gt;netsh interface ip set address &quot;connection name&quot; static 192.168.x.x 255.255.255.0 192.168.x.xnetsh&gt;netsh interface ip add dns &quot;con">
 <meta property="og:type" content="article">
 <meta property="og:title" content="netsh 命令行修改网络配置">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/11/06/netsh-命令行修改网络配置/index.html">
+<meta property="og:url" content="http://blog.lizhen.pub/2019/11/06/netsh-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BF%AE%E6%94%B9%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="netsh example1234567netshnetsh&amp;gt;interface ip show confignetsh&amp;gt;netsh interface ip set address &quot;connection name&quot; static 192.168.x.x 255.255.255.0 192.168.x.xnetsh&amp;gt;netsh interface ip add dns &quot;con">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-06T12:04:03.530Z">
+<meta property="og:description" content="netsh example1234567netshnetsh&gt;interface ip show confignetsh&gt;netsh interface ip set address &quot;connection name&quot; static 192.168.x.x 255.255.255.0 192.168.x.xnetsh&gt;netsh interface ip add dns &quot;con">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-11-06T11:58:56.000Z">
+<meta property="article:modified_time" content="2019-11-06T12:04:03.530Z">
+<meta property="article:author" content="li zhen">
+<meta property="article:tag" content="shell">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="netsh 命令行修改网络配置">
-<meta name="twitter:description" content="netsh example1234567netshnetsh&amp;gt;interface ip show confignetsh&amp;gt;netsh interface ip set address &quot;connection name&quot; static 192.168.x.x 255.255.255.0 192.168.x.xnetsh&amp;gt;netsh interface ip add dns &quot;con">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
   
@@ -28,9 +28,11 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
 <body>
   <div id="container">
     <div id="wrap">
@@ -71,7 +73,7 @@
       <div class="outer">
         <section id="main"><article id="post-netsh-命令行修改网络配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/06/netsh-命令行修改网络配置/" class="article-date">
+    <a href="/2019/11/06/netsh-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BF%AE%E6%94%B9%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="article-date">
   <time datetime="2019-11-06T11:58:56.000Z" itemprop="datePublished">2019-11-06</time>
 </a>
     
@@ -97,14 +99,13 @@
       
         <h4 id="netsh-example"><a href="#netsh-example" class="headerlink" title="netsh example"></a>netsh example</h4><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">netsh</span><br><span class="line">netsh&gt;interface ip show config</span><br><span class="line">netsh&gt;netsh interface ip <span class="built_in">set</span> address "connection name" static <span class="number">192</span>.<span class="number">168</span>.x.x <span class="number">255</span>.<span class="number">255</span>.<span class="number">255</span>.<span class="number">0</span> <span class="number">192</span>.<span class="number">168</span>.x.x</span><br><span class="line">netsh&gt;netsh interface ip add dns "connection name" <span class="number">8</span>.<span class="number">8</span>.<span class="number">8</span>.<span class="number">8</span></span><br><span class="line">netsh&gt;netsh interface ip add dns "connection name" <span class="number">114</span>.<span class="number">114</span>.<span class="number">114</span>.<span class="number">114</span> index=<span class="number">2</span></span><br><span class="line">netsh&gt;netsh interface ip <span class="built_in">set</span> address "connection name" dhcp</span><br><span class="line">netsh&gt;netsh interface ip <span class="built_in">set</span> dns "connection name" dhcp</span><br></pre></td></tr></table></figure>
 
-
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/06/netsh-命令行修改网络配置/" data-id="ck3vjuodz002x9tpwk0j0rdk8" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2019/11/06/netsh-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BF%AE%E6%94%B9%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" data-id="ckb6kjx2e0035pspwgmuo8z3t" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
 
     </footer>
   </div>
@@ -122,7 +123,7 @@
     </a>
   
   
-    <a href="/2019/11/04/Unix-and-Windows-文本文件转换/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/11/04/Unix-and-Windows-%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Unix and Windows 文本文件转换</div>
     </a>
@@ -150,7 +151,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kubenetes/">kubenetes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postgresql/">postgresql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/" rel="tag">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kubenetes/" rel="tag">kubenetes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/" rel="tag">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/" rel="tag">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/" rel="tag">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li></ul>
     </div>
   </div>
 
@@ -160,7 +161,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/docker/" style="font-size: 12px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/postgresql/" style="font-size: 18px;">postgresql</a> <a href="/tags/program/" style="font-size: 14px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/system/" style="font-size: 16px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12px;">vim</a>
+      <a href="/tags/docker/" style="font-size: 12px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/postgresql/" style="font-size: 18px;">postgresql</a> <a href="/tags/program/" style="font-size: 16px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/system/" style="font-size: 16px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12px;">vim</a>
     </div>
   </div>
 
@@ -169,7 +170,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
     </div>
   </div>
 
@@ -182,23 +183,23 @@
       <ul>
         
           <li>
-            <a href="/2019/12/06/kubenetes-安装/">kubenetes 安装</a>
+            <a href="/2020/06/08/yarn-reinstall-package/">yarn reinstall package</a>
           </li>
         
           <li>
-            <a href="/2019/11/25/Docker-按名称批量删除image/">Docker 按名称批量删除image</a>
+            <a href="/2019/12/06/kubenetes-%E5%AE%89%E8%A3%85/">kubenetes 安装</a>
           </li>
         
           <li>
-            <a href="/2019/11/24/阿里源/">阿里源</a>
+            <a href="/2019/11/25/Docker-%E6%8C%89%E5%90%8D%E7%A7%B0%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4image/">Docker 按名称批量删除image</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/24/%E9%98%BF%E9%87%8C%E6%BA%90/">阿里源</a>
           </li>
         
           <li>
             <a href="/2019/11/21/Set-TimeZone/">Set TimeZone</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/21/NFS-Mount/">NFS Mount</a>
           </li>
         
       </ul>
@@ -213,7 +214,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 li zhen<br>
+      &copy; 2020 li zhen<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -231,11 +232,17 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
 
 
 <script src="/js/script.js"></script>
+
 
 
 
