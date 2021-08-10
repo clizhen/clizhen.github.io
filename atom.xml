@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2020-06-08T14:49:52.943Z</updated>
+  <updated>2021-08-10T12:34:39.636Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>组策略启动脚本</title>
+    <link href="http://blog.lizhen.pub/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/"/>
+    <id>http://blog.lizhen.pub/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</id>
+    <published>2021-08-08T12:57:43.000Z</published>
+    <updated>2021-08-10T12:34:39.636Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;组策略启动脚本不执行&quot;&gt;&lt;a href=&quot;#组策略启动脚本不执行&quot; class=&quot;headerlink&quot; title=&quot;组策略启动脚本不执行&quot;&gt;&lt;/a&gt;组策略启动脚本不执行&lt;/h3&gt;&lt;h1 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    
+    
+      <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
+    
+  </entry>
   
   <entry>
     <title>Yarn reinstall package</title>
@@ -559,35 +588,6 @@
         
           &lt;ul&gt;
 &lt;li&gt;command-line reload&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Postgresql bitmap heap/index scan</title>
-    <link href="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/"/>
-    <id>http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/</id>
-    <published>2019-10-04T03:51:28.000Z</published>
-    <updated>2019-10-06T06:23:46.678Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;https://dba.stackexchange.com/questions/119386/understanding-bitmap-heap-scan-and-bitmap-index-scan&quot; target=&quot;_blank&quot;
         
       
     
