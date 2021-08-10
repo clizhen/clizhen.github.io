@@ -102,7 +102,7 @@
 <li>反复启动,检查开机日志发现1130错误(脚本无法启动,找不到对应文件), 发现其他错误NetLogon 无法找到域控(用户登录后域控正常) ,因脚本文件放在文件服务器上, 大致判定启动脚本运行时,计算机未完成网络连接.</li>
 <li>组策略已设置了网络就绪后应用脚本.最终在微软网站上查到的原因是 机器的千兆网卡(驱动问题)开机/重启连接网络时有延迟,但NetLogon会认为网卡已连接,投入运行, 造成错误.</li>
 </ul>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>因为是公司域 ,使用组策略(Computer Policy -&gt; Adm -&gt; System -&gt; Group Policy) , 设置组策略等待网络连接时间.</p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>因为是公司域 ,使用组策略(Computer Policy -&gt; Adm -&gt; System -&gt; Group Policy) , 设置启动策略处理等待时间(startup policy processing wait time ).</p>
 
       
     </div>
