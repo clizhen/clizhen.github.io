@@ -5,19 +5,19 @@
   
 
   
-  <title>Postgresql -- Move Data Directory | li</title>
+  <title>Linux NETSTAT SS | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="移动PostgreSQL数据目录转载  移动数据目录 12345$ sudo -u postgres psqlpostgres# SHOW data_directory$ sudo systemctl stop postgresql$ sudo systemctl status postgresql  # 确认已停止.$ sudo rsync -av &#x2F;var&#x2F;lib&#x2F;postgresql &#x2F;mn">
+  <meta name="description" content="netstat ssNETSTAT -l, –listening display listening server sockets -a, –all display all sockets (default: connected) -r, –route display routing table –i, –interfaces display interface table -g, –groups">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Postgresql -- Move Data Directory">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/index.html">
+<meta property="og:title" content="Linux NETSTAT SS">
+<meta property="og:url" content="http://blog.lizhen.pub/2021/08/28/Linux-netstat-ss/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="移动PostgreSQL数据目录转载  移动数据目录 12345$ sudo -u postgres psqlpostgres# SHOW data_directory$ sudo systemctl stop postgresql$ sudo systemctl status postgresql  # 确认已停止.$ sudo rsync -av &#x2F;var&#x2F;lib&#x2F;postgresql &#x2F;mn">
+<meta property="og:description" content="netstat ssNETSTAT -l, –listening display listening server sockets -a, –all display all sockets (default: connected) -r, –route display routing table –i, –interfaces display interface table -g, –groups">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-09-29T08:18:31.000Z">
-<meta property="article:modified_time" content="2019-10-06T06:23:46.678Z">
+<meta property="article:published_time" content="2021-08-28T12:19:39.000Z">
+<meta property="article:modified_time" content="2021-08-28T12:41:22.555Z">
 <meta property="article:author" content="li zhen">
-<meta property="article:tag" content="postgresql">
+<meta property="article:tag" content="network">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-PostgreSQL-Move-Data-Directory" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Linux-netstat-ss" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/09/29/PostgreSQL-Move-Data-Directory/" class="article-date">
-  <time datetime="2019-09-29T08:18:31.000Z" itemprop="datePublished">2019-09-29</time>
+    <a href="/2021/08/28/Linux-netstat-ss/" class="article-date">
+  <time datetime="2021-08-28T12:19:39.000Z" itemprop="datePublished">2021-08-28</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+    <a class="article-category-link" href="/categories/computer/">computer</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Postgresql -- Move Data Directory
+      Linux NETSTAT SS
     </h1>
   
 
@@ -93,25 +93,67 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="移动PostgreSQL数据目录"><a href="#移动PostgreSQL数据目录" class="headerlink" title="移动PostgreSQL数据目录"></a>移动PostgreSQL数据目录</h3><p><a href="https://www.digitalocean.com/community/tutorials/how-to-move-a-postgresql-data-directory-to-a-new-location-on-ubuntu-16-04" target="_blank" rel="noopener">转载</a></p>
-<ul>
-<li><p>移动数据目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -u postgres psql</span><br><span class="line">postgres<span class="comment"># SHOW data_directory</span></span><br><span class="line">$ sudo systemctl stop postgresql</span><br><span class="line">$ sudo systemctl status postgresql  <span class="comment"># 确认已停止.</span></span><br><span class="line">$ sudo rsync -av /var/lib/postgresql /mnt/... <span class="comment"># -a 保留权限</span></span><br></pre></td></tr></table></figure></li>
-<li><p>指向新数据库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/postgresql/.../postgresql.conf <span class="comment"># 修改: data_directory = '新路径...'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启PostgreSQL,并验证</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start postgresql</span><br><span class="line">$ sudo systemctl status postgresql</span><br><span class="line">$ sudo -u postgresql psql</span><br><span class="line">postgres=<span class="comment"># SHOW data_directory</span></span><br></pre></td></tr></table></figure>
-</li>
+        <h3 id="netstat-ss"><a href="#netstat-ss" class="headerlink" title="netstat ss"></a>netstat ss</h3><h4 id="NETSTAT"><a href="#NETSTAT" class="headerlink" title="NETSTAT"></a>NETSTAT</h4><ul>
+<li>-l, –listening display listening server sockets</li>
+<li>-a, –all display all sockets (default: connected)</li>
+<li>-r, –route display routing table</li>
+<li>–i, –interfaces display interface table</li>
+<li>-g, –groups display multicast group memberships</li>
+<li>-s, –statistics display networking statistics (like SNMP)</li>
+<li>-M, –masquerade display masqueraded connections</li>
+<li>-v, –verbose be verbose</li>
+<li>-W, –wide don’t truncate IP addresses</li>
+<li>-n, –numeric don’t resolve names</li>
+<li>-e, –extend display other/more information</li>
+<li>-p, –programs display PID/Program name for sockets</li>
+<li>-o, –timers display timers</li>
+<li>-F, –fib display Forwarding Information Base (default)</li>
+<li>-C, –cache display routing cache instead of FIB</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -pln | grep 22 | awk <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>监听22端口的进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -at</span><br><span class="line">netstat -lu</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>列出所有TCP端口</li>
+<li>列出所有监听的UDP端口</li>
+</ol>
+<h4 id="SS"><a href="#SS" class="headerlink" title="SS"></a>SS</h4><ul>
+<li>–n, –numeric don’t resolve service names</li>
+<li>-r, –resolve : resolve host hostnames.</li>
+<li>-l, –listening display listening sockets</li>
+<li>-o, –options show timer information</li>
+<li>-e, –extended show detailed socket information</li>
+<li>-m, –memory show socket memory usage</li>
+<li>-p, –processes show process using socket</li>
+<li>–s, –summary show socket usage summary</li>
+<li>-N, –net switch to the specified network namespace name</li>
+<li>-4, –ipv4 display only IP version 4 sockets</li>
+<li>-6, –ipv6 display only IP version 6 sockets</li>
+<li>–0, –packet display PACKET sockets</li>
+<li>-t, –tcp display only TCP sockets</li>
+<li>-S, –sctp display only SCTP sockets</li>
+<li>-u, –udp display only UDP sockets</li>
+<li>-w, –raw display only RAW sockets</li>
+<li>-x, –unix display only Unix domain sockets</li>
+<li>-f, –family=FAMILY display sockets of type FAMILY</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ss -tlp</span><br><span class="line">ss -t dst 192.168.1.10:443</span><br><span class="line">ss -t state established <span class="string">&#x27;( dport = :ssh or sport = :ssh )&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>列出监听的TCP协议并包括对应的进程</li>
+<li>列出连接到192.168.1.10:443的栈</li>
+<li>列出所有ssh相关的连接</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Move-Data-Directory/" data-id="ckb6kjx1t001vpspwa52859ea" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2021/08/28/Linux-netstat-ss/" data-id="cksvrx3oh0000l7pw1quf1jeg" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
 
     </footer>
   </div>
@@ -119,19 +161,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/09/29/PostgreSQL-Schema/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Postgresql -- Schema
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/09/27/PostgreSQL-client-Connection-options/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/08/28/LinuxProcessView/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Postgresql client Connection options</div>
+      <div class="article-nav-title">Linux 进程查看</div>
     </a>
   
 </nav>
