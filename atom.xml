@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2021-08-10T13:17:49.774Z</updated>
+  <updated>2021-08-28T09:33:43.437Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Linux 进程查看</title>
+    <link href="http://blog.lizhen.pub/2021/08/28/LinuxProcessView/"/>
+    <id>http://blog.lizhen.pub/2021/08/28/LinuxProcessView/</id>
+    <published>2021-08-28T03:31:10.000Z</published>
+    <updated>2021-08-28T09:33:43.437Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;ps-pidof-pgrep-fuser-lsof&quot;&gt;&lt;a href=&quot;#ps-pidof-pgrep-fuser-lsof&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+      <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
+    
+  </entry>
+  
+  <entry>
     <title>组策略启动脚本</title>
     <link href="http://blog.lizhen.pub/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/"/>
     <id>http://blog.lizhen.pub/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</id>
     <published>2021-08-08T12:57:43.000Z</published>
-    <updated>2021-08-10T13:17:49.774Z</updated>
+    <updated>2021-08-28T03:32:44.497Z</updated>
     
     <summary type="html">
     
@@ -558,36 +587,6 @@
         
           &lt;p&gt;显示文件位置的命令&lt;/p&gt;
 &lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Postgresql reload config</title>
-    <link href="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/"/>
-    <id>http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/</id>
-    <published>2019-10-04T07:27:00.000Z</published>
-    <updated>2019-10-06T06:23:46.678Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ul&gt;
-&lt;li&gt;command-line reload&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
         
       
     
