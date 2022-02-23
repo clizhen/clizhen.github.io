@@ -5,19 +5,19 @@
   
 
   
-  <title>Postgresql join | li</title>
+  <title>vlan-pvid-trunk | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="postgresql 中join的选项 Nested Loops(O(n2)) 123456for x in table1:  for y in table2:    if x.field &#x3D;&#x3D; y.field      issue row    else      keep doing  Hash joins 123Hash join  Sequentialscan tabl">
+  <meta name="description" content="VLAN 端口转发规则PVID PVID即 Port Vlan id，代表端口的缺省VLAN。默认PVID为1. 交换机从对端设备收到的帧有可能是不带VLAN标签的数据帧，但所有以太网帧在交换机中都是以带VLAN标签的形式来被处理和转发的，因此交换机必须给端口收到的不带VLAN标签的数据帧添加上VLAN标签。  ACCESS 端口规则发送 数据包Tag与PVID相同,剥离Tag发送. 数据包Tag">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Postgresql join">
-<meta property="og:url" content="http://blog.lizhen.pub/2019/10/06/Postgresql-join/index.html">
+<meta property="og:title" content="vlan-pvid-trunk">
+<meta property="og:url" content="http://blog.lizhen.pub/2022/02/23/vlan-pvid-trunk/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="postgresql 中join的选项 Nested Loops(O(n2)) 123456for x in table1:  for y in table2:    if x.field &#x3D;&#x3D; y.field      issue row    else      keep doing  Hash joins 123Hash join  Sequentialscan tabl">
+<meta property="og:description" content="VLAN 端口转发规则PVID PVID即 Port Vlan id，代表端口的缺省VLAN。默认PVID为1. 交换机从对端设备收到的帧有可能是不带VLAN标签的数据帧，但所有以太网帧在交换机中都是以带VLAN标签的形式来被处理和转发的，因此交换机必须给端口收到的不带VLAN标签的数据帧添加上VLAN标签。  ACCESS 端口规则发送 数据包Tag与PVID相同,剥离Tag发送. 数据包Tag">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-10-06T12:21:04.000Z">
-<meta property="article:modified_time" content="2019-10-07T06:35:21.155Z">
+<meta property="article:published_time" content="2022-02-23T11:47:38.000Z">
+<meta property="article:modified_time" content="2022-02-23T12:32:01.488Z">
 <meta property="article:author" content="li zhen">
-<meta property="article:tag" content="postgresql">
+<meta property="article:tag" content="network">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Postgresql-join" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-vlan-pvid-trunk" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/10/06/Postgresql-join/" class="article-date">
-  <time datetime="2019-10-06T12:21:04.000Z" itemprop="datePublished">2019-10-06</time>
+    <a href="/2022/02/23/vlan-pvid-trunk/" class="article-date">
+  <time datetime="2022-02-23T11:47:38.000Z" itemprop="datePublished">2022-02-23</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/other/">other</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Postgresql join
+      vlan-pvid-trunk
     </h1>
   
 
@@ -93,25 +93,35 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="postgresql-中join的选项"><a href="#postgresql-中join的选项" class="headerlink" title="postgresql 中join的选项"></a>postgresql 中join的选项</h3><ul>
-<li><p><strong>Nested Loops(O(n2))</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for x in table1:</span><br><span class="line">  for y in table2:</span><br><span class="line">    if x.field &#x3D;&#x3D; y.field</span><br><span class="line">      issue row</span><br><span class="line">    else</span><br><span class="line">      keep doing</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Hash joins</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hash join</span><br><span class="line">  Sequentialscan table 1</span><br><span class="line">  Sequentialscan table 2</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Merge joins(O(n * log(n)))</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Merge join</span><br><span class="line">  Sort table 1</span><br><span class="line">    Sequetial scan table 1</span><br><span class="line">  Sort table 2</span><br><span class="line">    Sequetial scan table 2</span><br><span class="line">---</span><br><span class="line">Merge join</span><br><span class="line">  Index scan table 1</span><br><span class="line">  Index scan table 2</span><br></pre></td></tr></table></figure>
-</li>
+        <h3 id="VLAN-端口转发规则"><a href="#VLAN-端口转发规则" class="headerlink" title="VLAN 端口转发规则"></a>VLAN 端口转发规则</h3><h4 id="PVID"><a href="#PVID" class="headerlink" title="PVID"></a>PVID</h4><ul>
+<li>PVID即 Port Vlan id，代表端口的缺省VLAN。默认PVID为1.</li>
+<li>交换机从对端设备收到的帧有可能是不带VLAN标签的数据帧，但所有以太网帧在交换机中都是以带VLAN标签的形式来被处理和转发的，因此交换机必须给端口收到的不带VLAN标签的数据帧添加上VLAN标签。</li>
 </ul>
+<h4 id="ACCESS-端口规则"><a href="#ACCESS-端口规则" class="headerlink" title="ACCESS 端口规则"></a>ACCESS 端口规则</h4><h5 id="发送"><a href="#发送" class="headerlink" title="发送"></a>发送</h5><ul>
+<li>数据包Tag与PVID相同,剥离Tag发送.</li>
+<li>数据包Tag与PVID不同,丢弃.</li>
+</ul>
+<h5 id="接受"><a href="#接受" class="headerlink" title="接受"></a>接受</h5><ul>
+<li>数据包无Tag,接受并打上PVID,进行交换转发.</li>
+<li>数据包有Tag,丢弃.</li>
+</ul>
+<h4 id="TRUNK-HYBRID-端口规则"><a href="#TRUNK-HYBRID-端口规则" class="headerlink" title="TRUNK/HYBRID 端口规则"></a>TRUNK/HYBRID 端口规则</h4><h5 id="发送-1"><a href="#发送-1" class="headerlink" title="发送"></a>发送</h5><ul>
+<li>数据包Tag与PVID相同,剥离Tag发送.</li>
+<li>数据包Tag与PVID不同,带Tag直接发送(Hybrid 可控制是否携带Tag),默认转发所有Tag.</li>
+</ul>
+<h5 id="接受-1"><a href="#接受-1" class="headerlink" title="接受"></a>接受</h5><ul>
+<li>数据包无Tag,接受并打上PVID,进行交换转发.</li>
+<li>数据包有Tag,且在允许Tag列表中,进行交换转发,否则丢弃.</li>
+</ul>
+<p>备注: 上述发送和接受指的是交换机对外的数据流.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-join/" data-id="ckb6kjx21002fpspwcw4u62gj" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2022/02/23/vlan-pvid-trunk/" data-id="ckzzj6zab000091pw2jya4s38" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
 
     </footer>
   </div>
@@ -119,19 +129,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/10/08/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA-ACL-%E5%8D%95%E5%90%91%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          华为交换机 ACL 单向流量控制
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/08/28/Linux-netstat-ss/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Postgresql static sys-view 性能</div>
+      <div class="article-nav-title">Linux NETSTAT SS</div>
     </a>
   
 </nav>

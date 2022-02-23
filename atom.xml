@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2021-08-28T12:41:22.555Z</updated>
+  <updated>2022-02-23T12:32:01.488Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vlan-pvid-trunk</title>
+    <link href="http://blog.lizhen.pub/2022/02/23/vlan-pvid-trunk/"/>
+    <id>http://blog.lizhen.pub/2022/02/23/vlan-pvid-trunk/</id>
+    <published>2022-02-23T11:47:38.000Z</published>
+    <updated>2022-02-23T12:32:01.488Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;VLAN-端口转发规则&quot;&gt;&lt;a href=&quot;#VLAN-端口转发规则&quot; class=&quot;headerlink&quot; title=&quot;VLAN 端口转发规则&quot;&gt;&lt;/a&gt;VLAN 端口转发规则&lt;/h3&gt;&lt;h4 id=&quot;PVID&quot;&gt;&lt;a href=&quot;#PVID&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+      <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
+    
+    
+      <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux NETSTAT SS</title>
@@ -555,35 +584,6 @@
         
         
           &lt;h3 id=&quot;postgresql-中join的选项&quot;&gt;&lt;a href=&quot;#postgresql-中join的选项&quot; class=&quot;headerlink&quot; title=&quot;postgresql 中join的选项&quot;&gt;&lt;/a&gt;postgresql
-        
-      
-    
-    </summary>
-    
-    
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Postgresql static sys-view 性能</title>
-    <link href="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/"/>
-    <id>http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/</id>
-    <published>2019-10-06T05:55:53.000Z</published>
-    <updated>2019-10-07T06:37:29.292Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;a href=&quot;https://www.cybertec-postgresql.com/en/3-ways-to-detect-slow-queries-in-postgresql/&quot; target=&quot;_blank&quot;
         
       
     
