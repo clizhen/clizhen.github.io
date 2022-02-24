@@ -5,17 +5,17 @@
   
 
   
-  <title>vlan-pvid-trunk | li</title>
+  <title>VLAN-PVID-TRUNK | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="VLAN 端口转发规则PVID PVID即 Port Vlan id，代表端口的缺省VLAN。默认PVID为1. 交换机从对端设备收到的帧有可能是不带VLAN标签的数据帧，但所有以太网帧在交换机中都是以带VLAN标签的形式来被处理和转发的，因此交换机必须给端口收到的不带VLAN标签的数据帧添加上VLAN标签。  ACCESS 端口规则发送 数据包Tag与PVID相同,剥离Tag发送. 数据包Tag">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vlan-pvid-trunk">
+<meta property="og:title" content="VLAN-PVID-TRUNK">
 <meta property="og:url" content="http://blog.lizhen.pub/2022/02/23/vlan-pvid-trunk/index.html">
 <meta property="og:site_name" content="li">
 <meta property="og:description" content="VLAN 端口转发规则PVID PVID即 Port Vlan id，代表端口的缺省VLAN。默认PVID为1. 交换机从对端设备收到的帧有可能是不带VLAN标签的数据帧，但所有以太网帧在交换机中都是以带VLAN标签的形式来被处理和转发的，因此交换机必须给端口收到的不带VLAN标签的数据帧添加上VLAN标签。  ACCESS 端口规则发送 数据包Tag与PVID相同,剥离Tag发送. 数据包Tag">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-23T11:47:38.000Z">
-<meta property="article:modified_time" content="2022-02-23T12:32:01.488Z">
+<meta property="article:modified_time" content="2022-02-24T11:51:40.969Z">
 <meta property="article:author" content="li zhen">
 <meta property="article:tag" content="network">
 <meta name="twitter:card" content="summary">
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vlan-pvid-trunk
+      VLAN-PVID-TRUNK
     </h1>
   
 
@@ -107,13 +107,13 @@
 </ul>
 <h4 id="TRUNK-HYBRID-端口规则"><a href="#TRUNK-HYBRID-端口规则" class="headerlink" title="TRUNK/HYBRID 端口规则"></a>TRUNK/HYBRID 端口规则</h4><h5 id="发送-1"><a href="#发送-1" class="headerlink" title="发送"></a>发送</h5><ul>
 <li>数据包Tag与PVID相同,剥离Tag发送.</li>
-<li>数据包Tag与PVID不同,带Tag直接发送(Hybrid 可控制是否携带Tag),默认转发所有Tag.</li>
+<li>数据包Tag与PVID不同,且在允许Tag列表中,带Tag直接发送(Hybrid 可控制是否携带Tag),默认转发所有Tag.</li>
 </ul>
 <h5 id="接受-1"><a href="#接受-1" class="headerlink" title="接受"></a>接受</h5><ul>
 <li>数据包无Tag,接受并打上PVID,进行交换转发.</li>
 <li>数据包有Tag,且在允许Tag列表中,进行交换转发,否则丢弃.</li>
 </ul>
-<p>备注: 上述发送和接受指的是交换机对外的数据流.</p>
+<p><strong>备注: 上述发送和接受指的是交换机对外的数据流.</strong></p>
 
       
     </div>
@@ -190,7 +190,7 @@
       <ul>
         
           <li>
-            <a href="/2022/02/23/vlan-pvid-trunk/">vlan-pvid-trunk</a>
+            <a href="/2022/02/23/vlan-pvid-trunk/">VLAN-PVID-TRUNK</a>
           </li>
         
           <li>

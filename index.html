@@ -84,7 +84,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/23/vlan-pvid-trunk/">vlan-pvid-trunk</a>
+      <a class="article-title" href="/2022/02/23/vlan-pvid-trunk/">VLAN-PVID-TRUNK</a>
     </h1>
   
 
@@ -106,13 +106,13 @@
 </ul>
 <h4 id="TRUNK-HYBRID-端口规则"><a href="#TRUNK-HYBRID-端口规则" class="headerlink" title="TRUNK/HYBRID 端口规则"></a>TRUNK/HYBRID 端口规则</h4><h5 id="发送-1"><a href="#发送-1" class="headerlink" title="发送"></a>发送</h5><ul>
 <li>数据包Tag与PVID相同,剥离Tag发送.</li>
-<li>数据包Tag与PVID不同,带Tag直接发送(Hybrid 可控制是否携带Tag),默认转发所有Tag.</li>
+<li>数据包Tag与PVID不同,且在允许Tag列表中,带Tag直接发送(Hybrid 可控制是否携带Tag),默认转发所有Tag.</li>
 </ul>
 <h5 id="接受-1"><a href="#接受-1" class="headerlink" title="接受"></a>接受</h5><ul>
 <li>数据包无Tag,接受并打上PVID,进行交换转发.</li>
 <li>数据包有Tag,且在允许Tag列表中,进行交换转发,否则丢弃.</li>
 </ul>
-<p>备注: 上述发送和接受指的是交换机对外的数据流.</p>
+<p><strong>备注: 上述发送和接受指的是交换机对外的数据流.</strong></p>
 
       
     </div>
@@ -681,7 +681,7 @@
       <ul>
         
           <li>
-            <a href="/2022/02/23/vlan-pvid-trunk/">vlan-pvid-trunk</a>
+            <a href="/2022/02/23/vlan-pvid-trunk/">VLAN-PVID-TRUNK</a>
           </li>
         
           <li>
