@@ -66,6 +66,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-KMS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/18/KMS/" class="article-date">
+  <time datetime="2019-09-18T12:10:13.000Z" itemprop="datePublished">2019-09-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/18/KMS/">KMS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>命令行激活,请使用管理员权限</strong></p>
+<p>激活WINDOWS</p>
+<ol>
+<li>slmgr /skms X.X.X.X. 设置kms服务器</li>
+<li>slmgr /ipk xxxx-xxxx-xxxx-xxxx 更换Key</li>
+<li>slmgr /ato 激活</li>
+</ol>
+<p>激活OFFICE</p>
+<ol>
+<li>ospp.vbs(C:\program files\microsoft office\officeXX) 注意32位版x86目录</li>
+<li>cscript ospp.vbs /sethst:X.X.X.X</li>
+<li>cscript ospp.vbs /act</li>
+</ol>
+<p>其他</p>
+<ul>
+<li>wmic os get caption 查看系统版本</li>
+<li>slmgr /dlv 详细许可证信息</li>
+<li><a href="https://github.com/Wind4/vlmcsd" target="_blank" rel="noopener">kms服务器</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows-server/get-started/kmsclientkeys" target="_blank" rel="noopener">序列号</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/18/KMS/" data-id="ckb6kjx16000hpspw2uny17st" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/" rel="tag">system</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-shell-Example" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/16/shell-Example/" class="article-date">
@@ -548,7 +610,7 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/docker/" style="font-size: 11.67px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 15px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.33px;">postgresql</a> <a href="/tags/program/" style="font-size: 15px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 16.67px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.67px;">vim</a>
+      <a href="/tags/docker/" style="font-size: 11.67px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 16.67px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.33px;">postgresql</a> <a href="/tags/program/" style="font-size: 15px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 16.67px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.67px;">vim</a>
     </div>
   </div>
 
@@ -570,6 +632,10 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       <ul>
         
           <li>
+            <a href="/2022/02/26/ipv6-address/">IPV6-ADDRESS</a>
+          </li>
+        
+          <li>
             <a href="/2022/02/23/vlan-pvid-trunk/">VLAN-PVID-TRUNK</a>
           </li>
         
@@ -583,10 +649,6 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
         
           <li>
             <a href="/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/">组策略启动脚本</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/08/yarn-reinstall-package/">Yarn Reinstall Package</a>
           </li>
         
       </ul>
