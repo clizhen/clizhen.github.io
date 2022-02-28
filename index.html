@@ -141,7 +141,7 @@
 </li>
 <li>路由器通告</li>
 </ul>
-<p>###二层组播技术(IGMP snooping)<br>  <strong>问题:</strong>二层Switch由于组播报文的目的地址为组播组地址，在二层设备上是学习不到这一类MAC表项的(组播MAC不会出现在源地址上)，因此组播报文就会在Switch所有接口进行广播.<br>  <strong>解决方法:</strong>当主机和上游三层设备之间传递的IGMP协议报文通过二层组播设备时，IGMP Snooping分析报文携带的信息，根据这些信息建立和维护二层组播转发表，从而指导组播数据在数据链路层按需转发.</p>
+<h3 id="二层组播技术-IGMP-snooping"><a href="#二层组播技术-IGMP-snooping" class="headerlink" title="二层组播技术(IGMP snooping)"></a>二层组播技术(IGMP snooping)</h3><p>  <strong>问题:</strong> 二层Switch由于组播报文的目的地址为组播组地址，在二层设备上是学习不到这一类MAC表项的(组播MAC不会出现在源地址上)，因此组播报文就会在Switch所有接口进行广播.<br>  <strong>解决方法:</strong> 当主机和上游三层设备之间传递的IGMP协议报文通过二层组播设备时，拥有IGMP Snooping技术的交换机可以分析报文携带的信息，根据这些信息建立和维护二层组播转发表，从而指导组播数据在数据链路层按需转发.</p>
 
       
     </div>

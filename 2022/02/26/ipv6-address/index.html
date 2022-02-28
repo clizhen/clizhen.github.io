@@ -15,7 +15,7 @@
 <meta property="og:description" content="IPV6 地址结构 地址长128位.(Routing Prefix(48) + Subnet ID (16) + Interface ID(64)) 主机地址(Interface ID)建议永远保留64位. IPV6不再使用子网掩码的说法,现在叫前缀长度.  IPV6 地址类型(单播,组播,任播)单播 可聚合全球地址(Global Unicast) 2000::&#x2F;3 电信(240e::&#x2F;18),联">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-26T12:19:38.000Z">
-<meta property="article:modified_time" content="2022-02-28T12:17:14.532Z">
+<meta property="article:modified_time" content="2022-02-28T12:26:03.203Z">
 <meta property="article:author" content="li zhen">
 <meta property="article:tag" content="network">
 <meta name="twitter:card" content="summary">
@@ -142,7 +142,7 @@
 </li>
 <li>路由器通告</li>
 </ul>
-<p>###二层组播技术(IGMP snooping)<br>  <strong>问题:</strong>二层Switch由于组播报文的目的地址为组播组地址，在二层设备上是学习不到这一类MAC表项的(组播MAC不会出现在源地址上)，因此组播报文就会在Switch所有接口进行广播.<br>  <strong>解决方法:</strong>当主机和上游三层设备之间传递的IGMP协议报文通过二层组播设备时，IGMP Snooping分析报文携带的信息，根据这些信息建立和维护二层组播转发表，从而指导组播数据在数据链路层按需转发.</p>
+<h3 id="二层组播技术-IGMP-snooping"><a href="#二层组播技术-IGMP-snooping" class="headerlink" title="二层组播技术(IGMP snooping)"></a>二层组播技术(IGMP snooping)</h3><p>  <strong>问题:</strong> 二层Switch由于组播报文的目的地址为组播组地址，在二层设备上是学习不到这一类MAC表项的(组播MAC不会出现在源地址上)，因此组播报文就会在Switch所有接口进行广播.<br>  <strong>解决方法:</strong> 当主机和上游三层设备之间传递的IGMP协议报文通过二层组播设备时，拥有IGMP Snooping技术的交换机可以分析报文携带的信息，根据这些信息建立和维护二层组播转发表，从而指导组播数据在数据链路层按需转发.</p>
 
       
     </div>
