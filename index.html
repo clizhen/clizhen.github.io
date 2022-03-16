@@ -524,10 +524,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>问题: 使用yarn upgrade-interactive 升级工程后, 某个软件包出错,需要重装,删除node_modules ,运行 yarn install ,不能解决问题.</strong><br>查询网络后 ,使用以下指令解决:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add package-name --force</span><br></pre></td></tr></table></figure>
+        <p><strong>问题: 使用yarn upgrade-interactive 升级工程后, 某个软件包出错,需要重装</strong><br>查询网络后 ,使用以下指令解决:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> yarn.lock</span><br><span class="line">yarn add package-name --force</span><br></pre></td></tr></table></figure>
 <p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn install --check-files</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> yarn.lock</span><br><span class="line">yarn install --check-files</span><br></pre></td></tr></table></figure>
 
       
     </div>

@@ -195,7 +195,7 @@
     <link href="http://blog.lizhen.pub/2020/06/08/yarn-reinstall-package/"/>
     <id>http://blog.lizhen.pub/2020/06/08/yarn-reinstall-package/</id>
     <published>2020-06-08T13:50:17.000Z</published>
-    <updated>2021-08-10T13:08:22.344Z</updated>
+    <updated>2022-03-16T12:20:32.264Z</updated>
     
     <summary type="html">
     
@@ -203,7 +203,8 @@
       
         
         
-          &lt;p&gt;&lt;strong&gt;问题: 使用yarn upgrade-interactive 升级工程后, 某个软件包出错,需要重装,删除node_modules ,运行 yarn install ,不能解决问题.&lt;/strong&gt;&lt;br&gt;查询网络后
+          &lt;p&gt;&lt;strong&gt;问题: 使用yarn upgrade-interactive 升级工程后, 某个软件包出错,需要重装&lt;/strong&gt;&lt;br&gt;查询网络后 ,使用以下指令解决:&lt;/p&gt;
+&lt;figure class=&quot;highlight
         
       
     
