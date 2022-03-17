@@ -3,7 +3,7 @@
   <title>li</title>
   <icon>http://blog.lizhen.pub/icon.png</icon>
   <subtitle>908878422@qq.com</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="http://blog.lizhen.pub/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
   <updated>2022-03-16T12:26:12.097Z</updated>
@@ -23,26 +23,24 @@
     <published>2022-03-16T11:23:46.000Z</published>
     <updated>2022-03-16T12:26:12.097Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h3 id=&quot;REDIS-是什么-能干什么&quot;&gt;&lt;a href=&quot;#REDIS-是什么-能干什么&quot; class=&quot;headerlink&quot; title=&quot;REDIS 是什么,能干什么&quot;&gt;&lt;/a&gt;REDIS 是什么,能干什么&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;redis的特性是快,
+    <summary type="html">&lt;h3 id=&quot;REDIS-是什么-能干什么&quot;&gt;&lt;a href=&quot;#REDIS-是什么-能干什么&quot; class=&quot;headerlink&quot; title=&quot;REDIS 是什么,能干什么&quot;&gt;&lt;/a&gt;REDIS 是什么,能干什么&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;redis的特性是快,</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
+    <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
     
     
-      <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
+    <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
     
   </entry>
   
@@ -53,26 +51,24 @@
     <published>2022-02-26T12:19:38.000Z</published>
     <updated>2022-02-28T12:26:03.203Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h3 id=&quot;IPV6-地址结构&quot;&gt;&lt;a href=&quot;#IPV6-地址结构&quot; class=&quot;headerlink&quot; title=&quot;IPV6 地址结构&quot;&gt;&lt;/a&gt;IPV6 地址结构&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;地址长128位.(Routing Prefix(48) +
+    <summary type="html">&lt;h3 id=&quot;IPV6-地址结构&quot;&gt;&lt;a href=&quot;#IPV6-地址结构&quot; class=&quot;headerlink&quot; title=&quot;IPV6 地址结构&quot;&gt;&lt;/a&gt;IPV6 地址结构&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;地址长128位.(Routing Prefix(48) +</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
+    <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
     
     
-      <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
+    <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
     
   </entry>
   
@@ -83,25 +79,23 @@
     <published>2022-02-23T11:47:38.000Z</published>
     <updated>2022-02-24T11:51:40.969Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h3 id=&quot;VLAN-端口转发规则&quot;&gt;&lt;a href=&quot;#VLAN-端口转发规则&quot; class=&quot;headerlink&quot; title=&quot;VLAN 端口转发规则&quot;&gt;&lt;/a&gt;VLAN 端口转发规则&lt;/h3&gt;&lt;h4 id=&quot;PVID&quot;&gt;&lt;a href=&quot;#PVID&quot;
+    <summary type="html">&lt;h3 id=&quot;VLAN-端口转发规则&quot;&gt;&lt;a href=&quot;#VLAN-端口转发规则&quot; class=&quot;headerlink&quot; title=&quot;VLAN 端口转发规则&quot;&gt;&lt;/a&gt;VLAN 端口转发规则&lt;/h3&gt;&lt;h4 id=&quot;PVID&quot;&gt;&lt;a href=&quot;#PVID&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
+    <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
     
     
-      <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
+    <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
     
   </entry>
   
@@ -112,23 +106,21 @@
     <published>2021-08-28T12:19:39.000Z</published>
     <updated>2021-08-28T12:41:22.555Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h3 id=&quot;netstat-ss&quot;&gt;&lt;a href=&quot;#netstat-ss&quot; class=&quot;headerlink&quot; title=&quot;netstat ss&quot;&gt;&lt;/a&gt;netstat ss&lt;/h3&gt;&lt;h4 id=&quot;NETSTAT&quot;&gt;&lt;a href=&quot;#NETSTAT&quot;
+    <summary type="html">&lt;h3 id=&quot;netstat-ss&quot;&gt;&lt;a href=&quot;#netstat-ss&quot; class=&quot;headerlink&quot; title=&quot;netstat ss&quot;&gt;&lt;/a&gt;netstat ss&lt;/h3&gt;&lt;h4 id=&quot;NETSTAT&quot;&gt;&lt;a href=&quot;#NETSTAT&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
     
-      <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
+    <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
     
   </entry>
   
@@ -139,25 +131,23 @@
     <published>2021-08-28T03:31:10.000Z</published>
     <updated>2021-08-28T09:33:43.437Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h3 id=&quot;ps-pidof-pgrep-fuser-lsof&quot;&gt;&lt;a href=&quot;#ps-pidof-pgrep-fuser-lsof&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;h3 id=&quot;ps-pidof-pgrep-fuser-lsof&quot;&gt;&lt;a href=&quot;#ps-pidof-pgrep-fuser-lsof&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
+    <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
     
   </entry>
   
@@ -168,25 +158,23 @@
     <published>2021-08-08T12:57:43.000Z</published>
     <updated>2021-08-28T03:32:44.497Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h3 id=&quot;组策略启动脚本不执行&quot;&gt;&lt;a href=&quot;#组策略启动脚本不执行&quot; class=&quot;headerlink&quot; title=&quot;组策略启动脚本不执行&quot;&gt;&lt;/a&gt;组策略启动脚本不执行&lt;/h3&gt;&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot;
+    <summary type="html">&lt;h3 id=&quot;组策略启动脚本不执行&quot;&gt;&lt;a href=&quot;#组策略启动脚本不执行&quot; class=&quot;headerlink&quot; title=&quot;组策略启动脚本不执行&quot;&gt;&lt;/a&gt;组策略启动脚本不执行&lt;/h3&gt;&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
+    <category term="network" scheme="http://blog.lizhen.pub/tags/network/"/>
     
   </entry>
   
@@ -197,26 +185,24 @@
     <published>2020-06-08T13:50:17.000Z</published>
     <updated>2022-03-16T12:20:32.264Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;strong&gt;问题: 使用yarn upgrade-interactive 升级工程后, 某个软件包出错,需要重装&lt;/strong&gt;&lt;br&gt;查询网络后 ,使用以下指令解决:&lt;/p&gt;
-&lt;figure class=&quot;highlight
+    <summary type="html">&lt;p&gt;&lt;strong&gt;问题: 使用yarn upgrade-interactive 升级工程后, 某个软件包出错,需要重装&lt;/strong&gt;&lt;br&gt;查询网络后 ,使用以下指令解决:&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
+    <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
     
   </entry>
   
@@ -227,25 +213,23 @@
     <published>2019-12-06T12:14:59.000Z</published>
     <updated>2019-12-07T12:23:34.603Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;strong&gt;我基本上是按照这篇&lt;a href=&quot;https://www.cnblogs.com/leisurelylicht/p/Ubuntu-guo-nei-an-zhuang-kubernetes.html&quot; target=&quot;_blank&quot;
+    <summary type="html">&lt;p&gt;&lt;strong&gt;我基本上是按照这篇&lt;a href=&quot;https://www.cnblogs.com/leisurelylicht/p/Ubuntu-guo-nei-an-zhuang-kubernetes.html&quot; target=&quot;_blank&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="kubenetes" scheme="http://blog.lizhen.pub/tags/kubenetes/"/>
+    <category term="kubenetes" scheme="http://blog.lizhen.pub/tags/kubenetes/"/>
     
   </entry>
   
@@ -256,27 +240,25 @@
     <published>2019-11-25T11:56:25.000Z</published>
     <updated>2019-11-25T12:01:22.664Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h4 id=&quot;go-模板&quot;&gt;&lt;a href=&quot;#go-模板&quot; class=&quot;headerlink&quot; title=&quot;go 模板&quot;&gt;&lt;/a&gt;go 模板&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+    <summary type="html">&lt;h4 id=&quot;go-模板&quot;&gt;&lt;a href=&quot;#go-模板&quot; class=&quot;headerlink&quot; title=&quot;go 模板&quot;&gt;&lt;/a&gt;go 模板&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
-      <category term="docker" scheme="http://blog.lizhen.pub/tags/docker/"/>
+    <category term="docker" scheme="http://blog.lizhen.pub/tags/docker/"/>
     
   </entry>
   
@@ -287,25 +269,23 @@
     <published>2019-11-24T11:46:38.000Z</published>
     <updated>2019-11-24T12:26:42.544Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h4 id=&quot;NPM&quot;&gt;&lt;a href=&quot;#NPM&quot; class=&quot;headerlink&quot; title=&quot;NPM&quot;&gt;&lt;/a&gt;NPM&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+    <summary type="html">&lt;h4 id=&quot;NPM&quot;&gt;&lt;a href=&quot;#NPM&quot; class=&quot;headerlink&quot; title=&quot;NPM&quot;&gt;&lt;/a&gt;NPM&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -316,25 +296,23 @@
     <published>2019-11-21T12:46:43.000Z</published>
     <updated>2019-11-21T12:49:08.684Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h4 id=&quot;timedatectl&quot;&gt;&lt;a href=&quot;#timedatectl&quot; class=&quot;headerlink&quot; title=&quot;timedatectl&quot;&gt;&lt;/a&gt;timedatectl&lt;/h4&gt;&lt;figure class=&quot;highlight
+    <summary type="html">&lt;h4 id=&quot;timedatectl&quot;&gt;&lt;a href=&quot;#timedatectl&quot; class=&quot;headerlink&quot; title=&quot;timedatectl&quot;&gt;&lt;/a&gt;timedatectl&lt;/h4&gt;&lt;figure class=&quot;highlight</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -345,25 +323,23 @@
     <published>2019-11-21T12:26:21.000Z</published>
     <updated>2019-11-21T12:36:38.932Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04&quot; target=&quot;_blank&quot;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04&quot; target=&quot;_blank&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -374,26 +350,24 @@
     <published>2019-11-20T14:02:19.000Z</published>
     <updated>2019-11-20T14:10:47.239Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/donghaixiaolongwang/article/details/79230220&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;转载&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;默认规则&quot;&gt;&lt;a
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/donghaixiaolongwang/article/details/79230220&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;转载&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;默认规则&quot;&gt;&lt;a</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -404,26 +378,24 @@
     <published>2019-11-09T03:43:19.000Z</published>
     <updated>2019-11-09T12:21:09.043Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h4 id=&quot;远程&quot;&gt;&lt;a href=&quot;#远程&quot; class=&quot;headerlink&quot; title=&quot;远程&quot;&gt;&lt;/a&gt;远程&lt;/h4&gt;&lt;p&gt;WinRM 打开: Enable-PSRemoting -force&lt;/p&gt;
-&lt;figure class=&quot;highlight
+    <summary type="html">&lt;h4 id=&quot;远程&quot;&gt;&lt;a href=&quot;#远程&quot; class=&quot;headerlink&quot; title=&quot;远程&quot;&gt;&lt;/a&gt;远程&lt;/h4&gt;&lt;p&gt;WinRM 打开: Enable-PSRemoting -force&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -434,25 +406,23 @@
     <published>2019-11-07T11:31:53.000Z</published>
     <updated>2019-11-09T03:48:07.757Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h4 id=&quot;PowerShell-设置防火墙&quot;&gt;&lt;a href=&quot;#PowerShell-设置防火墙&quot; class=&quot;headerlink&quot; title=&quot;PowerShell 设置防火墙&quot;&gt;&lt;/a&gt;PowerShell 设置防火墙&lt;/h4&gt;&lt;figure
+    <summary type="html">&lt;h4 id=&quot;PowerShell-设置防火墙&quot;&gt;&lt;a href=&quot;#PowerShell-设置防火墙&quot; class=&quot;headerlink&quot; title=&quot;PowerShell 设置防火墙&quot;&gt;&lt;/a&gt;PowerShell 设置防火墙&lt;/h4&gt;&lt;figure</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -463,25 +433,23 @@
     <published>2019-11-06T11:58:56.000Z</published>
     <updated>2019-11-06T12:04:03.530Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h4 id=&quot;netsh-example&quot;&gt;&lt;a href=&quot;#netsh-example&quot; class=&quot;headerlink&quot; title=&quot;netsh example&quot;&gt;&lt;/a&gt;netsh example&lt;/h4&gt;&lt;figure class=&quot;highlight
+    <summary type="html">&lt;h4 id=&quot;netsh-example&quot;&gt;&lt;a href=&quot;#netsh-example&quot; class=&quot;headerlink&quot; title=&quot;netsh example&quot;&gt;&lt;/a&gt;netsh example&lt;/h4&gt;&lt;figure class=&quot;highlight</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -492,27 +460,25 @@
     <published>2019-11-04T11:33:08.000Z</published>
     <updated>2019-11-04T12:20:56.388Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://kb.iu.edu/d/acux&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://kb.iu.edu/d/acux&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;原文&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;windows: line feed + carriage
+&lt;li&gt;windows: line feed + carriage</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -523,25 +489,23 @@
     <published>2019-11-03T12:47:49.000Z</published>
     <updated>2019-11-04T11:22:59.615Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h4 id=&quot;命令行&quot;&gt;&lt;a href=&quot;#命令行&quot; class=&quot;headerlink&quot; title=&quot;命令行&quot;&gt;&lt;/a&gt;命令行&lt;/h4&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+    <summary type="html">&lt;h4 id=&quot;命令行&quot;&gt;&lt;a href=&quot;#命令行&quot; class=&quot;headerlink&quot; title=&quot;命令行&quot;&gt;&lt;/a&gt;命令行&lt;/h4&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
-      <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
@@ -552,25 +516,23 @@
     <published>2019-10-26T05:57:46.000Z</published>
     <updated>2019-10-26T06:04:16.542Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h3 id=&quot;timezone-的设置&quot;&gt;&lt;a href=&quot;#timezone-的设置&quot; class=&quot;headerlink&quot; title=&quot;timezone 的设置&quot;&gt;&lt;/a&gt;timezone
+    <summary type="html">&lt;h3 id=&quot;timezone-的设置&quot;&gt;&lt;a href=&quot;#timezone-的设置&quot; class=&quot;headerlink&quot; title=&quot;timezone 的设置&quot;&gt;&lt;/a&gt;timezone</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
+    <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
     
   </entry>
   
@@ -581,25 +543,23 @@
     <published>2019-10-09T13:49:38.000Z</published>
     <updated>2019-10-10T11:45:10.470Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile&quot; target=&quot;_blank&quot;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile&quot; target=&quot;_blank&quot;</summary>
         
       
     
-    </summary>
     
     
-      <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
-      <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
-      <category term="docker" scheme="http://blog.lizhen.pub/tags/docker/"/>
+    <category term="docker" scheme="http://blog.lizhen.pub/tags/docker/"/>
     
   </entry>
   
