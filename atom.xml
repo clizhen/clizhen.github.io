@@ -6,7 +6,7 @@
   <link href="http://blog.lizhen.pub/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2022-03-16T12:26:12.097Z</updated>
+  <updated>2022-03-18T12:00:47.423Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenSSL</title>
+    <link href="http://blog.lizhen.pub/2022/03/18/OpenSSL/"/>
+    <id>http://blog.lizhen.pub/2022/03/18/OpenSSL/</id>
+    <published>2022-03-18T11:47:52.000Z</published>
+    <updated>2022-03-18T12:00:47.423Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;OpenSSL-简要说明&quot;&gt;&lt;a href=&quot;#OpenSSL-简要说明&quot; class=&quot;headerlink&quot; title=&quot;OpenSSL 简要说明&quot;&gt;&lt;/a&gt;OpenSSL 简要说明&lt;/h3&gt;&lt;h4 id=&quot;OpenSSL的功能&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+    <category term="system" scheme="http://blog.lizhen.pub/tags/system/"/>
+    
+  </entry>
   
   <entry>
     <title>REDIS</title>
@@ -533,33 +560,6 @@
     
     
     <category term="postgresql" scheme="http://blog.lizhen.pub/tags/postgresql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker entrypoint vs cmd</title>
-    <link href="http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/"/>
-    <id>http://blog.lizhen.pub/2019/10/09/Docker-entrypoint-vs-cmd/</id>
-    <published>2019-10-09T13:49:38.000Z</published>
-    <updated>2019-10-10T11:45:10.470Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile&quot; target=&quot;_blank&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-    <category term="docker" scheme="http://blog.lizhen.pub/tags/docker/"/>
     
   </entry>
   
