@@ -66,6 +66,62 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-PostgreSQL-client-Connection-options" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/27/PostgreSQL-client-Connection-options/" class="article-date">
+  <time datetime="2019-09-27T13:31:28.000Z" itemprop="datePublished">2019-09-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/27/PostgreSQL-client-Connection-options/">Postgresql client Connection options</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>PostgreSQL 客户端常用的连接参数</strong><br><em>注意:密码是不可能写在命令行上的,设置密码用.pgpass,环境变量</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Connection options:</span><br><span class="line">    -d, --dbname&#x3D;DBNAME </span><br><span class="line">    -h, --host&#x3D;HOSTNAME</span><br><span class="line">    -p, --port&#x3D;PORT</span><br><span class="line">    -U, --username&#x3D;NAME connect as specified database user</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用环境变量 连接PostgreSQL</strong></p>
+<ul>
+<li>PGHOST</li>
+<li>PGPORT</li>
+<li>PGUSER</li>
+<li>PGPASSWORD</li>
+<li>PGDATABASE</li>
+</ul>
+<p><strong>使用.pgpass 连接PostgreSQL</strong><br>在你的HOME目录下创建.pgpass文件,字段可用*<br>格式: <strong>hostname:port:database:username:password</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 0600 ~&#x2F;.pgpass</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/27/PostgreSQL-client-Connection-options/" data-id="ckb6kjx1s001spspwfulzbhmd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Linux-Shell-set-vs-env" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/26/Linux-Shell-set-vs-env/" class="article-date">
@@ -506,67 +562,6 @@
 
 
   
-    <article id="post-sed" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/21/sed/" class="article-date">
-  <time datetime="2019-09-21T11:33:04.000Z" itemprop="datePublished">2019-09-21</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/21/sed/">SED</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>两种执行方式</strong><br>-n 禁止默认输出</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed [-n] [-e] <span class="string">'command'</span> file(s)</span><br><span class="line">sed [-n] -f scriptfile file(s)</span><br></pre></td></tr></table></figure>
-<p>command结构</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- [addr [,addr]] [!] action [arguments]</span><br><span class="line">- [&#x2F;pattern&#x2F;[,&#x2F;pattern&#x2F;]] &#123;</span><br><span class="line">  cmd</span><br><span class="line">  cmd</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>action</p>
-<ul>
-<li>a 拼接</li>
-<li>c 替换</li>
-<li>i 插入</li>
-<li>d 删除</li>
-<li>s 替换</li>
-<li>y 翻译</li>
-<li>p 打印</li>
-</ul>
-<p><strong>举例</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># only print</span></span><br><span class="line">sed -ne <span class="string">'/regexp/p'</span> inputfile(s)</span><br><span class="line">sed -n <span class="string">'/GREEN/,$p'</span> inputfile(s)</span><br><span class="line"></span><br><span class="line"><span class="comment"># append after the pattern (-i 直接修改源文件)</span></span><br><span class="line">sed -i <span class="string">'/pattern/a \</span></span><br><span class="line"><span class="string">line1 \</span></span><br><span class="line"><span class="string">line2'</span> inputfile</span><br><span class="line"></span><br><span class="line"><span class="comment"># insert before the pattern</span></span><br><span class="line">sed -i <span class="string">'/This is line two/i\your text 1\nyout text 2'</span> inputfile(s)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/21/sed/" data-id="ckb6kjx1d000spspw4iwja9yv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -602,7 +597,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/docker/" style="font-size: 11.67px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 15px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.33px;">postgresql</a> <a href="/tags/program/" style="font-size: 15px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 16.67px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.67px;">vim</a>
+      <a href="/tags/docker/" style="font-size: 11.67px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 15px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.33px;">postgresql</a> <a href="/tags/program/" style="font-size: 16.67px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 16.67px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.67px;">vim</a>
     </div>
   </div>
 
@@ -624,6 +619,10 @@
       <ul>
         
           <li>
+            <a href="/2022/03/20/javascript-new-operator/">javascript_new_operator</a>
+          </li>
+        
+          <li>
             <a href="/2022/03/18/OpenSSL/">OpenSSL</a>
           </li>
         
@@ -637,10 +636,6 @@
         
           <li>
             <a href="/2022/02/23/vlan-pvid-trunk/">VLAN-PVID-TRUNK</a>
-          </li>
-        
-          <li>
-            <a href="/2021/08/28/Linux-netstat-ss/">Linux NETSTAT SS</a>
           </li>
         
       </ul>

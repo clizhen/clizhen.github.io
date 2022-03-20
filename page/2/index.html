@@ -66,6 +66,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Docker-按名称批量删除image" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/25/Docker-%E6%8C%89%E5%90%8D%E7%A7%B0%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4image/" class="article-date">
+  <time datetime="2019-11-25T11:56:25.000Z" itemprop="datePublished">2019-11-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/25/Docker-%E6%8C%89%E5%90%8D%E7%A7%B0%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4image/">Docker 按名称批量删除image</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="go-模板"><a href="#go-模板" class="headerlink" title="go 模板"></a>go 模板</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi $(docker images --format <span class="string">'&#123;&#123;.Repository&#125;&#125;:&#123;&#123;.Tag&#125;&#125;'</span> | grep <span class="string">'imagename'</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/11/25/Docker-%E6%8C%89%E5%90%8D%E7%A7%B0%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4image/" data-id="ckb6kjx2t003opspw5ytn19f7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-阿里源" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/24/%E9%98%BF%E9%87%8C%E6%BA%90/" class="article-date">
@@ -485,50 +528,6 @@
 
 
   
-    <article id="post-set-timezone-in-pg" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/26/set-timezone-in-pg/" class="article-date">
-  <time datetime="2019-10-26T05:57:46.000Z" itemprop="datePublished">2019-10-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/26/set-timezone-in-pg/">set timezone in pg</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="timezone-的设置"><a href="#timezone-的设置" class="headerlink" title="timezone 的设置"></a>timezone 的设置</h3><p>可以在连接参数中设置,也可以在服务器中修改或修改conf文件.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> pg_timezone_names;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">DATABASE</span> postgres <span class="keyword">SET</span> timezone <span class="keyword">TO</span> <span class="string">'Europe/Berlin'</span>;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/26/set-timezone-in-pg/" data-id="ckb6kjx29002vpspw1cubgv0v" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -564,7 +563,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/docker/" style="font-size: 11.67px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 15px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.33px;">postgresql</a> <a href="/tags/program/" style="font-size: 15px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 16.67px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.67px;">vim</a>
+      <a href="/tags/docker/" style="font-size: 11.67px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 15px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.33px;">postgresql</a> <a href="/tags/program/" style="font-size: 16.67px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 16.67px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.67px;">vim</a>
     </div>
   </div>
 
@@ -586,6 +585,10 @@
       <ul>
         
           <li>
+            <a href="/2022/03/20/javascript-new-operator/">javascript_new_operator</a>
+          </li>
+        
+          <li>
             <a href="/2022/03/18/OpenSSL/">OpenSSL</a>
           </li>
         
@@ -599,10 +602,6 @@
         
           <li>
             <a href="/2022/02/23/vlan-pvid-trunk/">VLAN-PVID-TRUNK</a>
-          </li>
-        
-          <li>
-            <a href="/2021/08/28/Linux-netstat-ss/">Linux NETSTAT SS</a>
           </li>
         
       </ul>
