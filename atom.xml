@@ -6,7 +6,7 @@
   <link href="http://blog.lizhen.pub/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2022-03-20T06:16:58.987Z</updated>
+  <updated>2022-04-04T06:06:48.144Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>react_hook_interal</title>
+    <link href="http://blog.lizhen.pub/2022/04/04/react-hook-interal/"/>
+    <id>http://blog.lizhen.pub/2022/04/04/react-hook-interal/</id>
+    <published>2022-04-04T02:46:04.000Z</published>
+    <updated>2022-04-04T06:06:48.144Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;REACT-HOOK&quot;&gt;&lt;a href=&quot;#REACT-HOOK&quot; class=&quot;headerlink&quot; title=&quot;REACT HOOK&quot;&gt;&lt;/a&gt;REACT HOOK&lt;/h3&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/linux/"/>
+    
+    <category term="other" scheme="http://blog.lizhen.pub/categories/linux/other/"/>
+    
+    
+    <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
     <title>JavaScript_New_KeyWord</title>
     <link href="http://blog.lizhen.pub/2022/03/20/javascript-new-operator/"/>
     <id>http://blog.lizhen.pub/2022/03/20/javascript-new-operator/</id>
     <published>2022-03-20T05:27:18.000Z</published>
-    <updated>2022-03-20T06:16:58.987Z</updated>
+    <updated>2022-04-04T06:02:05.735Z</updated>
     
     
       
@@ -530,33 +557,6 @@
     <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
     <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows中sha1 md5校验</title>
-    <link href="http://blog.lizhen.pub/2019/11/03/windows%E4%B8%ADsha1-md5%E6%A0%A1%E9%AA%8C/"/>
-    <id>http://blog.lizhen.pub/2019/11/03/windows%E4%B8%ADsha1-md5%E6%A0%A1%E9%AA%8C/</id>
-    <published>2019-11-03T12:47:49.000Z</published>
-    <updated>2019-11-04T11:22:59.615Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;命令行&quot;&gt;&lt;a href=&quot;#命令行&quot; class=&quot;headerlink&quot; title=&quot;命令行&quot;&gt;&lt;/a&gt;命令行&lt;/h4&gt;&lt;figure class=&quot;highlight cmd&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
     <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
