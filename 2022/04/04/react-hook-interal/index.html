@@ -5,18 +5,18 @@
   
 
   
-  <title>React Hook Interal | li</title>
+  <title>React Hook Internal | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="REACT HOOKReact Fiber with Render and Commit phrases  fiber 是react创建的内部对象代表每个元素(element),可以是一个DOM,也可以是一个函数部件. hook出现之前的函数部件,只接受属性(那时的react引擎不使用fiber). 因为函数不能保存状态,而使用fiber后,状态保存在fiber中.类似与将函数使用的变量保存函数体">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React Hook Interal">
+<meta property="og:title" content="React Hook Internal">
 <meta property="og:url" content="http://blog.lizhen.pub/2022/04/04/react-hook-interal/index.html">
 <meta property="og:site_name" content="li">
 <meta property="og:description" content="REACT HOOKReact Fiber with Render and Commit phrases  fiber 是react创建的内部对象代表每个元素(element),可以是一个DOM,也可以是一个函数部件. hook出现之前的函数部件,只接受属性(那时的react引擎不使用fiber). 因为函数不能保存状态,而使用fiber后,状态保存在fiber中.类似与将函数使用的变量保存函数体">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://blog.lizhen.pub/images/react_fiber.png">
 <meta property="article:published_time" content="2022-04-04T02:46:04.000Z">
-<meta property="article:modified_time" content="2022-04-05T08:39:09.533Z">
+<meta property="article:modified_time" content="2022-04-05T08:56:09.767Z">
 <meta property="article:author" content="li zhen">
 <meta property="article:tag" content="program">
 <meta name="twitter:card" content="summary">
@@ -87,7 +87,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      React Hook Interal
+      React Hook Internal
     </h1>
   
 
@@ -119,7 +119,7 @@
 <h4 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>( <span class="function">() =&gt;</span> &#123; ...; <span class="keyword">return</span> ... &#125;, [<span class="title class_">DependArray</span>] )</span><br></pre></td></tr></table></figure></li>
 </ol>
 </li>
-<li>useEffect 位于上图的绿色部分.再更新玩DOM后执行.</li>
+<li>useEffect 位于上图的绿色部分.再更新完DOM后执行.</li>
 <li>useEffect 将使用fiber的updateQueue属性,保存effect函数(分为 create 和destory两类), 取决于场景Mount&#x2F;Upudate 和 依赖数组.</li>
 <li>每次更新完屏幕后, react引擎会flush effect 队列.(先 destory ,后 create)</li>
 </ul>
@@ -199,7 +199,7 @@
       <ul>
         
           <li>
-            <a href="/2022/04/04/react-hook-interal/">React Hook Interal</a>
+            <a href="/2022/04/04/react-hook-interal/">React Hook Internal</a>
           </li>
         
           <li>
