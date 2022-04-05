@@ -105,8 +105,20 @@
 </ul>
 <h4 id="React-useState"><a href="#React-useState" class="headerlink" title="React useState"></a>React useState</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> [ data ,setData ] = <span class="title function_">useState</span>();</span><br></pre></td></tr></table></figure>
 <ul>
-<li>当代码使用setData时 ,意思是发出action ,引擎将action安排至对应fiber中hook对应的更新队列.下次更新时执行.</li>
+<li>当代码使用setData时 ,意思是 Dispatch action ,引擎将action安排至对应fiber中hook对应的更新队列.下次更新时执行.</li>
 <li>执行的结果决定了<strong>Update</strong>时, data获得的最新状态.</li>
+</ul>
+<h4 id="React-useEffect"><a href="#React-useEffect" class="headerlink" title="React useEffect"></a>React useEffect</h4><h5 id="What-is-a-side-effect"><a href="#What-is-a-side-effect" class="headerlink" title="What is a side effect?"></a>What is a side effect?</h5><ul>
+<li>相对于纯函数, 函数有隐含的依赖.</li>
+<li>解决方式有二种:<ol>
+<li>将依赖都放入函数参数中. 完美解决方式,但有时很难实现.</li>
+<li>将依赖打包并推迟到最后, 直到真正需要时才执行.在下面例子中,c and log 作为输入参数.所以addFunc是纯的, add 也是纯的.<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">addFunc</span>(<span class="params">c ,log</span>) &#123;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">a ,b</span>) &#123;</span><br><span class="line">  <span class="title function_">log</span>(a,b)</span><br><span class="line">  <span class="keyword">return</span> a + b + c</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> add</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="useEffect"><a href="#useEffect" class="headerlink" title="useEffect"></a>useEffect</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">useEffect</span>( <span class="function">() =&gt;</span> &#123; ...; <span class="keyword">return</span> ... &#125;, [<span class="title class_">DependArray</span>] )</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li>useEffect 位于上图的绿色部分.再更新玩DOM后执行.</li>
+<li>useEffect 将使用fiber的updateQueue属性,保存effect函数(分为 create 和destory两类), 取决于场景Mount&#x2F;Upudate 和 依赖数组.</li>
+<li>每次更新完屏幕后, react引擎会flush effect 队列.(先 destory ,后 create)</li>
 </ul>
 
       
