@@ -66,6 +66,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-PostgreSQL-Schema" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/29/PostgreSQL-Schema/" class="article-date">
+  <time datetime="2019-09-29T08:48:10.000Z" itemprop="datePublished">2019-09-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/29/PostgreSQL-Schema/">Postgresql -- Schema</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="postgresql-架构命令"><a href="#postgresql-架构命令" class="headerlink" title="postgresql 架构命令"></a>postgresql 架构命令</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> current_schema();</span><br><span class="line"><span class="keyword">Show</span> search_path;</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Alter</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Drop</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Set</span> search_path <span class="keyword">To</span> ..., ...</span><br><span class="line"><span class="keyword">Grant</span> <span class="keyword">Usage</span> <span class="keyword">On</span> <span class="keyword">Schema</span> schema_name <span class="keyword">To</span> user_name</span><br><span class="line"><span class="keyword">Grant</span> <span class="keyword">Create</span> <span class="keyword">On</span> <span class="keyword">Schema</span> schema_name <span class="keyword">To</span> user_name;</span><br><span class="line">\dn <span class="comment">#get the list of schemas;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/29/PostgreSQL-Schema/" data-id="ckb6kjx1v0020pspwhr717a74" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-PostgreSQL-Move-Data-Directory" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/29/PostgreSQL-Move-Data-Directory/" class="article-date">
@@ -516,55 +559,6 @@
 
 
   
-    <article id="post-设计原理-SOLID" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/22/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-SOLID/" class="article-date">
-  <time datetime="2019-09-22T08:08:56.000Z" itemprop="datePublished">2019-09-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/other/">other</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-SOLID/">设计原理 SOLID</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><strong>A class should have only a single responsibility</strong><br>  <em>单一职责(<strong>S</strong>)</em>: 一个类只承担一个职责,引起类变化的因素永远不要多余一个.</li>
-<li><strong>A class should be open for extension but closed for modification</strong><br>  <em>开闭原则(<strong>O</strong>)</em>: 不需要修改就能扩展类的行为,对拓展开放，对修改关闭.</li>
-<li><strong>A type must be substitutable by its subtypes without altering the correctness of the application</strong><br>  <em>替换原则(<strong>L</strong>)</em>: 子类代替父类时，对系统毫无影响,所有引用基类的地方必须能透明地使用其子类的对象.</li>
-<li><strong>Clients of a class should not be forced to depend on those of its methods that they don’t use</strong><br>  <em>接口隔离(<strong>I</strong>)</em>:客户端不应该强制依赖那些他们没有使用到的接口,类不需强制实现接口中不需要的方法和属性.</li>
-<li><strong>High-level classes should not dependent on low-level classes. Both of then shoud depend on abstractions. b. Abstractions should not depend upon details. Details should depend upon abstractions.</strong><br>  <em>依赖倒置(<strong>D</strong>)</em>:上级组件不依赖下级组件，二者都依赖抽象。抽象不取决于下级组件，其来自于上级组件的需求,下级组件完成抽象.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-SOLID/" data-id="ckb6kjx1n001gpspwaac38g9t" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/" rel="tag">program</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -580,7 +574,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/">computer</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/other/">other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/windows/">windows</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/linux/other/">other</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/">computer</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/other/">other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/windows/">windows</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -622,6 +616,10 @@
       <ul>
         
           <li>
+            <a href="/2022/04/09/postgresql-lock-md/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2022/04/04/react-hook-interal/">React Hook Internal</a>
           </li>
         
@@ -635,10 +633,6 @@
         
           <li>
             <a href="/2022/03/16/redis-primary/">REDIS</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/26/ipv6-address/">IPV6-ADDRESS</a>
           </li>
         
       </ul>
