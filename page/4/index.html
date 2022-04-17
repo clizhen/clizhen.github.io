@@ -66,6 +66,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-postgresql-bitmap-heap-index-scan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="article-date">
+  <time datetime="2019-10-04T03:51:28.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/04/postgresql-bitmap-heap-index-scan/">Postgresql bitmap heap/index scan</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://dba.stackexchange.com/questions/119386/understanding-bitmap-heap-scan-and-bitmap-index-scan" target="_blank" rel="noopener">转载</a></p>
+<ul>
+<li><p>index scan 扫描索引,查找后<strong>立即</strong>读取对应数据页,是<em>随机读</em>.</p>
+</li>
+<li><p>bitmap heap scan 最终是<em>顺序读</em>. 一般用在多个索引同时使用时或单个索引多次使用时.</p>
+</li>
+</ul>
+<p>举例(先bitmap index scan 再bitmap heap scan):<br><img src="/images/bitmapIndex.1.png" alt=""><br>bitmaps 按为与<br><img src="/images/bitmapIndex.2.png" alt=""><br>bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked).<br><img src="/images/bitmapIndex.3.png" alt="">.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ckb6kjx1w0023pspw3k3fcnyb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-PostgreSQL-Schema" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/29/PostgreSQL-Schema/" class="article-date">
@@ -516,49 +566,6 @@
 
 
   
-    <article id="post-SQL-Server中的Collations和Unicode" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/22/SQL-Server%E4%B8%AD%E7%9A%84Collations%E5%92%8CUnicode/" class="article-date">
-  <time datetime="2019-09-22T10:27:23.000Z" itemprop="datePublished">2019-09-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/SQL-Server%E4%B8%AD%E7%9A%84Collations%E5%92%8CUnicode/">SQL Server中的Collations和Unicode</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  我们知道计算机只能识别0和1, 当我们在SQL SERVER中保存和读取字符时就遇到了编码问题，SQL中字符从编码角度来看可分为2类，Unicode (nchar ,nvarchar)和非Unicode(char ,varchar) ,对于Unicode来说每个字符的码是一样的，不同语言不同版本的工具处理Unicode不存在问题。对于非Unicode 的字符，每个字符的码不一样，依赖于所属的代码页，只有知道了代码页，才能正确解释构成字符的0和1。而查询Collations就能得到代码页，同时Collations 对所有的Unicode 和非Unicode 规定了排序规则：大小写、重音、假名等。对于nvarchar ,nchar来说无关Collations中的代码页。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/SQL-Server%E4%B8%AD%E7%9A%84Collations%E5%92%8CUnicode/" data-id="ckb6kjx1l001cpspw1uoef0xj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/" rel="tag">sql</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -594,7 +601,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/docker/" style="font-size: 11.43px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 14.29px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.57px;">postgresql</a> <a href="/tags/program/" style="font-size: 17.14px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 12.86px;">sql</a> <a href="/tags/system/" style="font-size: 15.71px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.43px;">vim</a>
+      <a href="/tags/docker/" style="font-size: 11.67px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 15px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.33px;">postgresql</a> <a href="/tags/program/" style="font-size: 16.67px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 15px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.67px;">vim</a>
     </div>
   </div>
 
@@ -616,6 +623,10 @@
       <ul>
         
           <li>
+            <a href="/2022/04/17/get-public-ip/">GET_PUBLIC_IP</a>
+          </li>
+        
+          <li>
             <a href="/2022/04/09/postgresql-lock-md/">postgresql 事务隔离级别</a>
           </li>
         
@@ -629,10 +640,6 @@
         
           <li>
             <a href="/2022/03/18/OpenSSL/">OpenSSL</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/16/redis-primary/">REDIS</a>
           </li>
         
       </ul>

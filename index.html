@@ -66,6 +66,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-get-public-ip" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/04/17/get-public-ip/" class="article-date">
+  <time datetime="2022-04-17T08:09:05.000Z" itemprop="datePublished">2022-04-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/17/get-public-ip/">GET_PUBLIC_IP</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="GET-Public-IP"><a href="#GET-Public-IP" class="headerlink" title="GET Public IP"></a>GET Public IP</h3><p>  家里联通猫得到的是100.64.x.x的运营商私有区域地址.为获得使用的公网地址可采用如下方法:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dig +short myip.opendns.com @resolver1.opendns.com</span><br><span class="line">dig +short txt ch whoami.cloudflare @1.0.0.1</span><br><span class="line">dig TXT +short o-o.myaddr.l.google.com @ns1.google.com</span><br><span class="line">host myip.opendns.com resolver1.opendns.com</span><br><span class="line"><span class="comment"># 使用第三方网站</span></span><br><span class="line">curl ifconfig.me</span><br><span class="line">curl icanhazip.com</span><br><span class="line">curl ipecho.net/plain</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2022/04/17/get-public-ip/" data-id="cl230lz700000ljpwc9wdh9ae" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-postgresql-lock-md" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/04/09/postgresql-lock-md/" class="article-date">
@@ -686,55 +730,6 @@
 
 
   
-    <article id="post-组策略启动脚本" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/" class="article-date">
-  <time datetime="2021-08-08T12:57:43.000Z" itemprop="datePublished">2021-08-08</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/">组策略启动脚本</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="组策略启动脚本不执行"><a href="#组策略启动脚本不执行" class="headerlink" title="组策略启动脚本不执行"></a>组策略启动脚本不执行</h3><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
-<li>组策略启动脚本(Computer Policy -&gt; Windows -&gt; start script),不执行(10次中有一次可以). </li>
-<li>检查状态(gpupdate ,gpresult),策略已应用至本机, 本地执行脚本无问题.也排除权限问题(system账号,computer$域内机器账号)</li>
-<li>反复启动,检查开机日志发现1130错误(脚本无法启动,找不到对应文件), 发现其他错误NetLogon 无法找到域控(用户登录后域控正常) ,因脚本文件放在文件服务器上, 大致判定启动脚本运行时,计算机未完成网络连接.</li>
-<li>组策略已设置了网络就绪后应用脚本.最终在微软网站上查到的原因是 机器的千兆网卡(驱动问题)开机/重启连接网络时有延迟,但NetLogon会认为网卡已连接,投入运行, 造成错误.</li>
-</ul>
-<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>因为是公司域 ,使用组策略(Computer Policy -&gt; Adm -&gt; System -&gt; Group Policy) , 设置启动策略处理等待时间(startup policy processing wait time ).</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/" data-id="cks61rjb80000t9pwds973don" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -770,7 +765,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/docker/" style="font-size: 11.43px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 14.29px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.57px;">postgresql</a> <a href="/tags/program/" style="font-size: 17.14px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 12.86px;">sql</a> <a href="/tags/system/" style="font-size: 15.71px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.43px;">vim</a>
+      <a href="/tags/docker/" style="font-size: 11.67px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 15px;">network</a> <a href="/tags/postgresql/" style="font-size: 18.33px;">postgresql</a> <a href="/tags/program/" style="font-size: 16.67px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 13.33px;">sql</a> <a href="/tags/system/" style="font-size: 15px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 11.67px;">vim</a>
     </div>
   </div>
 
@@ -792,6 +787,10 @@
       <ul>
         
           <li>
+            <a href="/2022/04/17/get-public-ip/">GET_PUBLIC_IP</a>
+          </li>
+        
+          <li>
             <a href="/2022/04/09/postgresql-lock-md/">postgresql 事务隔离级别</a>
           </li>
         
@@ -805,10 +804,6 @@
         
           <li>
             <a href="/2022/03/18/OpenSSL/">OpenSSL</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/16/redis-primary/">REDIS</a>
           </li>
         
       </ul>
