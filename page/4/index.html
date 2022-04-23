@@ -66,6 +66,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-postgresql-reload-config" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-reload-config/" class="article-date">
+  <time datetime="2019-10-04T07:27:00.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/04/postgresql-reload-config/">Postgresql reload config</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>command-line reload<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#方法1</span></span><br><span class="line">sudo service postgresql-x.x reload</span><br><span class="line"><span class="comment">#方法2</span></span><br><span class="line">su -c root <span class="string">'service postgresql-x.x reload'</span></span><br><span class="line"><span class="comment">#方法3</span></span><br><span class="line">su - postges</span><br><span class="line">/usr/bin/pg_ctl reload</span><br></pre></td></tr></table></figure></li>
+<li>using sql reload<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> pg_reload_conf();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/" data-id="ckb6kjx1y0027pspwetyq5y1e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-postgresql-bitmap-heap-index-scan" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="article-date">
@@ -520,52 +567,6 @@
 
 
   
-    <article id="post-JS-函数上下文-闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/" class="article-date">
-  <time datetime="2019-09-22T10:37:48.000Z" itemprop="datePublished">2019-09-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/">JS 函数上下文 闭包</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>在传统的OO语言中，函数的上下文是由声明函数时确定的，例如静态函数通过类名调用，上下文是类。非静态函数通过类的实例调用，上下文是类的实例。而在javascript中函数首先是一个对象，<strong>它的上下文不能由声明时确定，而是由谁来调用来确定</strong>。也可通过使用call()和apply()来强行指定上下文。</li>
-<li><strong>闭包就是一个函数实例，该实例执行时需要的局部变量，来自其声明处。</strong></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/" data-id="ckb6kjx1i0014pspw4c0h91ht" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/" rel="tag">program</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -623,6 +624,10 @@
       <ul>
         
           <li>
+            <a href="/2022/04/23/react-my-components/">MY_COMPONENTS</a>
+          </li>
+        
+          <li>
             <a href="/2022/04/17/get-public-ip/">GET_PUBLIC_IP</a>
           </li>
         
@@ -636,10 +641,6 @@
         
           <li>
             <a href="/2022/03/20/javascript-new-operator/">JavaScript_New_KeyWord</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/18/OpenSSL/">OpenSSL</a>
           </li>
         
       </ul>

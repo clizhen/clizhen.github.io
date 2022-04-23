@@ -66,6 +66,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-react-my-components" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/04/23/react-my-components/" class="article-date">
+  <time datetime="2022-04-23T12:23:51.000Z" itemprop="datePublished">2022-04-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/04/23/react-my-components/">MY_COMPONENTS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="开发REACT时-我的常用包和工具"><a href="#开发REACT时-我的常用包和工具" class="headerlink" title="开发REACT时,我的常用包和工具"></a>开发REACT时,我的常用包和工具</h3><ul>
+<li>生成APP <a target="_blank" rel="noopener" href="https://create-react-app.dev/">create-react-app</a></li>
+<li>路由 <a target="_blank" rel="noopener" href="https://reactrouterdotcom.fly.dev/">React Router</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2022/04/23/react-my-components/" data-id="cl2bucyo30000c6pw6jy708g6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/" rel="tag">program</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-get-public-ip" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/04/17/get-public-ip/" class="article-date">
@@ -656,80 +702,6 @@
 
 
   
-    <article id="post-LinuxProcessView" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2021/08/28/LinuxProcessView/" class="article-date">
-  <time datetime="2021-08-28T03:31:10.000Z" itemprop="datePublished">2021-08-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/28/LinuxProcessView/">Linux 进程查看</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="ps-pidof-pgrep-fuser-lsof"><a href="#ps-pidof-pgrep-fuser-lsof" class="headerlink" title="ps,pidof,pgrep,fuser,lsof"></a>ps,pidof,pgrep,fuser,lsof</h3><h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux</span><br></pre></td></tr></table></figure>
-
-<p>x :所有类型进程.<br>a :所有用户.<br>u :格式选项.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -U root</span><br></pre></td></tr></table></figure>
-
-<p>U :指定用户.</p>
-<h5 id="PIDOF"><a href="#PIDOF" class="headerlink" title="PIDOF"></a>PIDOF</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pidf nvim</span><br></pre></td></tr></table></figure>
-
-<p>获得正在运行的程序nvim的进程ID.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">kill</span> -9 $(pidof firefox)</span><br></pre></td></tr></table></figure>
-
-<p>脚本中用法.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pidof -x script.py</span><br></pre></td></tr></table></figure>
-
-<p>包含脚本名的进程ID.</p>
-<h5 id="PGREP"><a href="#PGREP" class="headerlink" title="PGREP"></a>PGREP</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pgrep -l ssh</span><br></pre></td></tr></table></figure>
-
-<p>pgrep 相当于 ps -eo pid,cmd | awk ‘{print $1,$2}’ grep KeyWord</p>
-<h2 id="FUSER"><a href="#FUSER" class="headerlink" title="FUSER"></a>FUSER</h2><p>文件或网络端口使用的进程号.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fuser --namespace tcp port</span><br><span class="line">fuser --verbose path/to/file_or_directory</span><br></pre></td></tr></table></figure>
-
-<h2 id="LSOF"><a href="#LSOF" class="headerlink" title="LSOF"></a>LSOF</h2><p>打开的文件及对应的进程</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lsof path/to/file</span><br><span class="line">lsof -i :port</span><br><span class="line">lsof -u username</span><br><span class="line">lsof -c process_or_command_name</span><br><span class="line">lsof -p PID</span><br><span class="line">lsof -iTCP:port -sTCP:LISTEN</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>发现打开文件的进程</li>
-<li>发现打开指定端口的进程</li>
-<li>指定用户打开的文件</li>
-<li>指定命令打开的文件</li>
-<li>指定进程打开的文件</li>
-<li>发现Listen指定端口的进程</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2021/08/28/LinuxProcessView/" data-id="cksvfui170000uypweqv495e4" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/" rel="tag">system</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -787,6 +759,10 @@
       <ul>
         
           <li>
+            <a href="/2022/04/23/react-my-components/">MY_COMPONENTS</a>
+          </li>
+        
+          <li>
             <a href="/2022/04/17/get-public-ip/">GET_PUBLIC_IP</a>
           </li>
         
@@ -800,10 +776,6 @@
         
           <li>
             <a href="/2022/03/20/javascript-new-operator/">JavaScript_New_KeyWord</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/18/OpenSSL/">OpenSSL</a>
           </li>
         
       </ul>
