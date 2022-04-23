@@ -425,33 +425,6 @@
   </entry>
   
   <entry>
-    <title>阿里源</title>
-    <link href="http://blog.lizhen.pub/2019/11/24/%E9%98%BF%E9%87%8C%E6%BA%90/"/>
-    <id>http://blog.lizhen.pub/2019/11/24/%E9%98%BF%E9%87%8C%E6%BA%90/</id>
-    <published>2019-11-24T11:46:38.000Z</published>
-    <updated>2019-11-24T12:26:42.544Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;NPM&quot;&gt;&lt;a href=&quot;#NPM&quot; class=&quot;headerlink&quot; title=&quot;NPM&quot;&gt;&lt;/a&gt;NPM&lt;/h4&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Set TimeZone</title>
     <link href="http://blog.lizhen.pub/2019/11/21/Set-TimeZone/"/>
     <id>http://blog.lizhen.pub/2019/11/21/Set-TimeZone/</id>
@@ -547,6 +520,33 @@
         
     <summary type="html">&lt;h4 id=&quot;远程&quot;&gt;&lt;a href=&quot;#远程&quot; class=&quot;headerlink&quot; title=&quot;远程&quot;&gt;&lt;/a&gt;远程&lt;/h4&gt;&lt;p&gt;WinRM 打开: Enable-PSRemoting -force&lt;/p&gt;
 &lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
+    
+    
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PowerShell &amp;&amp; FireWall</title>
+    <link href="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/"/>
+    <id>http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/</id>
+    <published>2019-11-07T11:31:53.000Z</published>
+    <updated>2019-11-09T03:48:07.757Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;PowerShell-设置防火墙&quot;&gt;&lt;a href=&quot;#PowerShell-设置防火墙&quot; class=&quot;headerlink&quot; title=&quot;PowerShell 设置防火墙&quot;&gt;&lt;/a&gt;PowerShell 设置防火墙&lt;/h4&gt;&lt;figure</summary>
         
       
     

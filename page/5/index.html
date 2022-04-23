@@ -66,52 +66,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-JS-函数上下文-闭包" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/" class="article-date">
-  <time datetime="2019-09-22T10:37:48.000Z" itemprop="datePublished">2019-09-22</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/">JS 函数上下文 闭包</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>在传统的OO语言中，函数的上下文是由声明函数时确定的，例如静态函数通过类名调用，上下文是类。非静态函数通过类的实例调用，上下文是类的实例。而在javascript中函数首先是一个对象，<strong>它的上下文不能由声明时确定，而是由谁来调用来确定</strong>。也可通过使用call()和apply()来强行指定上下文。</li>
-<li><strong>闭包就是一个函数实例，该实例执行时需要的局部变量，来自其声明处。</strong></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/09/22/JS-%E5%87%BD%E6%95%B0%E4%B8%8A%E4%B8%8B%E6%96%87-%E9%97%AD%E5%8C%85/" data-id="ckb6kjx1i0014pspw4c0h91ht" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/" rel="tag">program</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-SQL-Server中的Collations和Unicode" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/09/22/SQL-Server%E4%B8%AD%E7%9A%84Collations%E5%92%8CUnicode/" class="article-date">
@@ -580,6 +534,60 @@ grep -r --exclude-dir=node_modules --exclude-dir=build --include  \*.js <span cl
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/" rel="tag">vim</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Set-TimeZone-NTP-In-Ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" class="article-date">
+  <time datetime="2019-09-16T11:57:48.000Z" itemprop="datePublished">2019-09-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/">Set TimeZone &amp; NTP In Ubuntu</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="TimeZone"><a href="#TimeZone" class="headerlink" title="TimeZone"></a>TimeZone</h3><ol>
+<li>timedatectl list-timezones</li>
+<li>sudo timedatectl set-timezone Asia/Shanghai</li>
+<li>timedatectl</li>
+</ol>
+<h3 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a>NTP</h3><ol>
+<li>sudo apt-get install ntp</li>
+<li>sntp –version</li>
+<li>sudo vim /etc/ntp.conf 选择<a target="_blank" rel="noopener" href="https://support.ntp.org/bin/view/Servers/NTPPoolServers">NTP server</a></li>
+<li>sudo service ntp restart</li>
+<li>sudo service ntp status</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/09/16/Set-TimeZone-NTP-In-Ubuntu/" data-id="ckb6kjx0z000apspwcpls7nig" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/system/" rel="tag">system</a></li></ul>
 
     </footer>
   </div>

@@ -66,49 +66,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-PowerShell-FireWall" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/07/PowerShell-FireWall/" class="article-date">
-  <time datetime="2019-11-07T11:31:53.000Z" itemprop="datePublished">2019-11-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="PowerShell-设置防火墙"><a href="#PowerShell-设置防火墙" class="headerlink" title="PowerShell 设置防火墙"></a>PowerShell 设置防火墙</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##关闭防火墙</span></span><br><span class="line"><span class="built_in">Get-NetFirewallProfile</span> | <span class="built_in">Set-NetFirewallProfile</span> <span class="literal">-enabled</span> false</span><br><span class="line"><span class="comment">##允许ping</span></span><br><span class="line"><span class="built_in">Set-NetFirewallRule</span> –Name “FPS<span class="literal">-ICMP4</span><span class="literal">-ERQ</span><span class="operator">-In</span>” –Enabled True</span><br><span class="line"><span class="built_in">Set-NetFirewallRule</span> –Name “FPS<span class="literal">-ICMP4</span><span class="literal">-ERQ</span><span class="literal">-Out</span>” –Enabled True</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/" data-id="ckb6kjx2g0038pspwdubi2elg" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-netsh-命令行修改网络配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/06/netsh-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BF%AE%E6%94%B9%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/" class="article-date">
@@ -553,6 +510,53 @@
     </div>
     <footer class="article-footer">
       <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-show-file-loaction/" data-id="ckb6kjx20002bpspw18hzh69t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-postgresql-reload-config" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-reload-config/" class="article-date">
+  <time datetime="2019-10-04T07:27:00.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/04/postgresql-reload-config/">Postgresql reload config</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>command-line reload<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#方法1</span></span><br><span class="line">sudo service postgresql-x.x reload</span><br><span class="line"><span class="comment">#方法2</span></span><br><span class="line">su -c root <span class="string">'service postgresql-x.x reload'</span></span><br><span class="line"><span class="comment">#方法3</span></span><br><span class="line">su - postges</span><br><span class="line">/usr/bin/pg_ctl reload</span><br></pre></td></tr></table></figure></li>
+<li>using sql reload<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> pg_reload_conf();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/10/04/postgresql-reload-config/" data-id="ckb6kjx1y0027pspwetyq5y1e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>

@@ -331,53 +331,6 @@
 
 
   
-    <article id="post-阿里源" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/24/%E9%98%BF%E9%87%8C%E6%BA%90/" class="article-date">
-  <time datetime="2019-11-24T11:46:38.000Z" itemprop="datePublished">2019-11-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/24/%E9%98%BF%E9%87%8C%E6%BA%90/">阿里源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry</span><br><span class="line"><span class="comment"># https://registry.npmjs.org/</span></span><br><span class="line"><span class="comment"># 方法一</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org/</span><br><span class="line"><span class="comment"># 方法二</span></span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line"><span class="comment"># 方法三</span></span><br><span class="line"><span class="built_in">alias</span> cnpm=<span class="string">"npm --registry=https://registry.npm.taobao.org \</span></span><br><span class="line"><span class="string">--cache=<span class="variable">$HOME</span>/.npm/.cache/cnpm \</span></span><br><span class="line"><span class="string">--disturl=https://npm.taobao.org/dist \</span></span><br><span class="line"><span class="string">--userconfig=<span class="variable">$HOME</span>/.cnpmrc"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Or alias it in .bashrc or .zshrc</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">'\n#alias for cnpm\nalias cnpm="npm --registry=https://registry.npm.taobao.org \</span></span><br><span class="line"><span class="string">  --cache=$HOME/.npm/.cache/cnpm \</span></span><br><span class="line"><span class="string">  --disturl=https://npm.taobao.org/dist \</span></span><br><span class="line"><span class="string">  --userconfig=$HOME/.cnpmrc"'</span> &gt;&gt; ~/.zshrc &amp;&amp; <span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
-<h4 id="YARN"><a href="#YARN" class="headerlink" title="YARN"></a>YARN</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn config get registry</span><br><span class="line"><span class="comment"># https://registry.yarnpkg.com</span></span><br><span class="line">yarn config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<h4 id="DOCK"><a href="#DOCK" class="headerlink" title="DOCK"></a>DOCK</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo vim /etc/docker/daemon.json  (Add)</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"registry-mirrors"</span>: [<span class="string">"https://e6bxib6v.mirror.aliyuncs.com"</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment"># install dockerce</span></span><br><span class="line">curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun</span><br></pre></td></tr></table></figure>
-<h4 id="UBUNTU-18-04"><a href="#UBUNTU-18-04" class="headerlink" title="UBUNTU 18.04"></a>UBUNTU 18.04</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># sudo vim &#x2F;etc&#x2F;apt&#x2F;sources.list (ADD)</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu&#x2F; bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-<h4 id="ALPINE"><a href="#ALPINE" class="headerlink" title="ALPINE"></a>ALPINE</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo sed -i <span class="string">'s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g'</span> /etc/apk/repositories</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/24/%E9%98%BF%E9%87%8C%E6%BA%90/" data-id="ckb6kjx3p005jpspw22l5fiy7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Set-TimeZone" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/21/Set-TimeZone/" class="article-date">
@@ -561,6 +514,49 @@
     </div>
     <footer class="article-footer">
       <a data-url="http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/" data-id="ckb6kjx2r003ipspwhkp620sq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-PowerShell-FireWall" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/07/PowerShell-FireWall/" class="article-date">
+  <time datetime="2019-11-07T11:31:53.000Z" itemprop="datePublished">2019-11-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="PowerShell-设置防火墙"><a href="#PowerShell-设置防火墙" class="headerlink" title="PowerShell 设置防火墙"></a>PowerShell 设置防火墙</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##关闭防火墙</span></span><br><span class="line"><span class="built_in">Get-NetFirewallProfile</span> | <span class="built_in">Set-NetFirewallProfile</span> <span class="literal">-enabled</span> false</span><br><span class="line"><span class="comment">##允许ping</span></span><br><span class="line"><span class="built_in">Set-NetFirewallRule</span> –Name “FPS<span class="literal">-ICMP4</span><span class="literal">-ERQ</span><span class="operator">-In</span>” –Enabled True</span><br><span class="line"><span class="built_in">Set-NetFirewallRule</span> –Name “FPS<span class="literal">-ICMP4</span><span class="literal">-ERQ</span><span class="literal">-Out</span>” –Enabled True</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/" data-id="ckb6kjx2g0038pspwdubi2elg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
