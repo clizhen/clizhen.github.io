@@ -66,6 +66,101 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Linux-netstat-ss" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/08/28/Linux-netstat-ss/" class="article-date">
+  <time datetime="2021-08-28T12:19:39.000Z" itemprop="datePublished">2021-08-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/28/Linux-netstat-ss/">Linux NETSTAT SS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="netstat-ss"><a href="#netstat-ss" class="headerlink" title="netstat ss"></a>netstat ss</h3><h4 id="NETSTAT"><a href="#NETSTAT" class="headerlink" title="NETSTAT"></a>NETSTAT</h4><ul>
+<li>-l, –listening display listening server sockets</li>
+<li>-a, –all display all sockets (default: connected)</li>
+<li>-r, –route display routing table</li>
+<li>–i, –interfaces display interface table</li>
+<li>-g, –groups display multicast group memberships</li>
+<li>-s, –statistics display networking statistics (like SNMP)</li>
+<li>-M, –masquerade display masqueraded connections</li>
+<li>-v, –verbose be verbose</li>
+<li>-W, –wide don’t truncate IP addresses</li>
+<li>-n, –numeric don’t resolve names</li>
+<li>-e, –extend display other/more information</li>
+<li>-p, –programs display PID/Program name for sockets</li>
+<li>-o, –timers display timers</li>
+<li>-F, –fib display Forwarding Information Base (default)</li>
+<li>-C, –cache display routing cache instead of FIB</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -pln | grep 22 | awk <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>监听22端口的进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">netstat -at</span><br><span class="line">netstat -lu</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>列出所有TCP端口</li>
+<li>列出所有监听的UDP端口</li>
+</ol>
+<h4 id="SS"><a href="#SS" class="headerlink" title="SS"></a>SS</h4><ul>
+<li>–n, –numeric don’t resolve service names</li>
+<li>-r, –resolve : resolve host hostnames.</li>
+<li>-l, –listening display listening sockets</li>
+<li>-o, –options show timer information</li>
+<li>-e, –extended show detailed socket information</li>
+<li>-m, –memory show socket memory usage</li>
+<li>-p, –processes show process using socket</li>
+<li>–s, –summary show socket usage summary</li>
+<li>-N, –net switch to the specified network namespace name</li>
+<li>-4, –ipv4 display only IP version 4 sockets</li>
+<li>-6, –ipv6 display only IP version 6 sockets</li>
+<li>–0, –packet display PACKET sockets</li>
+<li>-t, –tcp display only TCP sockets</li>
+<li>-S, –sctp display only SCTP sockets</li>
+<li>-u, –udp display only UDP sockets</li>
+<li>-w, –raw display only RAW sockets</li>
+<li>-x, –unix display only Unix domain sockets</li>
+<li>-f, –family=FAMILY display sockets of type FAMILY</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ss -tlp</span><br><span class="line">ss -t dst 192.168.1.10:443</span><br><span class="line">ss -t state established <span class="string">&#x27;( dport = :ssh or sport = :ssh )&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>列出监听的TCP协议并包括对应的进程</li>
+<li>列出连接到192.168.1.10:443的栈</li>
+<li>列出所有ssh相关的连接</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2021/08/28/Linux-netstat-ss/" data-id="cksvrx3oh0000l7pw1quf1jeg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-LinuxProcessView" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/08/28/LinuxProcessView/" class="article-date">
@@ -525,49 +620,6 @@
 
 
   
-    <article id="post-PowerShell-FireWall" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/07/PowerShell-FireWall/" class="article-date">
-  <time datetime="2019-11-07T11:31:53.000Z" itemprop="datePublished">2019-11-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/windows/">windows</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/07/PowerShell-FireWall/">PowerShell &amp;&amp; FireWall</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="PowerShell-设置防火墙"><a href="#PowerShell-设置防火墙" class="headerlink" title="PowerShell 设置防火墙"></a>PowerShell 设置防火墙</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##关闭防火墙</span></span><br><span class="line"><span class="built_in">Get-NetFirewallProfile</span> | <span class="built_in">Set-NetFirewallProfile</span> <span class="literal">-enabled</span> false</span><br><span class="line"><span class="comment">##允许ping</span></span><br><span class="line"><span class="built_in">Set-NetFirewallRule</span> –Name “FPS<span class="literal">-ICMP4</span><span class="literal">-ERQ</span><span class="operator">-In</span>” –Enabled True</span><br><span class="line"><span class="built_in">Set-NetFirewallRule</span> –Name “FPS<span class="literal">-ICMP4</span><span class="literal">-ERQ</span><span class="literal">-Out</span>” –Enabled True</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/" data-id="ckb6kjx2g0038pspwdubi2elg" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -612,7 +664,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
     </div>
   </div>
 
@@ -623,6 +675,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/06/03/python-venv/">Python3 开发准备</a>
+          </li>
         
           <li>
             <a href="/2022/04/23/react-my-components/">REACT 我的部件</a>
@@ -638,10 +694,6 @@
         
           <li>
             <a href="/2022/04/04/react-hook-interal/">React Hook Internal</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/20/javascript-new-operator/">JavaScript_New_KeyWord</a>
           </li>
         
       </ul>

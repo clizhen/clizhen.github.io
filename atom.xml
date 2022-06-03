@@ -6,7 +6,7 @@
   <link href="http://blog.lizhen.pub/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2022-05-19T13:43:42.745Z</updated>
+  <updated>2022-06-03T05:41:01.383Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python3 开发准备</title>
+    <link href="http://blog.lizhen.pub/2022/06/03/python-venv/"/>
+    <id>http://blog.lizhen.pub/2022/06/03/python-venv/</id>
+    <published>2022-06-03T00:43:15.000Z</published>
+    <updated>2022-06-03T05:41:01.383Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5 id=&quot;虚拟环境&quot;&gt;&lt;a href=&quot;#虚拟环境&quot; class=&quot;headerlink&quot; title=&quot;虚拟环境&quot;&gt;&lt;/a&gt;虚拟环境&lt;/h5&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
+    
+    
+    <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
+    
+  </entry>
   
   <entry>
     <title>REACT 我的部件</title>
@@ -520,33 +547,6 @@
         
     <summary type="html">&lt;h4 id=&quot;远程&quot;&gt;&lt;a href=&quot;#远程&quot; class=&quot;headerlink&quot; title=&quot;远程&quot;&gt;&lt;/a&gt;远程&lt;/h4&gt;&lt;p&gt;WinRM 打开: Enable-PSRemoting -force&lt;/p&gt;
 &lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
-    
-    
-    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PowerShell &amp;&amp; FireWall</title>
-    <link href="http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/"/>
-    <id>http://blog.lizhen.pub/2019/11/07/PowerShell-FireWall/</id>
-    <published>2019-11-07T11:31:53.000Z</published>
-    <updated>2019-11-09T03:48:07.757Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;PowerShell-设置防火墙&quot;&gt;&lt;a href=&quot;#PowerShell-设置防火墙&quot; class=&quot;headerlink&quot; title=&quot;PowerShell 设置防火墙&quot;&gt;&lt;/a&gt;PowerShell 设置防火墙&lt;/h4&gt;&lt;figure</summary>
         
       
     
