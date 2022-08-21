@@ -6,7 +6,7 @@
   <link href="http://blog.lizhen.pub/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2022-06-03T05:41:01.383Z</updated>
+  <updated>2022-08-21T07:17:18.127Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS FLEX</title>
+    <link href="http://blog.lizhen.pub/2022/08/21/css-flex/"/>
+    <id>http://blog.lizhen.pub/2022/08/21/css-flex/</id>
+    <published>2022-08-21T06:33:46.000Z</published>
+    <updated>2022-08-21T07:17:18.127Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5 id=&quot;CSS-Flex-弹性布局&quot;&gt;&lt;a href=&quot;#CSS-Flex-弹性布局&quot; class=&quot;headerlink&quot; title=&quot;CSS Flex 弹性布局&quot;&gt;&lt;/a&gt;CSS Flex 弹性布局&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;采用 Flex 布局的元素，称为</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+    <category term="program" scheme="http://blog.lizhen.pub/categories/computer/program/"/>
+    
+    
+    <category term="program" scheme="http://blog.lizhen.pub/tags/program/"/>
+    
+  </entry>
   
   <entry>
     <title>Python3 开发准备</title>
@@ -527,34 +555,6 @@
     <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
     
     <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PowerShell Remoting &amp;&amp; Job</title>
-    <link href="http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/"/>
-    <id>http://blog.lizhen.pub/2019/11/09/PowerShell-Remoting/</id>
-    <published>2019-11-09T03:43:19.000Z</published>
-    <updated>2019-11-09T12:21:09.043Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;远程&quot;&gt;&lt;a href=&quot;#远程&quot; class=&quot;headerlink&quot; title=&quot;远程&quot;&gt;&lt;/a&gt;远程&lt;/h4&gt;&lt;p&gt;WinRM 打开: Enable-PSRemoting -force&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-    <category term="windows" scheme="http://blog.lizhen.pub/categories/computer/windows/"/>
     
     
     <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
