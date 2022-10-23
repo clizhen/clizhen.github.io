@@ -66,6 +66,63 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-NFS-权限" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/20/NFS-%E6%9D%83%E9%99%90/" class="article-date">
+  <time datetime="2019-11-20T14:02:19.000Z" itemprop="datePublished">2019-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/20/NFS-%E6%9D%83%E9%99%90/">NFS 权限</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://blog.csdn.net/donghaixiaolongwang/article/details/79230220" target="_blank" rel="noopener">转载</a></p>
+<h4 id="默认规则"><a href="#默认规则" class="headerlink" title="默认规则"></a>默认规则</h4><p>  默认的权限规则是，root用户被映射成nfsnobody用户，对于客户端机器上和NFS服务器上UID相同的用户会对应映射，其它非root用户被映射成nobody用户。当root用户访问共享目录时是以nfsnobody用户访问共享目录的，具有什么权限看下共享目录权限便知。客户端机器上和NFS服务器上的相同UID用户，以NFS服务器上的用户访问共享目录，看戏目录权限便知。其它非root用户则映射成nobody用户，有啥权限一看便知。</p>
+<h4 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h4><ul>
+<li>ro：默认选项，以只读的方式共享。</li>
+<li>rw：以读写的方式共享。</li>
+<li>no_root_squash：将客户端使用的是root用户时，则映射到FNS服务器的用户依然为root用户。</li>
+<li>all_squash：默认选项，将所有访问NFS服务器的客户端的用户都映射为匿名用户，不管客户端使用的是什么用户。</li>
+<li>anonuid：设置映射到本地的匿名用户的UID</li>
+<li>anongid：设置映射到本地的匿名用户的GID</li>
+<li>sync：默认选项，保持数据同步，数据同步写入到内存和硬盘。</li>
+<li>async：异步，先将数据写入到内存，在将数据写入到硬盘。</li>
+<li>secure：NFS客户端必须使用NFS保留端口（通常是1024以下的端口），默认选项。</li>
+<li>insecure：允许NFS客户端不使用NFS保留端口（通常是1024以上的端口）。</li>
+</ul>
+<h4 id="EXAMPLE"><a href="#EXAMPLE" class="headerlink" title="EXAMPLE"></a>EXAMPLE</h4><p>配置文件: /etc/exports<br>/mount/www 192.168.x.x/24(rw,all_squash,anonuid=500,anongid=500)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2019/11/20/NFS-%E6%9D%83%E9%99%90/" data-id="ckb6kjx2s003lpspw1bw8bt16" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-PowerShell-Remoting" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/09/PowerShell-Remoting/" class="article-date">
@@ -497,78 +554,6 @@
 
 
   
-    <article id="post-Postgresql-static-sys-view-性能" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/" class="article-date">
-  <time datetime="2019-10-06T05:55:53.000Z" itemprop="datePublished">2019-10-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/">Postgresql static sys-view 性能</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://www.cybertec-postgresql.com/en/3-ways-to-detect-slow-queries-in-postgresql/" target="_blank" rel="noopener">参考</a></p>
-<ol start="0">
-<li><p>explain 计划</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">explain</span> (<span class="keyword">analyze</span> ,verbose ,consts ,timing ,buffers) <span class="keyword">Select</span> ...</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>pg_stat_activity(观察当前系统活动),每个连接一行记录.</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_activity</span><br><span class="line"><span class="keyword">Select</span> pid ,query_stat ,state_change ,state ,<span class="keyword">query</span> <span class="keyword">From</span> pg_stat_activity;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>pg_cancel_backend. (Select pg_cancel_backend(pid)),终止pid,保留连接.</li>
-<li>pg_terminate_backend.</li>
-</ul>
-</li>
-<li><p>检查数据库,pg_state_database</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d pg_state_database</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>检查表 pg_stat_user_tables ,pg_statio_user_tables</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_user_tables</span><br><span class="line"><span class="keyword">Select</span> schemaname, relname ,seq_scan ,seq_tup_read,</span><br><span class="line">  seq_tup_read /seq_scan <span class="keyword">as</span> <span class="keyword">avg</span>, idx_scan</span><br><span class="line"><span class="keyword">From</span> pg_stat_user_tables</span><br><span class="line"><span class="keyword">Where</span> seq_scan &gt; <span class="number">0</span></span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">By</span> seq_tup_read <span class="keyword">Desc</span></span><br><span class="line"><span class="keyword">Limit</span> <span class="number">25</span>;</span><br><span class="line">\d pg_statio_user_tables</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>深入索引 pg_stat_user_indexes</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_user_indexes</span><br><span class="line"><span class="keyword">Select</span> schemaname ,relname ,indexrelname ,idx_scan,</span><br><span class="line">  pg_size_pretty(pg_relation_size(indexrelid)) <span class="keyword">as</span> idx_size,</span><br><span class="line">  pg_size_pretty(<span class="keyword">sum</span>(pg_relation_size(indexrelid))</span><br><span class="line">                  <span class="keyword">Over</span> (<span class="keyword">Order</span> <span class="keyword">By</span> idx_scan ,indexrelid)) <span class="keyword">as</span> total</span><br><span class="line"><span class="keyword">From</span> pg_stat_user_indexes</span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">By</span> <span class="number">6</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用 <strong>pg_stat_statements</strong></p>
-<ol>
-<li>postgresql.conf 中将 pg_stat_statements 加入 shared_preload_libraties.</li>
-<li>重启 db server.</li>
-<li>在你的database中运行 CREATE EXTESION pg_stat_statements.<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_statements</span><br><span class="line"><span class="keyword">Select</span> <span class="keyword">round</span>((<span class="number">100</span> * total_time /<span class="keyword">sum</span>(total_time)</span><br><span class="line">        <span class="keyword">Over</span> ())::<span class="built_in">numeric</span>, <span class="number">2</span>) <span class="keyword">percent</span>,</span><br><span class="line">      <span class="keyword">round</span>(total_time::<span class="built_in">numeric</span> ,<span class="number">2</span>) <span class="keyword">as</span> total,</span><br><span class="line">      calls,</span><br><span class="line">      <span class="keyword">round</span>(mean_time::<span class="built_in">numeric</span> ,<span class="number">2</span>) <span class="keyword">as</span> mean,</span><br><span class="line">      <span class="keyword">substring</span>(<span class="keyword">query</span>, <span class="number">1</span>, <span class="number">40</span>)</span><br><span class="line"><span class="keyword">From</span> pg_stat_statements</span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">By</span> total_time <span class="keyword">DESC</span></span><br><span class="line"><span class="keyword">Limit</span> <span class="number">10</span>;</span><br><span class="line"><span class="keyword">Select</span> pg_stat_statements_reset();</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/" data-id="ckb6kjx25002npspw5xlnawes" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -584,7 +569,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/">computer</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/other/">other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/program/">program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/windows/">windows</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/">computer</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/other/">other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/program/">program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/windows/">windows</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li></ul>
     </div>
   </div>
 
@@ -613,7 +598,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
     </div>
   </div>
 
@@ -624,6 +609,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/10/23/ssh-example/">ssh example</a>
+          </li>
         
           <li>
             <a href="/2022/08/21/css-flex/">CSS FLEX</a>
@@ -639,10 +628,6 @@
         
           <li>
             <a href="/2022/04/17/get-public-ip/">查看公网IP地址</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/09/postgresql-lock-md/">postgresql 事务隔离级别</a>
           </li>
         
       </ul>

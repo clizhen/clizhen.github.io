@@ -5,19 +5,19 @@
   
 
   
-  <title>REDIS | li</title>
+  <title>ssh example | li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="REDIS 是什么,能干什么 redis的特性是快, 简化开发 .  不能替代数据库, 是以数据库为核心应用的强力补充. redis用内存存储数据.(disk only for persistence)内存大小,决定了redis处理数据大小. 数据模型是独特的 sting ( strings ,int ,float ) list hash set zset   事务 ( watch ,unwatc">
+  <meta name="description" content="SSH 举例tldr 1234567891011121314151617181920212223- Connect to a remote server:  ssh username@remote_host- Connect to a remote server with a specific identity (private key):  ssh -i path&#x2F;to&#x2F;key_file use">
 <meta property="og:type" content="article">
-<meta property="og:title" content="REDIS">
-<meta property="og:url" content="http://blog.lizhen.pub/2022/03/16/redis-primary/index.html">
+<meta property="og:title" content="ssh example">
+<meta property="og:url" content="http://blog.lizhen.pub/2022/10/23/ssh-example/index.html">
 <meta property="og:site_name" content="li">
-<meta property="og:description" content="REDIS 是什么,能干什么 redis的特性是快, 简化开发 .  不能替代数据库, 是以数据库为核心应用的强力补充. redis用内存存储数据.(disk only for persistence)内存大小,决定了redis处理数据大小. 数据模型是独特的 sting ( strings ,int ,float ) list hash set zset   事务 ( watch ,unwatc">
+<meta property="og:description" content="SSH 举例tldr 1234567891011121314151617181920212223- Connect to a remote server:  ssh username@remote_host- Connect to a remote server with a specific identity (private key):  ssh -i path&#x2F;to&#x2F;key_file use">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-03-16T11:23:46.000Z">
-<meta property="article:modified_time" content="2022-03-16T12:26:12.097Z">
+<meta property="article:published_time" content="2022-10-23T06:22:34.000Z">
+<meta property="article:modified_time" content="2022-10-23T06:27:33.109Z">
 <meta property="article:author" content="li zhen">
-<meta property="article:tag" content="program">
+<meta property="article:tag" content="shell">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-redis-primary" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-ssh-example" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2022/03/16/redis-primary/" class="article-date">
-  <time datetime="2022-03-16T11:23:46.000Z" itemprop="datePublished">2022-03-16</time>
+    <a href="/2022/10/23/ssh-example/" class="article-date">
+  <time datetime="2022-10-23T06:22:34.000Z" itemprop="datePublished">2022-10-23</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/other/">other</a>
+    <a class="article-category-link" href="/categories/linux/">linux</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      REDIS
+      ssh example
     </h1>
   
 
@@ -93,32 +93,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="REDIS-是什么-能干什么"><a href="#REDIS-是什么-能干什么" class="headerlink" title="REDIS 是什么,能干什么"></a>REDIS 是什么,能干什么</h3><ul>
-<li>redis的特性是快, 简化开发 . </li>
-<li>不能替代数据库, 是以数据库为核心应用的强力补充.</li>
-<li>redis用内存存储数据.(disk only for persistence)内存大小,决定了redis处理数据大小.</li>
-<li>数据模型是独特的<ul>
-<li>sting ( strings ,int ,float )</li>
-<li>list</li>
-<li>hash</li>
-<li>set</li>
-<li>zset</li>
-</ul>
-</li>
-<li>事务 ( watch ,unwatch ,mult ,exec )<ul>
-<li>watch 是乐观锁 ,不使用数据库中的悲观锁.( 例如: 更新前锁定 )</li>
-</ul>
-</li>
-<li>数据持久模式 : snapshotting , aof</li>
-</ul>
+        <h4 id="SSH-举例"><a href="#SSH-举例" class="headerlink" title="SSH 举例"></a>SSH 举例</h4><p>tldr</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">- Connect to a remote server:</span><br><span class="line">  ssh username@remote_host</span><br><span class="line"></span><br><span class="line">- Connect to a remote server with a specific identity (private key):</span><br><span class="line">  ssh -i path/to/key_file username@remote_host</span><br><span class="line"></span><br><span class="line">- Connect to a remote server using a specific port:</span><br><span class="line">  ssh username@remote_host -p 2222</span><br><span class="line"></span><br><span class="line">- Run a <span class="built_in">command</span> on a remote server with a [t]ty allocation allowing interaction with the remote <span class="built_in">command</span>:</span><br><span class="line">  ssh username@remote_host -t <span class="built_in">command</span> command_arguments</span><br><span class="line"></span><br><span class="line">- SSH tunneling: Dynamic port forwarding (SOCKS proxy on `localhost:1080`):</span><br><span class="line">  ssh -D 1080 username@remote_host</span><br><span class="line"></span><br><span class="line">- SSH tunneling: Forward a specific port (`localhost:9999` to `example.org:80`) along with disabling pseudo-[T]ty allocation and executio[N] of remote commands:</span><br><span class="line">  ssh -L 9999:example.org:80 -N -T username@remote_host</span><br><span class="line"></span><br><span class="line">- SSH jumping: Connect through a jumphost to a remote server (Multiple jump hops may be specified separated by comma characters):</span><br><span class="line">  ssh -J username@jump_host username@remote_host</span><br><span class="line"></span><br><span class="line">- Agent forwarding: Forward the authentication information to the remote machine (see `man ssh_config` <span class="keyword">for</span> available options):</span><br><span class="line">  ssh -A username@remote_host</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2022/03/16/redis-primary/" data-id="cl0thwv490000ddpwhjzmhwm5" class="article-share-link">Share</a>
+      <a data-url="http://blog.lizhen.pub/2022/10/23/ssh-example/" data-id="cl9kyxn0d0000ghpw8hqugh84" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/program/" rel="tag">program</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
 
     </footer>
   </div>
@@ -126,19 +110,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/03/18/OpenSSL/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          OpenSSL
-        
-      </div>
-    </a>
   
-  
-    <a href="/2022/02/26/ipv6-address/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2022/08/21/css-flex/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">IPV6-ADDRESS</div>
+      <div class="article-nav-title">CSS FLEX</div>
     </a>
   
 </nav>

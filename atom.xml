@@ -6,7 +6,7 @@
   <link href="http://blog.lizhen.pub/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2022-08-21T07:17:18.127Z</updated>
+  <updated>2022-10-23T06:27:33.109Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh example</title>
+    <link href="http://blog.lizhen.pub/2022/10/23/ssh-example/"/>
+    <id>http://blog.lizhen.pub/2022/10/23/ssh-example/</id>
+    <published>2022-10-23T06:22:34.000Z</published>
+    <updated>2022-10-23T06:27:33.109Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;SSH-举例&quot;&gt;&lt;a href=&quot;#SSH-举例&quot; class=&quot;headerlink&quot; title=&quot;SSH 举例&quot;&gt;&lt;/a&gt;SSH 举例&lt;/h4&gt;&lt;p&gt;tldr&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/linux/"/>
+    
+    
+    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS FLEX</title>
@@ -519,34 +545,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04&quot; target=&quot;_blank&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NFS 权限</title>
-    <link href="http://blog.lizhen.pub/2019/11/20/NFS-%E6%9D%83%E9%99%90/"/>
-    <id>http://blog.lizhen.pub/2019/11/20/NFS-%E6%9D%83%E9%99%90/</id>
-    <published>2019-11-20T14:02:19.000Z</published>
-    <updated>2019-11-20T14:10:47.239Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/donghaixiaolongwang/article/details/79230220&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;转载&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;默认规则&quot;&gt;&lt;a</summary>
         
       
     

@@ -66,6 +66,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ssh-example" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/10/23/ssh-example/" class="article-date">
+  <time datetime="2022-10-23T06:22:34.000Z" itemprop="datePublished">2022-10-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/23/ssh-example/">ssh example</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="SSH-举例"><a href="#SSH-举例" class="headerlink" title="SSH 举例"></a>SSH 举例</h4><p>tldr</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">- Connect to a remote server:</span><br><span class="line">  ssh username@remote_host</span><br><span class="line"></span><br><span class="line">- Connect to a remote server with a specific identity (private key):</span><br><span class="line">  ssh -i path/to/key_file username@remote_host</span><br><span class="line"></span><br><span class="line">- Connect to a remote server using a specific port:</span><br><span class="line">  ssh username@remote_host -p 2222</span><br><span class="line"></span><br><span class="line">- Run a <span class="built_in">command</span> on a remote server with a [t]ty allocation allowing interaction with the remote <span class="built_in">command</span>:</span><br><span class="line">  ssh username@remote_host -t <span class="built_in">command</span> command_arguments</span><br><span class="line"></span><br><span class="line">- SSH tunneling: Dynamic port forwarding (SOCKS proxy on `localhost:1080`):</span><br><span class="line">  ssh -D 1080 username@remote_host</span><br><span class="line"></span><br><span class="line">- SSH tunneling: Forward a specific port (`localhost:9999` to `example.org:80`) along with disabling pseudo-[T]ty allocation and executio[N] of remote commands:</span><br><span class="line">  ssh -L 9999:example.org:80 -N -T username@remote_host</span><br><span class="line"></span><br><span class="line">- SSH jumping: Connect through a jumphost to a remote server (Multiple jump hops may be specified separated by comma characters):</span><br><span class="line">  ssh -J username@jump_host username@remote_host</span><br><span class="line"></span><br><span class="line">- Agent forwarding: Forward the authentication information to the remote machine (see `man ssh_config` <span class="keyword">for</span> available options):</span><br><span class="line">  ssh -A username@remote_host</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.lizhen.pub/2022/10/23/ssh-example/" data-id="cl9kyxn0d0000ghpw8hqugh84" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/" rel="tag">shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-css-flex" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2022/08/21/css-flex/" class="article-date">
@@ -567,98 +611,6 @@
 
 
   
-    <article id="post-ipv6-address" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2022/02/26/ipv6-address/" class="article-date">
-  <time datetime="2022-02-26T12:19:38.000Z" itemprop="datePublished">2022-02-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/other/">other</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/02/26/ipv6-address/">IPV6-ADDRESS</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="IPV6-地址结构"><a href="#IPV6-地址结构" class="headerlink" title="IPV6 地址结构"></a>IPV6 地址结构</h3><ul>
-<li>地址长128位.(Routing Prefix(48) + Subnet ID (16) + Interface ID(64))</li>
-<li>主机地址(Interface ID)建议永远保留64位.</li>
-<li>IPV6不再使用子网掩码的说法,现在叫前缀长度.</li>
-</ul>
-<h3 id="IPV6-地址类型-单播-组播-任播"><a href="#IPV6-地址类型-单播-组播-任播" class="headerlink" title="IPV6 地址类型(单播,组播,任播)"></a>IPV6 地址类型(单播,组播,任播)</h3><h4 id="单播"><a href="#单播" class="headerlink" title="单播"></a>单播</h4><ul>
-<li>可聚合全球地址(Global Unicast) 2000::/3<ul>
-<li>电信(240e::/18),联通(2408:8000::/20),移动(2409:8000::/20)</li>
-</ul>
-</li>
-<li>本地链路(Link-Local) fe80::/10 相当于IPv4的169.254.0.0/16,不可路由.</li>
-<li>回环(Loopback) ::1/128</li>
-<li>本地唯一(Unique-Local) FC::/7 (FC00::/8暂未定义,当前 FD00::/8已定义),相当于IPv4的私有地址(10.0.0.0/8,172.16.0.0/20,192.168.0.0/24),不可在Internet路由.</li>
-<li>未指定地址(Unspecified) ::/128</li>
-</ul>
-<h4 id="组播-icmpv6-ndp-核心"><a href="#组播-icmpv6-ndp-核心" class="headerlink" title="组播(icmpv6 ndp 核心)"></a>组播(icmpv6 ndp 核心)</h4><ul>
-<li>部分特定地址(FFxx::/8)<ul>
-<li>FF02::1 all nodes 在本地链路范围的所有节点</li>
-<li>FF02::2 all routers 在本地链路范围的所有路由器</li>
-<li>FF02::5 all ospf routers</li>
-<li>FF02::9 all rip routers 所有运行RIP的路由器</li>
-<li>FF02::A all eigrp routers 所有运行eigrp的路由器</li>
-<li>FF05::2 在一个站点范围内的所有路由器</li>
-<li>FF02::1:FFxx:xxxx/104 被请求节点组播地址(solicited-node multicast address)<ul>
-<li>只在本地链路上有效,只包含一个用户,可从接口IPV6地址推算出.</li>
-<li>推算方式:被请求节点组播地址的前104位固定，将接口IP地址的后24位移下来填充到后面就可以了.</li>
-<li>组播地址映射MAC组播地址: 33-33-取IPv6组播地址的最后32bit</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="ICMPv6"><a href="#ICMPv6" class="headerlink" title="ICMPv6"></a>ICMPv6</h3><h4 id="NDP-Neighbor-Discovery-Protocol-邻居发现协议"><a href="#NDP-Neighbor-Discovery-Protocol-邻居发现协议" class="headerlink" title="NDP(Neighbor Discovery Protocol 邻居发现协议)"></a>NDP(Neighbor Discovery Protocol 邻居发现协议)</h4><ul>
-<li>地址解析步骤(获得对方mac ,netsh ipv6 show neighbors)<ol>
-<li>发送ICMPv6的邻居请求信息,目的IP为对方的被请求节点组播地址,目的MAC为对应的组播MAC.源IP/MAC均为本机接口对应地址.注意非广播报文,二层交换机是否广播由交换机能力决定.</li>
-<li>接受方(本地网卡有对应的组播MAC)回送ICMPV6邻居通告消息,该消息包含本机接口MAC.</li>
-</ol>
-</li>
-<li>邻居状态跟踪(间隔发送邻居请求信息,根据回应做出判断)</li>
-<li>DAD(Duplicate Address Detection重复地址检测,保证单播地址不存在冲突,所有单播地址都需要通过DAD检测,才能启用),DAD 使用邻居请求和邻居通告来完成其机制.</li>
-<li>无状态自动配置(自动配置IPV6地址)<ol>
-<li>自动生成本地链路地址(fe80::/10),并通过DAD</li>
-<li>发送邻居请求消息尝试在链路上发现IPV6路由器.</li>
-<li>路由器返回邻居通告消息（携带准备分配给主机的IPv6前缀信息。路由器在没有收到邻居请求消息时也能够主动发出邻居通告消息）</li>
-<li>主机根据路由器回应的邻居请求消息，获得本链路IPv6地址前缀信息， 由前缀 + 接口ID 生成主机的IPv6单播。通过DAD,启用该地址.</li>
-</ol>
-</li>
-<li>路由器通告</li>
-</ul>
-<h3 id="二层组播技术-IGMP-snooping"><a href="#二层组播技术-IGMP-snooping" class="headerlink" title="二层组播技术(IGMP snooping)"></a>二层组播技术(IGMP snooping)</h3><p>  <strong>问题:</strong> 二层Switch由于组播报文的目的地址为组播组地址，在二层设备上是学习不到这一类MAC表项的(组播MAC不会出现在源地址上)，因此组播报文就会在Switch所有接口进行广播.<br>  <strong>解决方法:</strong> 当主机和上游三层设备之间传递的IGMP协议报文通过二层组播设备时，拥有IGMP Snooping技术的交换机可以分析报文携带的信息，根据这些信息建立和维护二层组播转发表，从而指导组播数据在数据链路层按需转发.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.lizhen.pub/2022/02/26/ipv6-address/" data-id="cl04zol9c0000wapw6aed1kz5" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -674,7 +626,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/">computer</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/other/">other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/program/">program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/windows/">windows</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/">computer</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/other/">other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/program/">program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/windows/">windows</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">linux</a></li></ul>
     </div>
   </div>
 
@@ -703,7 +655,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
     </div>
   </div>
 
@@ -714,6 +666,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/10/23/ssh-example/">ssh example</a>
+          </li>
         
           <li>
             <a href="/2022/08/21/css-flex/">CSS FLEX</a>
@@ -729,10 +685,6 @@
         
           <li>
             <a href="/2022/04/17/get-public-ip/">查看公网IP地址</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/09/postgresql-lock-md/">postgresql 事务隔离级别</a>
           </li>
         
       </ul>
