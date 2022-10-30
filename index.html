@@ -94,17 +94,23 @@
       
         <h4 id="JS-PROMISE-ERROR"><a href="#JS-PROMISE-ERROR" class="headerlink" title="JS PROMISE ERROR"></a>JS PROMISE ERROR</h4><p>一般规则:<br><strong>子函数返回Promise,不必使用catch处理,错误处理由最顶层的Promise处理.</strong></p>
 <ul>
-<li>Async的作用有二个<ol>
+<li><p>promise reject 后，没有被catch的话，目前不会结束代码运行。会继续执行后续代码，不过会在最后报个警告： UnhandledPromiseRejectionWarning。并提示在后续的 node 版本中会导致进程非正常结束，就是崩掉。</p>
+</li>
+<li><p>Async的作用有二个</p>
+<ol>
 <li>函数返回 Promise</li>
 <li>函数中使用 await</li>
 </ol>
 </li>
-<li>await 对错误的处理方式:<ul>
+<li><p>await 对错误的处理方式:</p>
+<ul>
 <li>await 执行时如返回REJECT,则扔出错误,可以使用try&#x2F;catch语句捕获.</li>
 </ul>
 </li>
-<li>Then , Catch , Finally<ul>
+<li><p>Then , Catch , Finally</p>
+<ul>
 <li>catch 捕获错误,</li>
+<li>使用reject 而不是throw</li>
 <li>finally 不影响 then&#x2F;catch的数据流.不接受任何参数,可做一些清理工作.<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># <span class="title class_">Output</span>: <span class="title class_">Good</span> <span class="variable constant_">ABC</span> <span class="title class_">Promise</span>&#123; &lt;state&gt;: <span class="string">&quot;fulfilled&quot;</span> ,&lt;value&gt;: <span class="literal">undefined</span> &#125;</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">resolve</span>(<span class="string">&quot;ABC&quot;</span>).<span class="title function_">finally</span>(<span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Good&quot;</span>)).<span class="title function_">then</span>(<span class="function">(<span class="params">dat</span>) =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(dat));</span><br><span class="line"># <span class="title class_">Output</span>: <span class="title class_">Good</span> <span class="title class_">Promise</span>&#123; &lt;state&gt;: <span class="string">&quot;fulfilled&quot;</span>, &lt;value&gt;:<span class="string">&quot;ABC&quot;</span> &#125;</span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">reject</span>(<span class="string">&quot;ABC&quot;</span>).<span class="title function_">finally</span>(<span class="function">() =&gt;</span> <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Good&quot;</span>)).<span class="title function_">catch</span>(<span class="function">(<span class="params">dat</span>) =&gt;</span> dat);</span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
