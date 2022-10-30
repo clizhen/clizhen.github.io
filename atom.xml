@@ -6,7 +6,7 @@
   <link href="http://blog.lizhen.pub/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2022-10-23T12:30:55.405Z</updated>
+  <updated>2022-10-30T06:43:09.834Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PROMISE ERROR</title>
+    <link href="http://blog.lizhen.pub/2022/10/30/promise-error/"/>
+    <id>http://blog.lizhen.pub/2022/10/30/promise-error/</id>
+    <published>2022-10-30T06:08:52.000Z</published>
+    <updated>2022-10-30T06:43:09.834Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;JS-PROMISE-ERROR&quot;&gt;&lt;a href=&quot;#JS-PROMISE-ERROR&quot; class=&quot;headerlink&quot; title=&quot;JS PROMISE ERROR&quot;&gt;&lt;/a&gt;JS PROMISE</summary>
+        
+      
+    
+    
+    
+    <category term="program" scheme="http://blog.lizhen.pub/categories/program/"/>
+    
+    
+    <category term="javascript" scheme="http://blog.lizhen.pub/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>SSH EXAMPLE</title>
@@ -518,33 +543,6 @@
         
         
     <summary type="html">&lt;h4 id=&quot;timedatectl&quot;&gt;&lt;a href=&quot;#timedatectl&quot; class=&quot;headerlink&quot; title=&quot;timedatectl&quot;&gt;&lt;/a&gt;timedatectl&lt;/h4&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NFS Mount</title>
-    <link href="http://blog.lizhen.pub/2019/11/21/NFS-Mount/"/>
-    <id>http://blog.lizhen.pub/2019/11/21/NFS-Mount/</id>
-    <published>2019-11-21T12:26:21.000Z</published>
-    <updated>2019-11-21T12:36:38.932Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-18-04&quot; target=&quot;_blank&quot;</summary>
         
       
     
