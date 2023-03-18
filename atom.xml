@@ -6,7 +6,7 @@
   <link href="http://blog.lizhen.pub/atom.xml" rel="self"/>
   
   <link href="http://blog.lizhen.pub/"/>
-  <updated>2022-10-30T06:55:31.429Z</updated>
+  <updated>2023-03-18T00:34:13.711Z</updated>
   <id>http://blog.lizhen.pub/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>markdown</title>
+    <link href="http://blog.lizhen.pub/2023/03/18/markdown/"/>
+    <id>http://blog.lizhen.pub/2023/03/18/markdown/</id>
+    <published>2023-03-18T00:28:40.000Z</published>
+    <updated>2023-03-18T00:34:13.711Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;MARKDOWN&quot;&gt;&lt;a href=&quot;#MARKDOWN&quot; class=&quot;headerlink&quot; title=&quot;MARKDOWN&quot;&gt;&lt;/a&gt;MARKDOWN&lt;/h4&gt;&lt;h5 id=&quot;Heading-level-5&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+    <category term="other" scheme="http://blog.lizhen.pub/categories/computer/other/"/>
+    
+    
+    <category term="other" scheme="http://blog.lizhen.pub/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PROMISE ERROR</title>
     <link href="http://blog.lizhen.pub/2022/10/30/promise-error/"/>
     <id>http://blog.lizhen.pub/2022/10/30/promise-error/</id>
     <published>2022-10-30T06:08:52.000Z</published>
-    <updated>2022-10-30T06:55:31.429Z</updated>
+    <updated>2023-03-18T00:34:34.668Z</updated>
     
     
       
@@ -34,7 +61,9 @@
     
     
     
-    <category term="program" scheme="http://blog.lizhen.pub/categories/program/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+    <category term="program" scheme="http://blog.lizhen.pub/categories/computer/program/"/>
     
     
     <category term="javascript" scheme="http://blog.lizhen.pub/tags/javascript/"/>
@@ -46,7 +75,7 @@
     <link href="http://blog.lizhen.pub/2022/10/23/ssh-example/"/>
     <id>http://blog.lizhen.pub/2022/10/23/ssh-example/</id>
     <published>2022-10-23T06:22:34.000Z</published>
-    <updated>2022-10-23T12:30:55.405Z</updated>
+    <updated>2023-03-18T00:34:54.529Z</updated>
     
     
       
@@ -60,7 +89,9 @@
     
     
     
-    <category term="linux" scheme="http://blog.lizhen.pub/categories/linux/"/>
+    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
+    
+    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
     
     
     <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
@@ -527,33 +558,6 @@
     <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
     <category term="docker" scheme="http://blog.lizhen.pub/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Set TimeZone</title>
-    <link href="http://blog.lizhen.pub/2019/11/21/Set-TimeZone/"/>
-    <id>http://blog.lizhen.pub/2019/11/21/Set-TimeZone/</id>
-    <published>2019-11-21T12:46:43.000Z</published>
-    <updated>2019-11-21T12:49:08.684Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;timedatectl&quot;&gt;&lt;a href=&quot;#timedatectl&quot; class=&quot;headerlink&quot; title=&quot;timedatectl&quot;&gt;&lt;/a&gt;timedatectl&lt;/h4&gt;&lt;figure class=&quot;highlight</summary>
-        
-      
-    
-    
-    
-    <category term="computer" scheme="http://blog.lizhen.pub/categories/computer/"/>
-    
-    <category term="linux" scheme="http://blog.lizhen.pub/categories/computer/linux/"/>
-    
-    
-    <category term="shell" scheme="http://blog.lizhen.pub/tags/shell/"/>
     
   </entry>
   
