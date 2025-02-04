@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>li</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="IT Computer Program">
+<meta property="og:type" content="website">
+<meta property="og:title" content="li">
+<meta property="og:url" content="https://clizhen.github.io/page/4/index.html">
+<meta property="og:site_name" content="li">
+<meta property="og:description" content="IT Computer Program">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="li zhen">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="li" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">li</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://clizhen.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Docker-entrypoint-vs-cmd" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/09/Docker-entrypoint-vs-cmd/" class="article-date">
+  <time datetime="2019-10-09T13:49:38.000Z" itemprop="datePublished">2019-10-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/09/Docker-entrypoint-vs-cmd/">Docker entrypoint vs cmd</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile" target="_blank" rel="noopener">原文</a></p>
+<p>  <strong>Docker has a default entrypoint which is /bin/sh -c but does not have a default command.</strong></p>
+<p>  When you run docker like this: docker run -i -t ubuntu bash the entrypoint is the default /bin/sh -c, the image is ubuntu and the command is bash.</p>
+<p>  The command is run via the entrypoint. i.e., the actual thing that gets executed is /bin/sh -c bash. This allowed Docker to implement RUN quickly by relying on the shell’s parser.</p>
+<p>  Later on, people asked to be able to customize this, so ENTRYPOINT and –entrypoint were introduced.</p>
+<p>  Everything after ubuntu in the example above is the command and is passed to the entrypoint. When using the CMD instruction, it is exactly as if you were doing docker run -i -t ubuntu <cmd>. <cmd> will be the parameter of the entrypoint.</p>
+<p>  You will also get the same result if you instead type this command docker run -i -t ubuntu. You will still start a bash shell in the container because of the ubuntu Dockerfile specified a default CMD: CMD [“bash”]</p>
+<p>  As everything is passed to the entrypoint, you can have a very nice behavior from your images. @Jiri example is good, it shows how to use an image as a “binary”. When using [“/bin/cat”] as entrypoint and then doing docker run img /etc/passwd, you get it, /etc/passwd is the command and is passed to the entrypoint so the end result execution is simply /bin/cat /etc/passwd.</p>
+<p>  Another example would be to have any cli as entrypoint. For instance, if you have a redis image, instead of running docker run redisimg redis -H something -u toto get key, you can simply have ENTRYPOINT [“redis”, “-H”, “something”, “-u”, “toto”] and then run like this for the same result: docker run redisimg get key.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/10/09/Docker-entrypoint-vs-cmd/" data-id="ckb6kjx28002rpspw3yqi9a4e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-华为交换机-ACL-单向流量控制" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/08/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA-ACL-%E5%8D%95%E5%90%91%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/" class="article-date">
+  <time datetime="2019-10-08T11:50:40.000Z" itemprop="datePublished">2019-10-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/08/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA-ACL-%E5%8D%95%E5%90%91%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/">华为交换机 ACL 单向流量控制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>我们假设有VLAN A和B，需要做到A可以访问B，而B不可以访问A</strong><br>  A的地址段为 X.X.X.X/24<br>  B的地址段为 Y.Y.Y.Y/24</p>
+<p>  对于单向流量的控制，一般来说是属于防火墙的功能。但实际上，交换机也是可以通过ACL的灵活配置，来实现最基本的单向流量控制。具体配置如下：</p>
+<p>对于ICMP协议，需要允许B-&gt;A的icmp echo-reply报文：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">acl 3001</span><br><span class="line">   rule 5 permit icmp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255  icmp-type echo-reply</span><br></pre></td></tr></table></figure>
+<p>对于TCP协议，需要允许B-&gt;A，报文头中SYN Flag的类型为ack(010000)或rst(000100)的TCP报文：<br>———-V2R2版本及以前的配置————</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rule 9 permit tcp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255 tcp-flag ack</span><br><span class="line">rule 10 permit tcp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255 tcp-flag rst</span><br></pre></td></tr></table></figure>
+<p>———-V2R3版本及以后的配置————</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rule 10 permit tcp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255 tcp-flag established</span><br></pre></td></tr></table></figure>
+<p>对于UDP协议，由于其为无状态的特性，无法实现单通，基于业务优先原则，放开所有UDP协议文：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rule 15 permit udp source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255</span><br></pre></td></tr></table></figure>
+<p>最后，deny其他B-&gt;A的IP流量，并基于业务优先原则，放开其他所有未知流量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rule 20 deny ip source Y.Y.Y.Y 0.0.0.255 destination X.X.X.X 0.0.0.255</span><br><span class="line">rule 25 permit ip</span><br></pre></td></tr></table></figure>
+<p>将该ACL通过traffic-filter应用于VLAN之上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">traffic-filter vlan B inbound acl 3001</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/10/08/%E5%8D%8E%E4%B8%BA%E4%BA%A4%E6%8D%A2%E6%9C%BA-ACL-%E5%8D%95%E5%90%91%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/" data-id="ckb6kjx23002jpspw4t4wb6gt" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/network/" rel="tag">network</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Postgresql-join" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/06/Postgresql-join/" class="article-date">
+  <time datetime="2019-10-06T12:21:04.000Z" itemprop="datePublished">2019-10-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/06/Postgresql-join/">Postgresql join</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="postgresql-中join的选项"><a href="#postgresql-中join的选项" class="headerlink" title="postgresql 中join的选项"></a>postgresql 中join的选项</h3><ul>
+<li><p><strong>Nested Loops(O(n2))</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for x in table1:</span><br><span class="line">  for y in table2:</span><br><span class="line">    if x.field &#x3D;&#x3D; y.field</span><br><span class="line">      issue row</span><br><span class="line">    else</span><br><span class="line">      keep doing</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Hash joins</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hash join</span><br><span class="line">  Sequentialscan table 1</span><br><span class="line">  Sequentialscan table 2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Merge joins(O(n * log(n)))</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Merge join</span><br><span class="line">  Sort table 1</span><br><span class="line">    Sequetial scan table 1</span><br><span class="line">  Sort table 2</span><br><span class="line">    Sequetial scan table 2</span><br><span class="line">---</span><br><span class="line">Merge join</span><br><span class="line">  Index scan table 1</span><br><span class="line">  Index scan table 2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/10/06/Postgresql-join/" data-id="ckb6kjx21002fpspwcw4u62gj" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Postgresql-static-sys-view-性能" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/" class="article-date">
+  <time datetime="2019-10-06T05:55:53.000Z" itemprop="datePublished">2019-10-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/">Postgresql static sys-view 性能</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://www.cybertec-postgresql.com/en/3-ways-to-detect-slow-queries-in-postgresql/" target="_blank" rel="noopener">参考</a></p>
+<ol start="0">
+<li><p>explain 计划</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">explain</span> (<span class="keyword">analyze</span> ,verbose ,consts ,timing ,buffers) <span class="keyword">Select</span> ...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>pg_stat_activity(观察当前系统活动),每个连接一行记录.</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_activity</span><br><span class="line"><span class="keyword">Select</span> pid ,query_stat ,state_change ,state ,<span class="keyword">query</span> <span class="keyword">From</span> pg_stat_activity;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>pg_cancel_backend. (Select pg_cancel_backend(pid)),终止pid,保留连接.</li>
+<li>pg_terminate_backend.</li>
+</ul>
+</li>
+<li><p>检查数据库,pg_state_database</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\d pg_state_database</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查表 pg_stat_user_tables ,pg_statio_user_tables</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_user_tables</span><br><span class="line"><span class="keyword">Select</span> schemaname, relname ,seq_scan ,seq_tup_read,</span><br><span class="line">  seq_tup_read /seq_scan <span class="keyword">as</span> <span class="keyword">avg</span>, idx_scan</span><br><span class="line"><span class="keyword">From</span> pg_stat_user_tables</span><br><span class="line"><span class="keyword">Where</span> seq_scan &gt; <span class="number">0</span></span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">By</span> seq_tup_read <span class="keyword">Desc</span></span><br><span class="line"><span class="keyword">Limit</span> <span class="number">25</span>;</span><br><span class="line">\d pg_statio_user_tables</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>深入索引 pg_stat_user_indexes</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_user_indexes</span><br><span class="line"><span class="keyword">Select</span> schemaname ,relname ,indexrelname ,idx_scan,</span><br><span class="line">  pg_size_pretty(pg_relation_size(indexrelid)) <span class="keyword">as</span> idx_size,</span><br><span class="line">  pg_size_pretty(<span class="keyword">sum</span>(pg_relation_size(indexrelid))</span><br><span class="line">                  <span class="keyword">Over</span> (<span class="keyword">Order</span> <span class="keyword">By</span> idx_scan ,indexrelid)) <span class="keyword">as</span> total</span><br><span class="line"><span class="keyword">From</span> pg_stat_user_indexes</span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">By</span> <span class="number">6</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用 <strong>pg_stat_statements</strong></p>
+<ol>
+<li>postgresql.conf 中将 pg_stat_statements 加入 shared_preload_libraties.</li>
+<li>重启 db server.</li>
+<li>在你的database中运行 CREATE EXTESION pg_stat_statements.<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\d pg_stat_statements</span><br><span class="line"><span class="keyword">Select</span> <span class="keyword">round</span>((<span class="number">100</span> * total_time /<span class="keyword">sum</span>(total_time)</span><br><span class="line">        <span class="keyword">Over</span> ())::<span class="built_in">numeric</span>, <span class="number">2</span>) <span class="keyword">percent</span>,</span><br><span class="line">      <span class="keyword">round</span>(total_time::<span class="built_in">numeric</span> ,<span class="number">2</span>) <span class="keyword">as</span> total,</span><br><span class="line">      calls,</span><br><span class="line">      <span class="keyword">round</span>(mean_time::<span class="built_in">numeric</span> ,<span class="number">2</span>) <span class="keyword">as</span> mean,</span><br><span class="line">      <span class="keyword">substring</span>(<span class="keyword">query</span>, <span class="number">1</span>, <span class="number">40</span>)</span><br><span class="line"><span class="keyword">From</span> pg_stat_statements</span><br><span class="line"><span class="keyword">Order</span> <span class="keyword">By</span> total_time <span class="keyword">DESC</span></span><br><span class="line"><span class="keyword">Limit</span> <span class="number">10</span>;</span><br><span class="line"><span class="keyword">Select</span> pg_stat_statements_reset();</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/10/06/Postgresql-static-sys-view-%E6%80%A7%E8%83%BD/" data-id="ckb6kjx25002npspw5xlnawes" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-postgresql-show-file-loaction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-show-file-loaction/" class="article-date">
+  <time datetime="2019-10-04T07:39:27.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/04/postgresql-show-file-loaction/">Postgresql show file loaction</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>显示文件位置的命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SHOW</span> data_directory;</span><br><span class="line"><span class="keyword">SHOW</span> config_file;</span><br><span class="line"><span class="keyword">Select</span> <span class="keyword">name</span> ,setting <span class="keyword">From</span> pg_settings <span class="keyword">Where</span> <span class="keyword">category</span> = <span class="string">'File Locations'</span>;</span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">all</span>;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/10/04/postgresql-show-file-loaction/" data-id="ckb6kjx20002bpspw18hzh69t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-postgresql-reload-config" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-reload-config/" class="article-date">
+  <time datetime="2019-10-04T07:27:00.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/04/postgresql-reload-config/">Postgresql reload config</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>command-line reload<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#方法1</span></span><br><span class="line">sudo service postgresql-x.x reload</span><br><span class="line"><span class="comment">#方法2</span></span><br><span class="line">su -c root <span class="string">'service postgresql-x.x reload'</span></span><br><span class="line"><span class="comment">#方法3</span></span><br><span class="line">su - postges</span><br><span class="line">/usr/bin/pg_ctl reload</span><br></pre></td></tr></table></figure></li>
+<li>using sql reload<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> pg_reload_conf();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/10/04/postgresql-reload-config/" data-id="ckb6kjx1y0027pspwetyq5y1e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-postgresql-bitmap-heap-index-scan" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/10/04/postgresql-bitmap-heap-index-scan/" class="article-date">
+  <time datetime="2019-10-04T03:51:28.000Z" itemprop="datePublished">2019-10-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/04/postgresql-bitmap-heap-index-scan/">Postgresql bitmap heap/index scan</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://dba.stackexchange.com/questions/119386/understanding-bitmap-heap-scan-and-bitmap-index-scan" target="_blank" rel="noopener">转载</a></p>
+<ul>
+<li><p>index scan 扫描索引,查找后<strong>立即</strong>读取对应数据页,是<em>随机读</em>.</p>
+</li>
+<li><p>bitmap heap scan 最终是<em>顺序读</em>. 一般用在多个索引同时使用时或单个索引多次使用时.</p>
+</li>
+</ul>
+<p>举例(先bitmap index scan 再bitmap heap scan):<br><img src="/images/bitmapIndex.1.png" alt=""><br>bitmaps 按为与<br><img src="/images/bitmapIndex.2.png" alt=""><br>bitmap heap scan 读入对应的页,再次按指定条件查找记录(re-checked).<br><img src="/images/bitmapIndex.3.png" alt="">.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/10/04/postgresql-bitmap-heap-index-scan/" data-id="ckb6kjx1w0023pspw3k3fcnyb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-PostgreSQL-Schema" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/29/PostgreSQL-Schema/" class="article-date">
+  <time datetime="2019-09-29T08:48:10.000Z" itemprop="datePublished">2019-09-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/29/PostgreSQL-Schema/">Postgresql -- Schema</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="postgresql-架构命令"><a href="#postgresql-架构命令" class="headerlink" title="postgresql 架构命令"></a>postgresql 架构命令</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Select</span> current_schema();</span><br><span class="line"><span class="keyword">Show</span> search_path;</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Alter</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Drop</span> <span class="keyword">Schema</span> ...;</span><br><span class="line"><span class="keyword">Set</span> search_path <span class="keyword">To</span> ..., ...</span><br><span class="line"><span class="keyword">Grant</span> <span class="keyword">Usage</span> <span class="keyword">On</span> <span class="keyword">Schema</span> schema_name <span class="keyword">To</span> user_name</span><br><span class="line"><span class="keyword">Grant</span> <span class="keyword">Create</span> <span class="keyword">On</span> <span class="keyword">Schema</span> schema_name <span class="keyword">To</span> user_name;</span><br><span class="line">\dn <span class="comment">#get the list of schemas;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/09/29/PostgreSQL-Schema/" data-id="ckb6kjx1v0020pspwhr717a74" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-PostgreSQL-Move-Data-Directory" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/29/PostgreSQL-Move-Data-Directory/" class="article-date">
+  <time datetime="2019-09-29T08:18:31.000Z" itemprop="datePublished">2019-09-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/29/PostgreSQL-Move-Data-Directory/">Postgresql -- Move Data Directory</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="移动PostgreSQL数据目录"><a href="#移动PostgreSQL数据目录" class="headerlink" title="移动PostgreSQL数据目录"></a>移动PostgreSQL数据目录</h3><p><a href="https://www.digitalocean.com/community/tutorials/how-to-move-a-postgresql-data-directory-to-a-new-location-on-ubuntu-16-04" target="_blank" rel="noopener">转载</a></p>
+<ul>
+<li><p>移动数据目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ sudo -u postgres psql</span><br><span class="line">postgres<span class="comment"># SHOW data_directory</span></span><br><span class="line">$ sudo systemctl stop postgresql</span><br><span class="line">$ sudo systemctl status postgresql  <span class="comment"># 确认已停止.</span></span><br><span class="line">$ sudo rsync -av /var/lib/postgresql /mnt/... <span class="comment"># -a 保留权限</span></span><br></pre></td></tr></table></figure></li>
+<li><p>指向新数据库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vim /etc/postgresql/.../postgresql.conf <span class="comment"># 修改: data_directory = '新路径...'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启PostgreSQL,并验证</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl start postgresql</span><br><span class="line">$ sudo systemctl status postgresql</span><br><span class="line">$ sudo -u postgresql psql</span><br><span class="line">postgres=<span class="comment"># SHOW data_directory</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/09/29/PostgreSQL-Move-Data-Directory/" data-id="ckb6kjx1t001vpspwa52859ea" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-PostgreSQL-client-Connection-options" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/09/27/PostgreSQL-client-Connection-options/" class="article-date">
+  <time datetime="2019-09-27T13:31:28.000Z" itemprop="datePublished">2019-09-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/computer/">computer</a>►<a class="article-category-link" href="/categories/computer/linux/">linux</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/27/PostgreSQL-client-Connection-options/">Postgresql client Connection options</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>PostgreSQL 客户端常用的连接参数</strong><br><em>注意:密码是不可能写在命令行上的,设置密码用.pgpass,环境变量</em></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Connection options:</span><br><span class="line">    -d, --dbname&#x3D;DBNAME </span><br><span class="line">    -h, --host&#x3D;HOSTNAME</span><br><span class="line">    -p, --port&#x3D;PORT</span><br><span class="line">    -U, --username&#x3D;NAME connect as specified database user</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用环境变量 连接PostgreSQL</strong></p>
+<ul>
+<li>PGHOST</li>
+<li>PGPORT</li>
+<li>PGUSER</li>
+<li>PGPASSWORD</li>
+<li>PGDATABASE</li>
+</ul>
+<p><strong>使用.pgpass 连接PostgreSQL</strong><br>在你的HOME目录下创建.pgpass文件,字段可用*<br>格式: <strong>hostname:port:database:username:password</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 0600 ~&#x2F;.pgpass</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://clizhen.github.io/2019/09/27/PostgreSQL-client-Connection-options/" data-id="ckb6kjx1s001spspwfulzbhmd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/">computer</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/computer/linux/">linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/other/">other</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/program/">program</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/computer/windows/">windows</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/" rel="tag">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kubenetes/" rel="tag">kubenetes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/" rel="tag">other</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/postgresql/" rel="tag">postgresql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/program/" rel="tag">program</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shell/" rel="tag">shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/software/" rel="tag">software</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/system/" rel="tag">system</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url/" rel="tag">url</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/" rel="tag">vim</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/docker/" style="font-size: 12px;">docker</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/kubenetes/" style="font-size: 10px;">kubenetes</a> <a href="/tags/network/" style="font-size: 16px;">network</a> <a href="/tags/other/" style="font-size: 10px;">other</a> <a href="/tags/postgresql/" style="font-size: 18px;">postgresql</a> <a href="/tags/program/" style="font-size: 18px;">program</a> <a href="/tags/shell/" style="font-size: 20px;">shell</a> <a href="/tags/software/" style="font-size: 10px;">software</a> <a href="/tags/sql/" style="font-size: 14px;">sql</a> <a href="/tags/system/" style="font-size: 16px;">system</a> <a href="/tags/url/" style="font-size: 10px;">url</a> <a href="/tags/vim/" style="font-size: 12px;">vim</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/02/">February 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2025/02/04/iptables/">iptables</a>
+          </li>
+        
+          <li>
+            <a href="/2023/03/18/markdown/">MARKDOWN</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/30/promise-error/">PROMISE ERROR</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/23/ssh-example/">SSH EXAMPLE</a>
+          </li>
+        
+          <li>
+            <a href="/2022/08/21/css-flex/">CSS FLEX</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2025 li zhen<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

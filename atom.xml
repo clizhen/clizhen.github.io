@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>li</title>
+  <icon>https://clizhen.github.io/icon.png</icon>
+  <subtitle>908878422@qq.com</subtitle>
+  <link href="https://clizhen.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://clizhen.github.io/"/>
+  <updated>2025-02-04T00:02:03.783Z</updated>
+  <id>https://clizhen.github.io/</id>
+  
+  <author>
+    <name>li zhen</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iptables</title>
+    <link href="https://clizhen.github.io/2025/02/04/iptables/"/>
+    <id>https://clizhen.github.io/2025/02/04/iptables/</id>
+    <published>2025-02-03T22:59:13.000Z</published>
+    <updated>2025-02-04T00:02:03.783Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;IPTABLES&quot;&gt;&lt;a href=&quot;#IPTABLES&quot; class=&quot;headerlink&quot; title=&quot;IPTABLES&quot;&gt;&lt;/a&gt;IPTABLES&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="system" scheme="https://clizhen.github.io/tags/system/"/>
+    
+    <category term="network" scheme="https://clizhen.github.io/tags/network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MARKDOWN</title>
+    <link href="https://clizhen.github.io/2023/03/18/markdown/"/>
+    <id>https://clizhen.github.io/2023/03/18/markdown/</id>
+    <published>2023-03-18T00:28:40.000Z</published>
+    <updated>2023-03-19T00:37:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Heading-level-1&quot;&gt;&lt;a href=&quot;#Heading-level-1&quot; class=&quot;headerlink&quot; title=&quot;# Heading level 1&quot;&gt;&lt;/a&gt;# Heading level 1&lt;/h1&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="other" scheme="https://clizhen.github.io/categories/computer/other/"/>
+    
+    
+    <category term="other" scheme="https://clizhen.github.io/tags/other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PROMISE ERROR</title>
+    <link href="https://clizhen.github.io/2022/10/30/promise-error/"/>
+    <id>https://clizhen.github.io/2022/10/30/promise-error/</id>
+    <published>2022-10-30T06:08:52.000Z</published>
+    <updated>2023-03-18T00:34:34.668Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;JS-PROMISE-ERROR&quot;&gt;&lt;a href=&quot;#JS-PROMISE-ERROR&quot; class=&quot;headerlink&quot; title=&quot;JS PROMISE ERROR&quot;&gt;&lt;/a&gt;JS PROMISE</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="program" scheme="https://clizhen.github.io/categories/computer/program/"/>
+    
+    
+    <category term="javascript" scheme="https://clizhen.github.io/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSH EXAMPLE</title>
+    <link href="https://clizhen.github.io/2022/10/23/ssh-example/"/>
+    <id>https://clizhen.github.io/2022/10/23/ssh-example/</id>
+    <published>2022-10-23T06:22:34.000Z</published>
+    <updated>2023-03-18T00:34:54.529Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;SSH-举例&quot;&gt;&lt;a href=&quot;#SSH-举例&quot; class=&quot;headerlink&quot; title=&quot;SSH 举例&quot;&gt;&lt;/a&gt;SSH 举例&lt;/h4&gt;&lt;p&gt;tldr&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="shell" scheme="https://clizhen.github.io/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS FLEX</title>
+    <link href="https://clizhen.github.io/2022/08/21/css-flex/"/>
+    <id>https://clizhen.github.io/2022/08/21/css-flex/</id>
+    <published>2022-08-21T06:33:46.000Z</published>
+    <updated>2023-02-26T04:49:55.317Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5 id=&quot;CSS-Flex-弹性布局&quot;&gt;&lt;a href=&quot;#CSS-Flex-弹性布局&quot; class=&quot;headerlink&quot; title=&quot;CSS Flex 弹性布局&quot;&gt;&lt;/a&gt;CSS Flex 弹性布局&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;采用 Flex 布局的元素，称为</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="program" scheme="https://clizhen.github.io/categories/computer/program/"/>
+    
+    
+    <category term="program" scheme="https://clizhen.github.io/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python3 开发准备</title>
+    <link href="https://clizhen.github.io/2022/06/03/python-venv/"/>
+    <id>https://clizhen.github.io/2022/06/03/python-venv/</id>
+    <published>2022-06-03T00:43:15.000Z</published>
+    <updated>2022-06-03T05:41:01.383Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h5 id=&quot;虚拟环境&quot;&gt;&lt;a href=&quot;#虚拟环境&quot; class=&quot;headerlink&quot; title=&quot;虚拟环境&quot;&gt;&lt;/a&gt;虚拟环境&lt;/h5&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="program" scheme="https://clizhen.github.io/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>REACT 我的部件</title>
+    <link href="https://clizhen.github.io/2022/04/23/react-my-components/"/>
+    <id>https://clizhen.github.io/2022/04/23/react-my-components/</id>
+    <published>2022-04-23T12:23:51.000Z</published>
+    <updated>2022-05-19T13:43:42.745Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;开发REACT时-我的常用包和工具&quot;&gt;&lt;a href=&quot;#开发REACT时-我的常用包和工具&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="program" scheme="https://clizhen.github.io/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>查看公网IP地址</title>
+    <link href="https://clizhen.github.io/2022/04/17/get-public-ip/"/>
+    <id>https://clizhen.github.io/2022/04/17/get-public-ip/</id>
+    <published>2022-04-17T08:09:05.000Z</published>
+    <updated>2022-04-28T11:52:59.831Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;GET-Public-IP&quot;&gt;&lt;a href=&quot;#GET-Public-IP&quot; class=&quot;headerlink&quot; title=&quot;GET Public IP&quot;&gt;&lt;/a&gt;GET Public IP&lt;/h3&gt;&lt;p&gt; </summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="network" scheme="https://clizhen.github.io/tags/network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>postgresql 事务隔离级别</title>
+    <link href="https://clizhen.github.io/2022/04/09/postgresql-lock-md/"/>
+    <id>https://clizhen.github.io/2022/04/09/postgresql-lock-md/</id>
+    <published>2022-04-09T01:38:04.000Z</published>
+    <updated>2022-04-10T01:52:44.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;事务隔离级别&quot;&gt;&lt;a href=&quot;#事务隔离级别&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="postgresql" scheme="https://clizhen.github.io/tags/postgresql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React Hook Internal</title>
+    <link href="https://clizhen.github.io/2022/04/04/react-hook-interal/"/>
+    <id>https://clizhen.github.io/2022/04/04/react-hook-interal/</id>
+    <published>2022-04-04T02:46:04.000Z</published>
+    <updated>2022-04-09T01:19:23.013Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;REACT-HOOK&quot;&gt;&lt;a href=&quot;#REACT-HOOK&quot; class=&quot;headerlink&quot; title=&quot;REACT HOOK&quot;&gt;&lt;/a&gt;REACT HOOK&lt;/h3&gt;&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="program" scheme="https://clizhen.github.io/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript_New_KeyWord</title>
+    <link href="https://clizhen.github.io/2022/03/20/javascript-new-operator/"/>
+    <id>https://clizhen.github.io/2022/03/20/javascript-new-operator/</id>
+    <published>2022-03-20T05:27:18.000Z</published>
+    <updated>2022-04-04T06:02:05.735Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;JS-new-操作符&quot;&gt;&lt;a href=&quot;#JS-new-操作符&quot; class=&quot;headerlink&quot; title=&quot;JS new 操作符&quot;&gt;&lt;/a&gt;JS new</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="program" scheme="https://clizhen.github.io/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenSSL</title>
+    <link href="https://clizhen.github.io/2022/03/18/OpenSSL/"/>
+    <id>https://clizhen.github.io/2022/03/18/OpenSSL/</id>
+    <published>2022-03-18T11:47:52.000Z</published>
+    <updated>2022-03-18T12:00:47.423Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;OpenSSL-简要说明&quot;&gt;&lt;a href=&quot;#OpenSSL-简要说明&quot; class=&quot;headerlink&quot; title=&quot;OpenSSL 简要说明&quot;&gt;&lt;/a&gt;OpenSSL 简要说明&lt;/h3&gt;&lt;h4 id=&quot;OpenSSL的功能&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="system" scheme="https://clizhen.github.io/tags/system/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>REDIS</title>
+    <link href="https://clizhen.github.io/2022/03/16/redis-primary/"/>
+    <id>https://clizhen.github.io/2022/03/16/redis-primary/</id>
+    <published>2022-03-16T11:23:46.000Z</published>
+    <updated>2022-03-16T12:26:12.097Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;REDIS-是什么-能干什么&quot;&gt;&lt;a href=&quot;#REDIS-是什么-能干什么&quot; class=&quot;headerlink&quot; title=&quot;REDIS 是什么,能干什么&quot;&gt;&lt;/a&gt;REDIS 是什么,能干什么&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;redis的特性是快,</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="other" scheme="https://clizhen.github.io/categories/computer/other/"/>
+    
+    
+    <category term="program" scheme="https://clizhen.github.io/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>IPV6-ADDRESS</title>
+    <link href="https://clizhen.github.io/2022/02/26/ipv6-address/"/>
+    <id>https://clizhen.github.io/2022/02/26/ipv6-address/</id>
+    <published>2022-02-26T12:19:38.000Z</published>
+    <updated>2022-02-28T12:26:03.203Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;IPV6-地址结构&quot;&gt;&lt;a href=&quot;#IPV6-地址结构&quot; class=&quot;headerlink&quot; title=&quot;IPV6 地址结构&quot;&gt;&lt;/a&gt;IPV6 地址结构&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;地址长128位.(Routing Prefix(48) +</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="other" scheme="https://clizhen.github.io/categories/computer/other/"/>
+    
+    
+    <category term="network" scheme="https://clizhen.github.io/tags/network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VLAN-PVID-TRUNK</title>
+    <link href="https://clizhen.github.io/2022/02/23/vlan-pvid-trunk/"/>
+    <id>https://clizhen.github.io/2022/02/23/vlan-pvid-trunk/</id>
+    <published>2022-02-23T11:47:38.000Z</published>
+    <updated>2022-02-24T11:51:40.969Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;VLAN-端口转发规则&quot;&gt;&lt;a href=&quot;#VLAN-端口转发规则&quot; class=&quot;headerlink&quot; title=&quot;VLAN 端口转发规则&quot;&gt;&lt;/a&gt;VLAN 端口转发规则&lt;/h3&gt;&lt;h4 id=&quot;PVID&quot;&gt;&lt;a href=&quot;#PVID&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="other" scheme="https://clizhen.github.io/categories/computer/other/"/>
+    
+    
+    <category term="network" scheme="https://clizhen.github.io/tags/network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux NETSTAT SS</title>
+    <link href="https://clizhen.github.io/2021/08/28/Linux-netstat-ss/"/>
+    <id>https://clizhen.github.io/2021/08/28/Linux-netstat-ss/</id>
+    <published>2021-08-28T12:19:39.000Z</published>
+    <updated>2021-08-28T12:41:22.555Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;netstat-ss&quot;&gt;&lt;a href=&quot;#netstat-ss&quot; class=&quot;headerlink&quot; title=&quot;netstat ss&quot;&gt;&lt;/a&gt;netstat ss&lt;/h3&gt;&lt;h4 id=&quot;NETSTAT&quot;&gt;&lt;a href=&quot;#NETSTAT&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    
+    <category term="network" scheme="https://clizhen.github.io/tags/network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 进程查看</title>
+    <link href="https://clizhen.github.io/2021/08/28/LinuxProcessView/"/>
+    <id>https://clizhen.github.io/2021/08/28/LinuxProcessView/</id>
+    <published>2021-08-28T03:31:10.000Z</published>
+    <updated>2021-08-28T09:33:43.437Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;ps-pidof-pgrep-fuser-lsof&quot;&gt;&lt;a href=&quot;#ps-pidof-pgrep-fuser-lsof&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="system" scheme="https://clizhen.github.io/tags/system/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>组策略启动脚本</title>
+    <link href="https://clizhen.github.io/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/"/>
+    <id>https://clizhen.github.io/2021/08/08/%E7%BB%84%E7%AD%96%E7%95%A5%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/</id>
+    <published>2021-08-08T12:57:43.000Z</published>
+    <updated>2021-08-28T03:32:44.497Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;组策略启动脚本不执行&quot;&gt;&lt;a href=&quot;#组策略启动脚本不执行&quot; class=&quot;headerlink&quot; title=&quot;组策略启动脚本不执行&quot;&gt;&lt;/a&gt;组策略启动脚本不执行&lt;/h3&gt;&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="windows" scheme="https://clizhen.github.io/categories/computer/windows/"/>
+    
+    
+    <category term="network" scheme="https://clizhen.github.io/tags/network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Yarn Reinstall Package</title>
+    <link href="https://clizhen.github.io/2020/06/08/yarn-reinstall-package/"/>
+    <id>https://clizhen.github.io/2020/06/08/yarn-reinstall-package/</id>
+    <published>2020-06-08T13:50:17.000Z</published>
+    <updated>2022-03-16T12:20:32.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;问题: 使用yarn upgrade-interactive 升级工程后, 某个软件包出错,需要重装&lt;/strong&gt;&lt;br&gt;查询网络后 ,使用以下指令解决:&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="program" scheme="https://clizhen.github.io/tags/program/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kubenetes 安装</title>
+    <link href="https://clizhen.github.io/2019/12/06/kubenetes-%E5%AE%89%E8%A3%85/"/>
+    <id>https://clizhen.github.io/2019/12/06/kubenetes-%E5%AE%89%E8%A3%85/</id>
+    <published>2019-12-06T12:14:59.000Z</published>
+    <updated>2019-12-07T12:23:34.603Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;我基本上是按照这篇&lt;a href=&quot;https://www.cnblogs.com/leisurelylicht/p/Ubuntu-guo-nei-an-zhuang-kubernetes.html&quot; target=&quot;_blank&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="computer" scheme="https://clizhen.github.io/categories/computer/"/>
+    
+    <category term="linux" scheme="https://clizhen.github.io/categories/computer/linux/"/>
+    
+    
+    <category term="kubenetes" scheme="https://clizhen.github.io/tags/kubenetes/"/>
+    
+  </entry>
+  
+</feed>
